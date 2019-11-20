@@ -1,0 +1,5 @@
+Building DAG of jobs...
+InputFunctionException in line 47 of /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile:
+NameError: name 'sample_id' is not defined
+Wildcards:
+sample_id={wildcards.sample_id}

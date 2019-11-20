@@ -1,0 +1,362 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 50
+Job counts:
+	count	jobs
+	1	all
+	32	collapse
+	33
+
+[Tue Oct 22 16:07:27 2019]
+rule collapse:
+    input: outputs/trimmed/COIII_3B_MRB7260_mintet1.fa
+    output: outputs/collapse/COIII_3B_MRB7260_mintet1.fa
+    jobid: 9
+    wildcards: sample_id=COIII_3B_MRB7260_mintet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/COIII_3B_MRB7260_mintet1.fa -o outputs/collapse/COIII_3B_MRB7260_mintet1.fa -v
+Submitted job 9 with external jobid 'Submitted batch job 452102 on cluster faculty'.
+
+[Tue Oct 22 16:07:27 2019]
+rule collapse:
+    input: outputs/trimmed/ND9_3B_MRB7260_plustet2.fa
+    output: outputs/collapse/ND9_3B_MRB7260_plustet2.fa
+    jobid: 28
+    wildcards: sample_id=ND9_3B_MRB7260_plustet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/ND9_3B_MRB7260_plustet2.fa -o outputs/collapse/ND9_3B_MRB7260_plustet2.fa -v
+Submitted job 28 with external jobid 'Submitted batch job 452103 on cluster faculty'.
+
+[Tue Oct 22 16:07:27 2019]
+rule collapse:
+    input: outputs/trimmed/CR3_REH1_plustet1.fa
+    output: outputs/collapse/CR3_REH1_plustet1.fa
+    jobid: 15
+    wildcards: sample_id=CR3_REH1_plustet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/CR3_REH1_plustet1.fa -o outputs/collapse/CR3_REH1_plustet1.fa -v
+Submitted job 15 with external jobid 'Submitted batch job 452104 on cluster faculty'.
+
+[Tue Oct 22 16:07:28 2019]
+rule collapse:
+    input: outputs/trimmed/ND9_3B_MRB7260_mintet1.fa
+    output: outputs/collapse/ND9_3B_MRB7260_mintet1.fa
+    jobid: 25
+    wildcards: sample_id=ND9_3B_MRB7260_mintet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/ND9_3B_MRB7260_mintet1.fa -o outputs/collapse/ND9_3B_MRB7260_mintet1.fa -v
+Submitted job 25 with external jobid 'Submitted batch job 452105 on cluster faculty'.
+
+[Tue Oct 22 16:07:28 2019]
+rule collapse:
+    input: outputs/trimmed/RPS12_REH1_plustet2.fa
+    output: outputs/collapse/RPS12_REH1_plustet2.fa
+    jobid: 32
+    wildcards: sample_id=RPS12_REH1_plustet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/RPS12_REH1_plustet2.fa -o outputs/collapse/RPS12_REH1_plustet2.fa -v
+Submitted job 32 with external jobid 'Submitted batch job 452106 on cluster faculty'.
+
+[Tue Oct 22 16:07:28 2019]
+rule collapse:
+    input: outputs/trimmed/A6_3B_REH1_plustet1.fa
+    output: outputs/collapse/A6_3B_REH1_plustet1.fa
+    jobid: 7
+    wildcards: sample_id=A6_3B_REH1_plustet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/A6_3B_REH1_plustet1.fa -o outputs/collapse/A6_3B_REH1_plustet1.fa -v
+Submitted job 7 with external jobid 'Submitted batch job 452107 on cluster faculty'.
+
+[Tue Oct 22 16:07:28 2019]
+rule collapse:
+    input: outputs/trimmed/COIII_3B_MRB7260_plustet2.fa
+    output: outputs/collapse/COIII_3B_MRB7260_plustet2.fa
+    jobid: 12
+    wildcards: sample_id=COIII_3B_MRB7260_plustet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/COIII_3B_MRB7260_plustet2.fa -o outputs/collapse/COIII_3B_MRB7260_plustet2.fa -v
+Submitted job 12 with external jobid 'Submitted batch job 452108 on cluster faculty'.
+
+[Tue Oct 22 16:07:28 2019]
+rule collapse:
+    input: outputs/trimmed/ND9_3B_MRB7260_plustet1.fa
+    output: outputs/collapse/ND9_3B_MRB7260_plustet1.fa
+    jobid: 27
+    wildcards: sample_id=ND9_3B_MRB7260_plustet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/ND9_3B_MRB7260_plustet1.fa -o outputs/collapse/ND9_3B_MRB7260_plustet1.fa -v
+Submitted job 27 with external jobid 'Submitted batch job 452109 on cluster faculty'.
+
+[Tue Oct 22 16:07:28 2019]
+rule collapse:
+    input: outputs/trimmed/CR4_3B_MRB7260_plustet2.fa
+    output: outputs/collapse/CR4_3B_MRB7260_plustet2.fa
+    jobid: 20
+    wildcards: sample_id=CR4_3B_MRB7260_plustet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/CR4_3B_MRB7260_plustet2.fa -o outputs/collapse/CR4_3B_MRB7260_plustet2.fa -v
+Submitted job 20 with external jobid 'Submitted batch job 452110 on cluster faculty'.
+
+[Tue Oct 22 16:07:28 2019]
+rule collapse:
+    input: outputs/trimmed/A6_3B_REH1_mintet2.fa
+    output: outputs/collapse/A6_3B_REH1_mintet2.fa
+    jobid: 6
+    wildcards: sample_id=A6_3B_REH1_mintet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/A6_3B_REH1_mintet2.fa -o outputs/collapse/A6_3B_REH1_mintet2.fa -v
+Submitted job 6 with external jobid 'Submitted batch job 452111 on cluster faculty'.
+
+[Tue Oct 22 16:07:29 2019]
+rule collapse:
+    input: outputs/trimmed/COIII_3B_MRB7260_mintet2.fa
+    output: outputs/collapse/COIII_3B_MRB7260_mintet2.fa
+    jobid: 10
+    wildcards: sample_id=COIII_3B_MRB7260_mintet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/COIII_3B_MRB7260_mintet2.fa -o outputs/collapse/COIII_3B_MRB7260_mintet2.fa -v
+Submitted job 10 with external jobid 'Submitted batch job 452112 on cluster faculty'.
+
+[Tue Oct 22 16:07:29 2019]
+rule collapse:
+    input: outputs/trimmed/ND8_3B_MRB7260_plustet2.fa
+    output: outputs/collapse/ND8_3B_MRB7260_plustet2.fa
+    jobid: 24
+    wildcards: sample_id=ND8_3B_MRB7260_plustet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/ND8_3B_MRB7260_plustet2.fa -o outputs/collapse/ND8_3B_MRB7260_plustet2.fa -v
+Submitted job 24 with external jobid 'Submitted batch job 452113 on cluster faculty'.
+
+[Tue Oct 22 16:07:29 2019]
+rule collapse:
+    input: outputs/trimmed/ND9_3B_MRB7260_mintet2.fa
+    output: outputs/collapse/ND9_3B_MRB7260_mintet2.fa
+    jobid: 26
+    wildcards: sample_id=ND9_3B_MRB7260_mintet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/ND9_3B_MRB7260_mintet2.fa -o outputs/collapse/ND9_3B_MRB7260_mintet2.fa -v
+Submitted job 26 with external jobid 'Submitted batch job 452114 on cluster faculty'.
+
+[Tue Oct 22 16:07:29 2019]
+rule collapse:
+    input: outputs/trimmed/RPS12_REH1_mintet1.fa
+    output: outputs/collapse/RPS12_REH1_mintet1.fa
+    jobid: 29
+    wildcards: sample_id=RPS12_REH1_mintet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/RPS12_REH1_mintet1.fa -o outputs/collapse/RPS12_REH1_mintet1.fa -v
+Submitted job 29 with external jobid 'Submitted batch job 452115 on cluster faculty'.
+
+[Tue Oct 22 16:07:29 2019]
+rule collapse:
+    input: outputs/trimmed/RPS12_REH1_mintet2.fa
+    output: outputs/collapse/RPS12_REH1_mintet2.fa
+    jobid: 30
+    wildcards: sample_id=RPS12_REH1_mintet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/RPS12_REH1_mintet2.fa -o outputs/collapse/RPS12_REH1_mintet2.fa -v
+Submitted job 30 with external jobid 'Submitted batch job 452116 on cluster faculty'.
+
+[Tue Oct 22 16:07:29 2019]
+rule collapse:
+    input: outputs/trimmed/COIII_3B_MRB7260_plustet1.fa
+    output: outputs/collapse/COIII_3B_MRB7260_plustet1.fa
+    jobid: 11
+    wildcards: sample_id=COIII_3B_MRB7260_plustet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/COIII_3B_MRB7260_plustet1.fa -o outputs/collapse/COIII_3B_MRB7260_plustet1.fa -v
+Submitted job 11 with external jobid 'Submitted batch job 452117 on cluster faculty'.
+
+[Tue Oct 22 16:07:29 2019]
+rule collapse:
+    input: outputs/trimmed/ND8_3B_MRB7260_mintet2.fa
+    output: outputs/collapse/ND8_3B_MRB7260_mintet2.fa
+    jobid: 22
+    wildcards: sample_id=ND8_3B_MRB7260_mintet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/ND8_3B_MRB7260_mintet2.fa -o outputs/collapse/ND8_3B_MRB7260_mintet2.fa -v
+Submitted job 22 with external jobid 'Submitted batch job 452118 on cluster faculty'.
+
+[Tue Oct 22 16:07:30 2019]
+rule collapse:
+    input: outputs/trimmed/ND8_3B_MRB7260_plustet1.fa
+    output: outputs/collapse/ND8_3B_MRB7260_plustet1.fa
+    jobid: 23
+    wildcards: sample_id=ND8_3B_MRB7260_plustet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/ND8_3B_MRB7260_plustet1.fa -o outputs/collapse/ND8_3B_MRB7260_plustet1.fa -v
+Submitted job 23 with external jobid 'Submitted batch job 452119 on cluster faculty'.
+
+[Tue Oct 22 16:07:30 2019]
+rule collapse:
+    input: outputs/trimmed/CR4_3B_MRB7260_mintet2.fa
+    output: outputs/collapse/CR4_3B_MRB7260_mintet2.fa
+    jobid: 18
+    wildcards: sample_id=CR4_3B_MRB7260_mintet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/CR4_3B_MRB7260_mintet2.fa -o outputs/collapse/CR4_3B_MRB7260_mintet2.fa -v
+Submitted job 18 with external jobid 'Submitted batch job 452120 on cluster faculty'.
+
+[Tue Oct 22 16:07:30 2019]
+rule collapse:
+    input: outputs/trimmed/RPS12_REH1_plustet1.fa
+    output: outputs/collapse/RPS12_REH1_plustet1.fa
+    jobid: 31
+    wildcards: sample_id=RPS12_REH1_plustet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/RPS12_REH1_plustet1.fa -o outputs/collapse/RPS12_REH1_plustet1.fa -v
+Submitted job 31 with external jobid 'Submitted batch job 452121 on cluster faculty'.
+
+[Tue Oct 22 16:07:30 2019]
+rule collapse:
+    input: outputs/trimmed/CR3_REH1_mintet1.fa
+    output: outputs/collapse/CR3_REH1_mintet1.fa
+    jobid: 13
+    wildcards: sample_id=CR3_REH1_mintet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/CR3_REH1_mintet1.fa -o outputs/collapse/CR3_REH1_mintet1.fa -v
+Submitted job 13 with external jobid 'Submitted batch job 452122 on cluster faculty'.
+
+[Tue Oct 22 16:07:30 2019]
+rule collapse:
+    input: outputs/trimmed/CR3_REH1_plustet2.fa
+    output: outputs/collapse/CR3_REH1_plustet2.fa
+    jobid: 16
+    wildcards: sample_id=CR3_REH1_plustet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/CR3_REH1_plustet2.fa -o outputs/collapse/CR3_REH1_plustet2.fa -v
+Submitted job 16 with external jobid 'Submitted batch job 452123 on cluster faculty'.
+
+[Tue Oct 22 16:07:30 2019]
+rule collapse:
+    input: outputs/trimmed/A6_3B_REH1_plustet2.fa
+    output: outputs/collapse/A6_3B_REH1_plustet2.fa
+    jobid: 8
+    wildcards: sample_id=A6_3B_REH1_plustet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/A6_3B_REH1_plustet2.fa -o outputs/collapse/A6_3B_REH1_plustet2.fa -v
+Submitted job 8 with external jobid 'Submitted batch job 452124 on cluster faculty'.
+
+[Tue Oct 22 16:07:30 2019]
+rule collapse:
+    input: outputs/trimmed/CR4_3B_MRB7260_mintet1.fa
+    output: outputs/collapse/CR4_3B_MRB7260_mintet1.fa
+    jobid: 17
+    wildcards: sample_id=CR4_3B_MRB7260_mintet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/CR4_3B_MRB7260_mintet1.fa -o outputs/collapse/CR4_3B_MRB7260_mintet1.fa -v
+Submitted job 17 with external jobid 'Submitted batch job 452125 on cluster faculty'.
+
+[Tue Oct 22 16:07:31 2019]
+rule collapse:
+    input: outputs/trimmed/CR3_REH1_mintet2.fa
+    output: outputs/collapse/CR3_REH1_mintet2.fa
+    jobid: 14
+    wildcards: sample_id=CR3_REH1_mintet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/CR3_REH1_mintet2.fa -o outputs/collapse/CR3_REH1_mintet2.fa -v
+Submitted job 14 with external jobid 'Submitted batch job 452126 on cluster faculty'.
+
+[Tue Oct 22 16:07:31 2019]
+rule collapse:
+    input: outputs/trimmed/A6_3B_MRB7260_mintet2.fa
+    output: outputs/collapse/A6_3B_MRB7260_mintet2.fa
+    jobid: 2
+    wildcards: sample_id=A6_3B_MRB7260_mintet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/A6_3B_MRB7260_mintet2.fa -o outputs/collapse/A6_3B_MRB7260_mintet2.fa -v
+Submitted job 2 with external jobid 'Submitted batch job 452127 on cluster faculty'.
+
+[Tue Oct 22 16:07:31 2019]
+rule collapse:
+    input: outputs/trimmed/A6_3B_MRB7260_mintet1.fa
+    output: outputs/collapse/A6_3B_MRB7260_mintet1.fa
+    jobid: 1
+    wildcards: sample_id=A6_3B_MRB7260_mintet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/A6_3B_MRB7260_mintet1.fa -o outputs/collapse/A6_3B_MRB7260_mintet1.fa -v
+Submitted job 1 with external jobid 'Submitted batch job 452128 on cluster faculty'.
+
+[Tue Oct 22 16:07:31 2019]
+rule collapse:
+    input: outputs/trimmed/A6_3B_REH1_mintet1.fa
+    output: outputs/collapse/A6_3B_REH1_mintet1.fa
+    jobid: 5
+    wildcards: sample_id=A6_3B_REH1_mintet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/A6_3B_REH1_mintet1.fa -o outputs/collapse/A6_3B_REH1_mintet1.fa -v
+Submitted job 5 with external jobid 'Submitted batch job 452129 on cluster faculty'.
+
+[Tue Oct 22 16:07:31 2019]
+rule collapse:
+    input: outputs/trimmed/ND8_3B_MRB7260_mintet1.fa
+    output: outputs/collapse/ND8_3B_MRB7260_mintet1.fa
+    jobid: 21
+    wildcards: sample_id=ND8_3B_MRB7260_mintet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/ND8_3B_MRB7260_mintet1.fa -o outputs/collapse/ND8_3B_MRB7260_mintet1.fa -v
+Submitted job 21 with external jobid 'Submitted batch job 452130 on cluster faculty'.
+
+[Tue Oct 22 16:07:31 2019]
+rule collapse:
+    input: outputs/trimmed/A6_3B_MRB7260_plustet1.fa
+    output: outputs/collapse/A6_3B_MRB7260_plustet1.fa
+    jobid: 3
+    wildcards: sample_id=A6_3B_MRB7260_plustet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/A6_3B_MRB7260_plustet1.fa -o outputs/collapse/A6_3B_MRB7260_plustet1.fa -v
+Submitted job 3 with external jobid 'Submitted batch job 452131 on cluster faculty'.
+
+[Tue Oct 22 16:07:32 2019]
+rule collapse:
+    input: outputs/trimmed/A6_3B_MRB7260_plustet2.fa
+    output: outputs/collapse/A6_3B_MRB7260_plustet2.fa
+    jobid: 4
+    wildcards: sample_id=A6_3B_MRB7260_plustet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/A6_3B_MRB7260_plustet2.fa -o outputs/collapse/A6_3B_MRB7260_plustet2.fa -v
+Submitted job 4 with external jobid 'Submitted batch job 452132 on cluster faculty'.
+
+[Tue Oct 22 16:07:32 2019]
+rule collapse:
+    input: outputs/trimmed/CR4_3B_MRB7260_plustet1.fa
+    output: outputs/collapse/CR4_3B_MRB7260_plustet1.fa
+    jobid: 19
+    wildcards: sample_id=CR4_3B_MRB7260_plustet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/CR4_3B_MRB7260_plustet1.fa -o outputs/collapse/CR4_3B_MRB7260_plustet1.fa -v
+Submitted job 19 with external jobid 'Submitted batch job 452133 on cluster faculty'.
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 73 of /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile:
+Missing files after 5 seconds:
+outputs/collapse/COIII_3B_MRB7260_mintet1.fa
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 73 of /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile:
+Missing files after 5 seconds:
+outputs/collapse/ND9_3B_MRB7260_plustet2.fa
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 73 of /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile:
+Missing files after 5 seconds:
+outputs/collapse/CR3_REH1_plustet1.fa
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 73 of /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile:
+Missing files after 5 seconds:
+outputs/collapse/ND9_3B_MRB7260_mintet1.fa
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 73 of /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile:
+Missing files after 5 seconds:
+outputs/collapse/RPS12_REH1_plustet2.fa
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 73 of /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile:
+Missing files after 5 seconds:
+outputs/collapse/A6_3B_REH1_plustet1.fa
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Waiting at most 5 seconds for missing files.
+Terminating processes on user request, this might take some time.
+Will exit after finishing currently running jobs.
+Cancelling snakemake on user request.

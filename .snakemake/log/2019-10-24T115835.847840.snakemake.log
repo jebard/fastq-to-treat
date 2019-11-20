@@ -1,0 +1,33 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	25	collapse
+	14	filter
+	19	fq_2_fa
+	32	treat
+	19	trim
+	110
+
+[Thu Oct 24 11:58:39 2019]
+rule filter:
+    input: outputs/join/RPS12_REH1_mintet2.assembled.fastq
+    output: outputs/filter/RPS12_REH1_mintet2.fq
+    jobid: 158
+    wildcards: sample_id=RPS12_REH1_mintet2
+
+Terminating processes on user request, this might take some time.
+[Thu Oct 24 11:58:44 2019]
+Error in rule filter:
+    jobid: 158
+    output: outputs/filter/RPS12_REH1_mintet2.fq
+    shell:
+        tools/fastx/0.0.13/fastq_quality_filter -i outputs/join/RPS12_REH1_mintet2.assembled.fastq -o outputs/filter/RPS12_REH1_mintet2.fq -q 0 -p 90 -Q33 -v
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job filter since they might be corrupted:
+outputs/filter/RPS12_REH1_mintet2.fq
+Complete log: /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/.snakemake/log/2019-10-24T115835.847840.snakemake.log

@@ -1,0 +1,71 @@
+{{define "content"}}
+
+<div class="page-header">
+  <h3><i class="fa fa-align-left fa-lg"></i> Fragments: {{ .curdb }} 
+    <span class="badge badge-default">{{ .Showing }} of {{ .Count }}</span>
+  </h3>
+</div>
+
+{{template "search-form" .}}
+
+<ul class="pagination pagination-sm">
+<li><a href="/search?page={{ decrement .Page }}&amp;gene={{.Fields.Gene}}&amp;limit={{.Fields.Limit}}&amp;junc_end={{.Fields.JuncEnd}}&amp;edit_stop={{.Fields.EditStop}}&amp;junc_len={{.Fields.JuncLen}}{{range $s := $.Fields.Sample}}&amp;sample={{$s}}{{end}}&amp;has_mutation={{.Fields.HasMutation}}&amp;has_alt={{.Fields.HasAlt}}&amp;alt={{.Fields.AltRegion}}">Previous</a></li>
+<li><a href="/search?page={{ increment .Page }}&amp;gene={{.Fields.Gene}}&amp;limit={{.Fields.Limit}}&amp;junc_end={{.Fields.JuncEnd}}&amp;edit_stop={{.Fields.EditStop}}&amp;junc_len={{.Fields.JuncLen}}{{range $s := $.Fields.Sample}}&amp;sample={{$s}}{{end}}&amp;has_mutation={{.Fields.HasMutation}}&amp;has_alt={{.Fields.HasAlt}}&amp;alt={{.Fields.AltRegion}}">Next</a></li>
+<li><a href="/search?export=1&amp;gene={{.Fields.Gene}}&amp;limit={{.Fields.Limit}}&amp;junc_end={{.Fields.JuncEnd}}&amp;edit_stop={{.Fields.EditStop}}&amp;junc_len={{.Fields.JuncLen}}{{range $s := $.Fields.Sample}}&amp;sample={{$s}}{{end}}&amp;has_mutation={{.Fields.HasMutation}}&amp;has_alt={{.Fields.HasAlt}}&amp;alt={{.Fields.AltRegion}}">Export</a></li>
+</ul>
+
+<div class="table-responsive">
+<table class="table table-bordered table-condensed table-hover">
+  <thead>
+    <tr>
+      <th>View</th>
+      <th>ID</th>
+      <th>Gene</th>
+      <th>Sample</th>
+      <th>Merge Count</th>
+      <th>Norm Count</th>
+      <th class="text-right">% Search by Sample</th>
+      <th class="text-right">% Edit Stop by Sample</th>
+      <th class="text-right">Editing Stop</th>
+      <th class="text-right">Junction End</th>
+      <th class="text-right">Junction Len</th>
+      <th class="text-right">Flags</th>
+      <th>Junction Sequence</th>
+    </tr>
+  </thead>
+  <tbody>
+{{ range $i, $a := .Alignments }}
+    <tr>
+      <td><a class="btn btn-default btn-primary" href="/show?gene={{$a.Key.Gene}}&sample={{$a.Key.Sample}}&id={{$a.Id}}&db={{$.curdb}}"><i class="fa fa-search"></i></a></td>
+      <td>{{ $a.Id }}</td>
+      <td>{{ $a.Key.Gene }}</td>
+      <td style="white-space: nowrap">{{ $a.Key.Sample }}</td>
+      <td class="text-right">{{ $a.ReadCount }}</td>
+      <td class="text-right">{{ $a.Norm | round }}</td>
+      <td class="text-right">{{ pctSearch $a $.SearchTotals }}</td>
+      <td class="text-right">{{ pctEditStop $a $.EditStopTotals }}</td>
+      <td class="text-right">{{ $a.EditStop }}</td>
+      <td class="text-right">{{ $a.JuncEnd }}</td>
+      <td class="text-right">{{ $a.JuncLen }}</td>
+      <td class="text-center">
+        {{ if gt $a.AltEditing 0 }}
+        <span class="label label-warning"><i class="fa fa-magic fa-sm"></i> A{{ $a.AltEditing }}</span>
+        {{ end }}
+        {{ if $a.HasMutation }}
+        <span class="label label-danger"><i class="fa fa-warning fa-sm"></i> Mutation</span>
+        {{ end }}
+      </td>
+      <td class="dt" style="font-size: 16px">
+        {{ juncseq $a.JuncSeq }}
+      </td>
+    </tr>
+{{ else }}
+    <tr>
+      <td colspan="14">No fragments found</td>
+    </tr>
+{{ end }}
+  </tbody>
+</table>
+</div>
+
+{{end}}

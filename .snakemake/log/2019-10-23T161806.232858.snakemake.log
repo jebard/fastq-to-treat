@@ -1,0 +1,2 @@
+SyntaxError in line 106 of /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile:
+Expecting rule keyword, comment or docstrings inside a rule definition. (Snakefile, line 106)

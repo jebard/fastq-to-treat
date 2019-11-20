@@ -1,0 +1,875 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 50
+Job counts:
+	count	jobs
+	1	all
+	32	collapse
+	32	filter
+	32	fq_2_fa
+	32	join
+	1	mkdir
+	32	trim
+	32	unzip
+	194
+
+[Tue Oct 22 16:14:04 2019]
+localrule mkdir:
+    output: mkdir.done
+    jobid: 193
+
+mkdir -p outputs/collapse outputs/trimmed outputs/fq_2_fa outputs/filter outputs/join outputs/unzip
+Touching output file mkdir.done.
+[Tue Oct 22 16:14:04 2019]
+Finished job 193.
+1 of 194 steps (0.52%) done
+
+[Tue Oct 22 16:14:04 2019]
+rule unzip:
+    input: ../C9K8C/fastq/A63B_REH1_mintet2_S23_L001_R1_001.fastq.gz, ../C9K8C/fastq/A63B_REH1_mintet2_S23_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/A6_3B_REH1_mintet2_R1.fq, outputs/unzip/A6_3B_REH1_mintet2_R2.fq
+    jobid: 166
+    wildcards: sample_id=A6_3B_REH1_mintet2
+
+gunzip -c ../C9K8C/fastq/A63B_REH1_mintet2_S23_L001_R1_001.fastq.gz > outputs/unzip/A6_3B_REH1_mintet2_R1.fq && gunzip -c ../C9K8C/fastq/A63B_REH1_mintet2_S23_L001_R2_001.fastq.gz > outputs/unzip/A6_3B_REH1_mintet2_R2.fq
+Submitted job 166 with external jobid 'Submitted batch job 452151 on cluster faculty'.
+
+[Tue Oct 22 16:14:04 2019]
+rule unzip:
+    input: ../C9K8C/fastq/A63B_MRB7260_mintet1_S1_L001_R1_001.fastq.gz, ../C9K8C/fastq/A63B_MRB7260_mintet1_S1_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/A6_3B_MRB7260_mintet1_R1.fq, outputs/unzip/A6_3B_MRB7260_mintet1_R2.fq
+    jobid: 161
+    wildcards: sample_id=A6_3B_MRB7260_mintet1
+
+gunzip -c ../C9K8C/fastq/A63B_MRB7260_mintet1_S1_L001_R1_001.fastq.gz > outputs/unzip/A6_3B_MRB7260_mintet1_R1.fq && gunzip -c ../C9K8C/fastq/A63B_MRB7260_mintet1_S1_L001_R2_001.fastq.gz > outputs/unzip/A6_3B_MRB7260_mintet1_R2.fq
+Submitted job 161 with external jobid 'Submitted batch job 452152 on cluster faculty'.
+
+[Tue Oct 22 16:14:04 2019]
+rule unzip:
+    input: ../C9K8C/fastq/ND8_3B_MRB7260_mintet2_S15_L001_R1_001.fastq.gz, ../C9K8C/fastq/ND8_3B_MRB7260_mintet2_S15_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/ND8_3B_MRB7260_mintet2_R1.fq, outputs/unzip/ND8_3B_MRB7260_mintet2_R2.fq
+    jobid: 182
+    wildcards: sample_id=ND8_3B_MRB7260_mintet2
+
+gunzip -c ../C9K8C/fastq/ND8_3B_MRB7260_mintet2_S15_L001_R1_001.fastq.gz > outputs/unzip/ND8_3B_MRB7260_mintet2_R1.fq && gunzip -c ../C9K8C/fastq/ND8_3B_MRB7260_mintet2_S15_L001_R2_001.fastq.gz > outputs/unzip/ND8_3B_MRB7260_mintet2_R2.fq
+Submitted job 182 with external jobid 'Submitted batch job 452153 on cluster faculty'.
+
+[Tue Oct 22 16:14:05 2019]
+rule unzip:
+    input: ../C9K8C/fastq/ND9_3B_MRB7260_plustet1_S18_L001_R1_001.fastq.gz, ../C9K8C/fastq/ND9_3B_MRB7260_plustet1_S18_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/ND9_3B_MRB7260_plustet1_R1.fq, outputs/unzip/ND9_3B_MRB7260_plustet1_R2.fq
+    jobid: 187
+    wildcards: sample_id=ND9_3B_MRB7260_plustet1
+
+gunzip -c ../C9K8C/fastq/ND9_3B_MRB7260_plustet1_S18_L001_R1_001.fastq.gz > outputs/unzip/ND9_3B_MRB7260_plustet1_R1.fq && gunzip -c ../C9K8C/fastq/ND9_3B_MRB7260_plustet1_S18_L001_R2_001.fastq.gz > outputs/unzip/ND9_3B_MRB7260_plustet1_R2.fq
+Submitted job 187 with external jobid 'Submitted batch job 452154 on cluster faculty'.
+
+[Tue Oct 22 16:14:05 2019]
+rule unzip:
+    input: ../C9K8C/fastq/CR3_REH1_plustet2_S32_L001_R1_001.fastq.gz, ../C9K8C/fastq/CR3_REH1_plustet2_S32_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/CR3_REH1_plustet2_R1.fq, outputs/unzip/CR3_REH1_plustet2_R2.fq
+    jobid: 176
+    wildcards: sample_id=CR3_REH1_plustet2
+
+gunzip -c ../C9K8C/fastq/CR3_REH1_plustet2_S32_L001_R1_001.fastq.gz > outputs/unzip/CR3_REH1_plustet2_R1.fq && gunzip -c ../C9K8C/fastq/CR3_REH1_plustet2_S32_L001_R2_001.fastq.gz > outputs/unzip/CR3_REH1_plustet2_R2.fq
+Submitted job 176 with external jobid 'Submitted batch job 452155 on cluster faculty'.
+
+[Tue Oct 22 16:14:05 2019]
+rule unzip:
+    input: ../C9K8C/fastq/CR4_3B_MRB7260_plustet1_S10_L001_R1_001.fastq.gz, ../C9K8C/fastq/CR4_3B_MRB7260_plustet1_S10_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/CR4_3B_MRB7260_plustet1_R1.fq, outputs/unzip/CR4_3B_MRB7260_plustet1_R2.fq
+    jobid: 179
+    wildcards: sample_id=CR4_3B_MRB7260_plustet1
+
+gunzip -c ../C9K8C/fastq/CR4_3B_MRB7260_plustet1_S10_L001_R1_001.fastq.gz > outputs/unzip/CR4_3B_MRB7260_plustet1_R1.fq && gunzip -c ../C9K8C/fastq/CR4_3B_MRB7260_plustet1_S10_L001_R2_001.fastq.gz > outputs/unzip/CR4_3B_MRB7260_plustet1_R2.fq
+Submitted job 179 with external jobid 'Submitted batch job 452156 on cluster faculty'.
+
+[Tue Oct 22 16:14:05 2019]
+rule unzip:
+    input: ../C9K8C/fastq/ND8_3B_MRB7260_plustet2_S16_L001_R1_001.fastq.gz, ../C9K8C/fastq/ND8_3B_MRB7260_plustet2_S16_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/ND8_3B_MRB7260_plustet2_R1.fq, outputs/unzip/ND8_3B_MRB7260_plustet2_R2.fq
+    jobid: 184
+    wildcards: sample_id=ND8_3B_MRB7260_plustet2
+
+gunzip -c ../C9K8C/fastq/ND8_3B_MRB7260_plustet2_S16_L001_R1_001.fastq.gz > outputs/unzip/ND8_3B_MRB7260_plustet2_R1.fq && gunzip -c ../C9K8C/fastq/ND8_3B_MRB7260_plustet2_S16_L001_R2_001.fastq.gz > outputs/unzip/ND8_3B_MRB7260_plustet2_R2.fq
+Submitted job 184 with external jobid 'Submitted batch job 452157 on cluster faculty'.
+
+[Tue Oct 22 16:14:05 2019]
+rule unzip:
+    input: ../C9K8C/fastq/COIII_3B_MRB7260_plustet1_S6_L001_R1_001.fastq.gz, ../C9K8C/fastq/COIII_3B_MRB7260_plustet1_S6_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/COIII_3B_MRB7260_plustet1_R1.fq, outputs/unzip/COIII_3B_MRB7260_plustet1_R2.fq
+    jobid: 171
+    wildcards: sample_id=COIII_3B_MRB7260_plustet1
+
+gunzip -c ../C9K8C/fastq/COIII_3B_MRB7260_plustet1_S6_L001_R1_001.fastq.gz > outputs/unzip/COIII_3B_MRB7260_plustet1_R1.fq && gunzip -c ../C9K8C/fastq/COIII_3B_MRB7260_plustet1_S6_L001_R2_001.fastq.gz > outputs/unzip/COIII_3B_MRB7260_plustet1_R2.fq
+Submitted job 171 with external jobid 'Submitted batch job 452158 on cluster faculty'.
+
+[Tue Oct 22 16:14:05 2019]
+rule unzip:
+    input: ../C9K8C/fastq/ND9_3B_MRB7260_mintet1_S17_L001_R1_001.fastq.gz, ../C9K8C/fastq/ND9_3B_MRB7260_mintet1_S17_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/ND9_3B_MRB7260_mintet1_R1.fq, outputs/unzip/ND9_3B_MRB7260_mintet1_R2.fq
+    jobid: 185
+    wildcards: sample_id=ND9_3B_MRB7260_mintet1
+
+gunzip -c ../C9K8C/fastq/ND9_3B_MRB7260_mintet1_S17_L001_R1_001.fastq.gz > outputs/unzip/ND9_3B_MRB7260_mintet1_R1.fq && gunzip -c ../C9K8C/fastq/ND9_3B_MRB7260_mintet1_S17_L001_R2_001.fastq.gz > outputs/unzip/ND9_3B_MRB7260_mintet1_R2.fq
+Submitted job 185 with external jobid 'Submitted batch job 452159 on cluster faculty'.
+
+[Tue Oct 22 16:14:06 2019]
+rule unzip:
+    input: ../C9K8C/fastq/CR3_REH1_mintet1_S29_L001_R1_001.fastq.gz, ../C9K8C/fastq/CR3_REH1_mintet1_S29_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/CR3_REH1_mintet1_R1.fq, outputs/unzip/CR3_REH1_mintet1_R2.fq
+    jobid: 173
+    wildcards: sample_id=CR3_REH1_mintet1
+
+gunzip -c ../C9K8C/fastq/CR3_REH1_mintet1_S29_L001_R1_001.fastq.gz > outputs/unzip/CR3_REH1_mintet1_R1.fq && gunzip -c ../C9K8C/fastq/CR3_REH1_mintet1_S29_L001_R2_001.fastq.gz > outputs/unzip/CR3_REH1_mintet1_R2.fq
+Submitted job 173 with external jobid 'Submitted batch job 452160 on cluster faculty'.
+
+[Tue Oct 22 16:14:06 2019]
+rule unzip:
+    input: ../C9K8C/fastq/A63B_REH1_plustet2_S24_L001_R1_001.fastq.gz, ../C9K8C/fastq/A63B_REH1_plustet2_S24_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/A6_3B_REH1_plustet2_R1.fq, outputs/unzip/A6_3B_REH1_plustet2_R2.fq
+    jobid: 168
+    wildcards: sample_id=A6_3B_REH1_plustet2
+
+gunzip -c ../C9K8C/fastq/A63B_REH1_plustet2_S24_L001_R1_001.fastq.gz > outputs/unzip/A6_3B_REH1_plustet2_R1.fq && gunzip -c ../C9K8C/fastq/A63B_REH1_plustet2_S24_L001_R2_001.fastq.gz > outputs/unzip/A6_3B_REH1_plustet2_R2.fq
+Submitted job 168 with external jobid 'Submitted batch job 452161 on cluster faculty'.
+
+[Tue Oct 22 16:14:06 2019]
+rule unzip:
+    input: ../C9K8C/fastq/CR3_REH1_plustet1_S30_L001_R1_001.fastq.gz, ../C9K8C/fastq/CR3_REH1_plustet1_S30_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/CR3_REH1_plustet1_R1.fq, outputs/unzip/CR3_REH1_plustet1_R2.fq
+    jobid: 175
+    wildcards: sample_id=CR3_REH1_plustet1
+
+gunzip -c ../C9K8C/fastq/CR3_REH1_plustet1_S30_L001_R1_001.fastq.gz > outputs/unzip/CR3_REH1_plustet1_R1.fq && gunzip -c ../C9K8C/fastq/CR3_REH1_plustet1_S30_L001_R2_001.fastq.gz > outputs/unzip/CR3_REH1_plustet1_R2.fq
+Submitted job 175 with external jobid 'Submitted batch job 452162 on cluster faculty'.
+
+[Tue Oct 22 16:14:06 2019]
+rule unzip:
+    input: ../C9K8C/fastq/ND8_3B_MRB7260_plustet1_S14_L001_R1_001.fastq.gz, ../C9K8C/fastq/ND8_3B_MRB7260_plustet1_S14_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/ND8_3B_MRB7260_plustet1_R1.fq, outputs/unzip/ND8_3B_MRB7260_plustet1_R2.fq
+    jobid: 183
+    wildcards: sample_id=ND8_3B_MRB7260_plustet1
+
+gunzip -c ../C9K8C/fastq/ND8_3B_MRB7260_plustet1_S14_L001_R1_001.fastq.gz > outputs/unzip/ND8_3B_MRB7260_plustet1_R1.fq && gunzip -c ../C9K8C/fastq/ND8_3B_MRB7260_plustet1_S14_L001_R2_001.fastq.gz > outputs/unzip/ND8_3B_MRB7260_plustet1_R2.fq
+Submitted job 183 with external jobid 'Submitted batch job 452163 on cluster faculty'.
+
+[Tue Oct 22 16:14:06 2019]
+rule unzip:
+    input: ../C9K8C/fastq/CR3_REH1_mintet2_S31_L001_R1_001.fastq.gz, ../C9K8C/fastq/CR3_REH1_mintet2_S31_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/CR3_REH1_mintet2_R1.fq, outputs/unzip/CR3_REH1_mintet2_R2.fq
+    jobid: 174
+    wildcards: sample_id=CR3_REH1_mintet2
+
+gunzip -c ../C9K8C/fastq/CR3_REH1_mintet2_S31_L001_R1_001.fastq.gz > outputs/unzip/CR3_REH1_mintet2_R1.fq && gunzip -c ../C9K8C/fastq/CR3_REH1_mintet2_S31_L001_R2_001.fastq.gz > outputs/unzip/CR3_REH1_mintet2_R2.fq
+Submitted job 174 with external jobid 'Submitted batch job 452164 on cluster faculty'.
+
+[Tue Oct 22 16:14:06 2019]
+rule unzip:
+    input: ../C9K8C/fastq/ND8_3B_MRB7260_mintet1_S13_L001_R1_001.fastq.gz, ../C9K8C/fastq/ND8_3B_MRB7260_mintet1_S13_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/ND8_3B_MRB7260_mintet1_R1.fq, outputs/unzip/ND8_3B_MRB7260_mintet1_R2.fq
+    jobid: 181
+    wildcards: sample_id=ND8_3B_MRB7260_mintet1
+
+gunzip -c ../C9K8C/fastq/ND8_3B_MRB7260_mintet1_S13_L001_R1_001.fastq.gz > outputs/unzip/ND8_3B_MRB7260_mintet1_R1.fq && gunzip -c ../C9K8C/fastq/ND8_3B_MRB7260_mintet1_S13_L001_R2_001.fastq.gz > outputs/unzip/ND8_3B_MRB7260_mintet1_R2.fq
+Submitted job 181 with external jobid 'Submitted batch job 452165 on cluster faculty'.
+
+[Tue Oct 22 16:14:06 2019]
+rule unzip:
+    input: ../C9K8C/fastq/CR4_3B_MRB7260_mintet2_S11_L001_R1_001.fastq.gz, ../C9K8C/fastq/CR4_3B_MRB7260_mintet2_S11_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/CR4_3B_MRB7260_mintet2_R1.fq, outputs/unzip/CR4_3B_MRB7260_mintet2_R2.fq
+    jobid: 178
+    wildcards: sample_id=CR4_3B_MRB7260_mintet2
+
+gunzip -c ../C9K8C/fastq/CR4_3B_MRB7260_mintet2_S11_L001_R1_001.fastq.gz > outputs/unzip/CR4_3B_MRB7260_mintet2_R1.fq && gunzip -c ../C9K8C/fastq/CR4_3B_MRB7260_mintet2_S11_L001_R2_001.fastq.gz > outputs/unzip/CR4_3B_MRB7260_mintet2_R2.fq
+Submitted job 178 with external jobid 'Submitted batch job 452166 on cluster faculty'.
+
+[Tue Oct 22 16:14:07 2019]
+rule unzip:
+    input: ../C9K8C/fastq/RPS12_REH1_plustet1_S26_L001_R1_001.fastq.gz, ../C9K8C/fastq/RPS12_REH1_plustet1_S26_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/RPS12_REH1_plustet1_R1.fq, outputs/unzip/RPS12_REH1_plustet1_R2.fq
+    jobid: 191
+    wildcards: sample_id=RPS12_REH1_plustet1
+
+gunzip -c ../C9K8C/fastq/RPS12_REH1_plustet1_S26_L001_R1_001.fastq.gz > outputs/unzip/RPS12_REH1_plustet1_R1.fq && gunzip -c ../C9K8C/fastq/RPS12_REH1_plustet1_S26_L001_R2_001.fastq.gz > outputs/unzip/RPS12_REH1_plustet1_R2.fq
+Submitted job 191 with external jobid 'Submitted batch job 452167 on cluster faculty'.
+
+[Tue Oct 22 16:14:07 2019]
+rule unzip:
+    input: ../C9K8C/fastq/COIII_3B_MRB7260_plustet2_S8_L001_R1_001.fastq.gz, ../C9K8C/fastq/COIII_3B_MRB7260_plustet2_S8_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/COIII_3B_MRB7260_plustet2_R1.fq, outputs/unzip/COIII_3B_MRB7260_plustet2_R2.fq
+    jobid: 172
+    wildcards: sample_id=COIII_3B_MRB7260_plustet2
+
+gunzip -c ../C9K8C/fastq/COIII_3B_MRB7260_plustet2_S8_L001_R1_001.fastq.gz > outputs/unzip/COIII_3B_MRB7260_plustet2_R1.fq && gunzip -c ../C9K8C/fastq/COIII_3B_MRB7260_plustet2_S8_L001_R2_001.fastq.gz > outputs/unzip/COIII_3B_MRB7260_plustet2_R2.fq
+Submitted job 172 with external jobid 'Submitted batch job 452168 on cluster faculty'.
+
+[Tue Oct 22 16:14:07 2019]
+rule unzip:
+    input: ../C9K8C/fastq/CR4_3B_MRB7260_plustet2_S12_L001_R1_001.fastq.gz, ../C9K8C/fastq/CR4_3B_MRB7260_plustet2_S12_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/CR4_3B_MRB7260_plustet2_R1.fq, outputs/unzip/CR4_3B_MRB7260_plustet2_R2.fq
+    jobid: 180
+    wildcards: sample_id=CR4_3B_MRB7260_plustet2
+
+gunzip -c ../C9K8C/fastq/CR4_3B_MRB7260_plustet2_S12_L001_R1_001.fastq.gz > outputs/unzip/CR4_3B_MRB7260_plustet2_R1.fq && gunzip -c ../C9K8C/fastq/CR4_3B_MRB7260_plustet2_S12_L001_R2_001.fastq.gz > outputs/unzip/CR4_3B_MRB7260_plustet2_R2.fq
+Submitted job 180 with external jobid 'Submitted batch job 452169 on cluster faculty'.
+
+[Tue Oct 22 16:14:07 2019]
+rule unzip:
+    input: ../C9K8C/fastq/A63B_REH1_plustet1_S22_L001_R1_001.fastq.gz, ../C9K8C/fastq/A63B_REH1_plustet1_S22_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/A6_3B_REH1_plustet1_R1.fq, outputs/unzip/A6_3B_REH1_plustet1_R2.fq
+    jobid: 167
+    wildcards: sample_id=A6_3B_REH1_plustet1
+
+gunzip -c ../C9K8C/fastq/A63B_REH1_plustet1_S22_L001_R1_001.fastq.gz > outputs/unzip/A6_3B_REH1_plustet1_R1.fq && gunzip -c ../C9K8C/fastq/A63B_REH1_plustet1_S22_L001_R2_001.fastq.gz > outputs/unzip/A6_3B_REH1_plustet1_R2.fq
+Submitted job 167 with external jobid 'Submitted batch job 452170 on cluster faculty'.
+
+[Tue Oct 22 16:14:07 2019]
+rule unzip:
+    input: ../C9K8C/fastq/A63B_MRB7260_mintet2_S3_L001_R1_001.fastq.gz, ../C9K8C/fastq/A63B_MRB7260_mintet2_S3_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/A6_3B_MRB7260_mintet2_R1.fq, outputs/unzip/A6_3B_MRB7260_mintet2_R2.fq
+    jobid: 162
+    wildcards: sample_id=A6_3B_MRB7260_mintet2
+
+gunzip -c ../C9K8C/fastq/A63B_MRB7260_mintet2_S3_L001_R1_001.fastq.gz > outputs/unzip/A6_3B_MRB7260_mintet2_R1.fq && gunzip -c ../C9K8C/fastq/A63B_MRB7260_mintet2_S3_L001_R2_001.fastq.gz > outputs/unzip/A6_3B_MRB7260_mintet2_R2.fq
+Submitted job 162 with external jobid 'Submitted batch job 452171 on cluster faculty'.
+
+[Tue Oct 22 16:14:07 2019]
+rule unzip:
+    input: ../C9K8C/fastq/A63B_REH1_mintet1_S21_L001_R1_001.fastq.gz, ../C9K8C/fastq/A63B_REH1_mintet1_S21_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/A6_3B_REH1_mintet1_R1.fq, outputs/unzip/A6_3B_REH1_mintet1_R2.fq
+    jobid: 165
+    wildcards: sample_id=A6_3B_REH1_mintet1
+
+gunzip -c ../C9K8C/fastq/A63B_REH1_mintet1_S21_L001_R1_001.fastq.gz > outputs/unzip/A6_3B_REH1_mintet1_R1.fq && gunzip -c ../C9K8C/fastq/A63B_REH1_mintet1_S21_L001_R2_001.fastq.gz > outputs/unzip/A6_3B_REH1_mintet1_R2.fq
+Submitted job 165 with external jobid 'Submitted batch job 452172 on cluster faculty'.
+
+[Tue Oct 22 16:14:08 2019]
+rule unzip:
+    input: ../C9K8C/fastq/ND9_3B_MRB7260_plustet2_S20_L001_R1_001.fastq.gz, ../C9K8C/fastq/ND9_3B_MRB7260_plustet2_S20_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/ND9_3B_MRB7260_plustet2_R1.fq, outputs/unzip/ND9_3B_MRB7260_plustet2_R2.fq
+    jobid: 188
+    wildcards: sample_id=ND9_3B_MRB7260_plustet2
+
+gunzip -c ../C9K8C/fastq/ND9_3B_MRB7260_plustet2_S20_L001_R1_001.fastq.gz > outputs/unzip/ND9_3B_MRB7260_plustet2_R1.fq && gunzip -c ../C9K8C/fastq/ND9_3B_MRB7260_plustet2_S20_L001_R2_001.fastq.gz > outputs/unzip/ND9_3B_MRB7260_plustet2_R2.fq
+Submitted job 188 with external jobid 'Submitted batch job 452173 on cluster faculty'.
+
+[Tue Oct 22 16:14:08 2019]
+rule unzip:
+    input: ../C9K8C/fastq/RPS12_REH1_plustet2_S28_L001_R1_001.fastq.gz, ../C9K8C/fastq/RPS12_REH1_plustet2_S28_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/RPS12_REH1_plustet2_R1.fq, outputs/unzip/RPS12_REH1_plustet2_R2.fq
+    jobid: 192
+    wildcards: sample_id=RPS12_REH1_plustet2
+
+gunzip -c ../C9K8C/fastq/RPS12_REH1_plustet2_S28_L001_R1_001.fastq.gz > outputs/unzip/RPS12_REH1_plustet2_R1.fq && gunzip -c ../C9K8C/fastq/RPS12_REH1_plustet2_S28_L001_R2_001.fastq.gz > outputs/unzip/RPS12_REH1_plustet2_R2.fq
+Submitted job 192 with external jobid 'Submitted batch job 452174 on cluster faculty'.
+
+[Tue Oct 22 16:14:08 2019]
+rule unzip:
+    input: ../C9K8C/fastq/ND9_3B_MRB7260_mintet2_S19_L001_R1_001.fastq.gz, ../C9K8C/fastq/ND9_3B_MRB7260_mintet2_S19_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/ND9_3B_MRB7260_mintet2_R1.fq, outputs/unzip/ND9_3B_MRB7260_mintet2_R2.fq
+    jobid: 186
+    wildcards: sample_id=ND9_3B_MRB7260_mintet2
+
+gunzip -c ../C9K8C/fastq/ND9_3B_MRB7260_mintet2_S19_L001_R1_001.fastq.gz > outputs/unzip/ND9_3B_MRB7260_mintet2_R1.fq && gunzip -c ../C9K8C/fastq/ND9_3B_MRB7260_mintet2_S19_L001_R2_001.fastq.gz > outputs/unzip/ND9_3B_MRB7260_mintet2_R2.fq
+Submitted job 186 with external jobid 'Submitted batch job 452175 on cluster faculty'.
+
+[Tue Oct 22 16:14:08 2019]
+rule unzip:
+    input: ../C9K8C/fastq/CR4_3B_MRB7260_mintet1_S9_L001_R1_001.fastq.gz, ../C9K8C/fastq/CR4_3B_MRB7260_mintet1_S9_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/CR4_3B_MRB7260_mintet1_R1.fq, outputs/unzip/CR4_3B_MRB7260_mintet1_R2.fq
+    jobid: 177
+    wildcards: sample_id=CR4_3B_MRB7260_mintet1
+
+gunzip -c ../C9K8C/fastq/CR4_3B_MRB7260_mintet1_S9_L001_R1_001.fastq.gz > outputs/unzip/CR4_3B_MRB7260_mintet1_R1.fq && gunzip -c ../C9K8C/fastq/CR4_3B_MRB7260_mintet1_S9_L001_R2_001.fastq.gz > outputs/unzip/CR4_3B_MRB7260_mintet1_R2.fq
+Submitted job 177 with external jobid 'Submitted batch job 452176 on cluster faculty'.
+
+[Tue Oct 22 16:14:08 2019]
+rule unzip:
+    input: ../C9K8C/fastq/COIII_3B_MRB7260_mintet2_S7_L001_R1_001.fastq.gz, ../C9K8C/fastq/COIII_3B_MRB7260_mintet2_S7_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/COIII_3B_MRB7260_mintet2_R1.fq, outputs/unzip/COIII_3B_MRB7260_mintet2_R2.fq
+    jobid: 170
+    wildcards: sample_id=COIII_3B_MRB7260_mintet2
+
+gunzip -c ../C9K8C/fastq/COIII_3B_MRB7260_mintet2_S7_L001_R1_001.fastq.gz > outputs/unzip/COIII_3B_MRB7260_mintet2_R1.fq && gunzip -c ../C9K8C/fastq/COIII_3B_MRB7260_mintet2_S7_L001_R2_001.fastq.gz > outputs/unzip/COIII_3B_MRB7260_mintet2_R2.fq
+Submitted job 170 with external jobid 'Submitted batch job 452177 on cluster faculty'.
+
+[Tue Oct 22 16:14:08 2019]
+rule unzip:
+    input: ../C9K8C/fastq/COIII_3B_MRB7260_mintet1_S5_L001_R1_001.fastq.gz, ../C9K8C/fastq/COIII_3B_MRB7260_mintet1_S5_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/COIII_3B_MRB7260_mintet1_R1.fq, outputs/unzip/COIII_3B_MRB7260_mintet1_R2.fq
+    jobid: 169
+    wildcards: sample_id=COIII_3B_MRB7260_mintet1
+
+gunzip -c ../C9K8C/fastq/COIII_3B_MRB7260_mintet1_S5_L001_R1_001.fastq.gz > outputs/unzip/COIII_3B_MRB7260_mintet1_R1.fq && gunzip -c ../C9K8C/fastq/COIII_3B_MRB7260_mintet1_S5_L001_R2_001.fastq.gz > outputs/unzip/COIII_3B_MRB7260_mintet1_R2.fq
+Submitted job 169 with external jobid 'Submitted batch job 452178 on cluster faculty'.
+
+[Tue Oct 22 16:14:08 2019]
+rule unzip:
+    input: ../C9K8C/fastq/RPS12_REH1_mintet2_S27_L001_R1_001.fastq.gz, ../C9K8C/fastq/RPS12_REH1_mintet2_S27_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/RPS12_REH1_mintet2_R1.fq, outputs/unzip/RPS12_REH1_mintet2_R2.fq
+    jobid: 190
+    wildcards: sample_id=RPS12_REH1_mintet2
+
+gunzip -c ../C9K8C/fastq/RPS12_REH1_mintet2_S27_L001_R1_001.fastq.gz > outputs/unzip/RPS12_REH1_mintet2_R1.fq && gunzip -c ../C9K8C/fastq/RPS12_REH1_mintet2_S27_L001_R2_001.fastq.gz > outputs/unzip/RPS12_REH1_mintet2_R2.fq
+Submitted job 190 with external jobid 'Submitted batch job 452179 on cluster faculty'.
+
+[Tue Oct 22 16:14:09 2019]
+rule unzip:
+    input: ../C9K8C/fastq/RPS12_REH1_mintet1_S25_L001_R1_001.fastq.gz, ../C9K8C/fastq/RPS12_REH1_mintet1_S25_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/RPS12_REH1_mintet1_R1.fq, outputs/unzip/RPS12_REH1_mintet1_R2.fq
+    jobid: 189
+    wildcards: sample_id=RPS12_REH1_mintet1
+
+gunzip -c ../C9K8C/fastq/RPS12_REH1_mintet1_S25_L001_R1_001.fastq.gz > outputs/unzip/RPS12_REH1_mintet1_R1.fq && gunzip -c ../C9K8C/fastq/RPS12_REH1_mintet1_S25_L001_R2_001.fastq.gz > outputs/unzip/RPS12_REH1_mintet1_R2.fq
+Submitted job 189 with external jobid 'Submitted batch job 452180 on cluster faculty'.
+
+[Tue Oct 22 16:14:09 2019]
+rule unzip:
+    input: ../C9K8C/fastq/A63B_MRB7260_plustet2_S4_L001_R1_001.fastq.gz, ../C9K8C/fastq/A63B_MRB7260_plustet2_S4_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/A6_3B_MRB7260_plustet2_R1.fq, outputs/unzip/A6_3B_MRB7260_plustet2_R2.fq
+    jobid: 164
+    wildcards: sample_id=A6_3B_MRB7260_plustet2
+
+gunzip -c ../C9K8C/fastq/A63B_MRB7260_plustet2_S4_L001_R1_001.fastq.gz > outputs/unzip/A6_3B_MRB7260_plustet2_R1.fq && gunzip -c ../C9K8C/fastq/A63B_MRB7260_plustet2_S4_L001_R2_001.fastq.gz > outputs/unzip/A6_3B_MRB7260_plustet2_R2.fq
+Submitted job 164 with external jobid 'Submitted batch job 452181 on cluster faculty'.
+
+[Tue Oct 22 16:14:09 2019]
+rule unzip:
+    input: ../C9K8C/fastq/A63B_MRB7260_plustet1_S2_L001_R1_001.fastq.gz, ../C9K8C/fastq/A63B_MRB7260_plustet1_S2_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/A6_3B_MRB7260_plustet1_R1.fq, outputs/unzip/A6_3B_MRB7260_plustet1_R2.fq
+    jobid: 163
+    wildcards: sample_id=A6_3B_MRB7260_plustet1
+
+gunzip -c ../C9K8C/fastq/A63B_MRB7260_plustet1_S2_L001_R1_001.fastq.gz > outputs/unzip/A6_3B_MRB7260_plustet1_R1.fq && gunzip -c ../C9K8C/fastq/A63B_MRB7260_plustet1_S2_L001_R2_001.fastq.gz > outputs/unzip/A6_3B_MRB7260_plustet1_R2.fq
+Submitted job 163 with external jobid 'Submitted batch job 452182 on cluster faculty'.
+[Tue Oct 22 16:14:40 2019]
+Finished job 166.
+2 of 194 steps (1%) done
+
+[Tue Oct 22 16:14:40 2019]
+rule join:
+    input: outputs/unzip/A6_3B_REH1_mintet2_R1.fq, outputs/unzip/A6_3B_REH1_mintet2_R2.fq
+    output: outputs/join/A6_3B_REH1_mintet2.assembled.fastq
+    jobid: 134
+    wildcards: sample_id=A6_3B_REH1_mintet2
+
+tools/pear/0.9.6/pear -f outputs/unzip/A6_3B_REH1_mintet2_R1.fq -r outputs/unzip/A6_3B_REH1_mintet2_R2.fq -o outputs/join/A6_3B_REH1_mintet2
+[Tue Oct 22 16:14:40 2019]
+Finished job 182.
+3 of 194 steps (2%) done
+[Tue Oct 22 16:14:40 2019]
+Finished job 176.
+4 of 194 steps (2%) done
+[Tue Oct 22 16:14:40 2019]
+Finished job 179.
+5 of 194 steps (3%) done
+Submitted job 134 with external jobid 'Submitted batch job 452183 on cluster faculty'.
+
+[Tue Oct 22 16:14:40 2019]
+rule join:
+    input: outputs/unzip/CR4_3B_MRB7260_plustet1_R1.fq, outputs/unzip/CR4_3B_MRB7260_plustet1_R2.fq
+    output: outputs/join/CR4_3B_MRB7260_plustet1.assembled.fastq
+    jobid: 147
+    wildcards: sample_id=CR4_3B_MRB7260_plustet1
+
+tools/pear/0.9.6/pear -f outputs/unzip/CR4_3B_MRB7260_plustet1_R1.fq -r outputs/unzip/CR4_3B_MRB7260_plustet1_R2.fq -o outputs/join/CR4_3B_MRB7260_plustet1
+Submitted job 147 with external jobid 'Submitted batch job 452184 on cluster faculty'.
+
+[Tue Oct 22 16:14:40 2019]
+rule join:
+    input: outputs/unzip/CR3_REH1_plustet2_R1.fq, outputs/unzip/CR3_REH1_plustet2_R2.fq
+    output: outputs/join/CR3_REH1_plustet2.assembled.fastq
+    jobid: 144
+    wildcards: sample_id=CR3_REH1_plustet2
+
+tools/pear/0.9.6/pear -f outputs/unzip/CR3_REH1_plustet2_R1.fq -r outputs/unzip/CR3_REH1_plustet2_R2.fq -o outputs/join/CR3_REH1_plustet2
+Submitted job 144 with external jobid 'Submitted batch job 452185 on cluster faculty'.
+
+[Tue Oct 22 16:14:41 2019]
+rule join:
+    input: outputs/unzip/ND8_3B_MRB7260_mintet2_R1.fq, outputs/unzip/ND8_3B_MRB7260_mintet2_R2.fq
+    output: outputs/join/ND8_3B_MRB7260_mintet2.assembled.fastq
+    jobid: 150
+    wildcards: sample_id=ND8_3B_MRB7260_mintet2
+
+tools/pear/0.9.6/pear -f outputs/unzip/ND8_3B_MRB7260_mintet2_R1.fq -r outputs/unzip/ND8_3B_MRB7260_mintet2_R2.fq -o outputs/join/ND8_3B_MRB7260_mintet2
+Submitted job 150 with external jobid 'Submitted batch job 452186 on cluster faculty'.
+[Tue Oct 22 16:14:53 2019]
+Finished job 161.
+6 of 194 steps (3%) done
+
+[Tue Oct 22 16:14:53 2019]
+rule join:
+    input: outputs/unzip/A6_3B_MRB7260_mintet1_R1.fq, outputs/unzip/A6_3B_MRB7260_mintet1_R2.fq
+    output: outputs/join/A6_3B_MRB7260_mintet1.assembled.fastq
+    jobid: 129
+    wildcards: sample_id=A6_3B_MRB7260_mintet1
+
+tools/pear/0.9.6/pear -f outputs/unzip/A6_3B_MRB7260_mintet1_R1.fq -r outputs/unzip/A6_3B_MRB7260_mintet1_R2.fq -o outputs/join/A6_3B_MRB7260_mintet1
+[Tue Oct 22 16:14:53 2019]
+Finished job 187.
+7 of 194 steps (4%) done
+[Tue Oct 22 16:14:53 2019]
+Finished job 184.
+8 of 194 steps (4%) done
+Submitted job 129 with external jobid 'Submitted batch job 452187 on cluster faculty'.
+
+[Tue Oct 22 16:14:53 2019]
+rule join:
+    input: outputs/unzip/ND8_3B_MRB7260_plustet2_R1.fq, outputs/unzip/ND8_3B_MRB7260_plustet2_R2.fq
+    output: outputs/join/ND8_3B_MRB7260_plustet2.assembled.fastq
+    jobid: 152
+    wildcards: sample_id=ND8_3B_MRB7260_plustet2
+
+tools/pear/0.9.6/pear -f outputs/unzip/ND8_3B_MRB7260_plustet2_R1.fq -r outputs/unzip/ND8_3B_MRB7260_plustet2_R2.fq -o outputs/join/ND8_3B_MRB7260_plustet2
+Submitted job 152 with external jobid 'Submitted batch job 452188 on cluster faculty'.
+
+[Tue Oct 22 16:14:54 2019]
+rule join:
+    input: outputs/unzip/ND9_3B_MRB7260_plustet1_R1.fq, outputs/unzip/ND9_3B_MRB7260_plustet1_R2.fq
+    output: outputs/join/ND9_3B_MRB7260_plustet1.assembled.fastq
+    jobid: 155
+    wildcards: sample_id=ND9_3B_MRB7260_plustet1
+
+tools/pear/0.9.6/pear -f outputs/unzip/ND9_3B_MRB7260_plustet1_R1.fq -r outputs/unzip/ND9_3B_MRB7260_plustet1_R2.fq -o outputs/join/ND9_3B_MRB7260_plustet1
+Submitted job 155 with external jobid 'Submitted batch job 452189 on cluster faculty'.
+[Tue Oct 22 16:14:54 2019]
+Finished job 181.
+9 of 194 steps (5%) done
+
+[Tue Oct 22 16:14:54 2019]
+rule join:
+    input: outputs/unzip/ND8_3B_MRB7260_mintet1_R1.fq, outputs/unzip/ND8_3B_MRB7260_mintet1_R2.fq
+    output: outputs/join/ND8_3B_MRB7260_mintet1.assembled.fastq
+    jobid: 149
+    wildcards: sample_id=ND8_3B_MRB7260_mintet1
+
+tools/pear/0.9.6/pear -f outputs/unzip/ND8_3B_MRB7260_mintet1_R1.fq -r outputs/unzip/ND8_3B_MRB7260_mintet1_R2.fq -o outputs/join/ND8_3B_MRB7260_mintet1
+Submitted job 149 with external jobid 'Submitted batch job 452190 on cluster faculty'.
+[Tue Oct 22 16:14:55 2019]
+Finished job 188.
+10 of 194 steps (5%) done
+
+[Tue Oct 22 16:14:55 2019]
+rule join:
+    input: outputs/unzip/ND9_3B_MRB7260_plustet2_R1.fq, outputs/unzip/ND9_3B_MRB7260_plustet2_R2.fq
+    output: outputs/join/ND9_3B_MRB7260_plustet2.assembled.fastq
+    jobid: 156
+    wildcards: sample_id=ND9_3B_MRB7260_plustet2
+
+tools/pear/0.9.6/pear -f outputs/unzip/ND9_3B_MRB7260_plustet2_R1.fq -r outputs/unzip/ND9_3B_MRB7260_plustet2_R2.fq -o outputs/join/ND9_3B_MRB7260_plustet2
+Submitted job 156 with external jobid 'Submitted batch job 452191 on cluster faculty'.
+[Tue Oct 22 16:15:06 2019]
+Finished job 171.
+11 of 194 steps (6%) done
+
+[Tue Oct 22 16:15:06 2019]
+rule join:
+    input: outputs/unzip/COIII_3B_MRB7260_plustet1_R1.fq, outputs/unzip/COIII_3B_MRB7260_plustet1_R2.fq
+    output: outputs/join/COIII_3B_MRB7260_plustet1.assembled.fastq
+    jobid: 139
+    wildcards: sample_id=COIII_3B_MRB7260_plustet1
+
+tools/pear/0.9.6/pear -f outputs/unzip/COIII_3B_MRB7260_plustet1_R1.fq -r outputs/unzip/COIII_3B_MRB7260_plustet1_R2.fq -o outputs/join/COIII_3B_MRB7260_plustet1
+Submitted job 139 with external jobid 'Submitted batch job 452192 on cluster faculty'.
+[Tue Oct 22 16:15:07 2019]
+Finished job 185.
+12 of 194 steps (6%) done
+
+[Tue Oct 22 16:15:07 2019]
+rule join:
+    input: outputs/unzip/ND9_3B_MRB7260_mintet1_R1.fq, outputs/unzip/ND9_3B_MRB7260_mintet1_R2.fq
+    output: outputs/join/ND9_3B_MRB7260_mintet1.assembled.fastq
+    jobid: 153
+    wildcards: sample_id=ND9_3B_MRB7260_mintet1
+
+tools/pear/0.9.6/pear -f outputs/unzip/ND9_3B_MRB7260_mintet1_R1.fq -r outputs/unzip/ND9_3B_MRB7260_mintet1_R2.fq -o outputs/join/ND9_3B_MRB7260_mintet1
+[Tue Oct 22 16:15:07 2019]
+Finished job 173.
+13 of 194 steps (7%) done
+[Tue Oct 22 16:15:08 2019]
+Finished job 168.
+14 of 194 steps (7%) done
+[Tue Oct 22 16:15:08 2019]
+Finished job 175.
+15 of 194 steps (8%) done
+Submitted job 153 with external jobid 'Submitted batch job 452193 on cluster faculty'.
+[Tue Oct 22 16:15:08 2019]
+Finished job 183.
+16 of 194 steps (8%) done
+
+[Tue Oct 22 16:15:08 2019]
+rule join:
+    input: outputs/unzip/ND8_3B_MRB7260_plustet1_R1.fq, outputs/unzip/ND8_3B_MRB7260_plustet1_R2.fq
+    output: outputs/join/ND8_3B_MRB7260_plustet1.assembled.fastq
+    jobid: 151
+    wildcards: sample_id=ND8_3B_MRB7260_plustet1
+
+tools/pear/0.9.6/pear -f outputs/unzip/ND8_3B_MRB7260_plustet1_R1.fq -r outputs/unzip/ND8_3B_MRB7260_plustet1_R2.fq -o outputs/join/ND8_3B_MRB7260_plustet1
+[Tue Oct 22 16:15:08 2019]
+Finished job 174.
+17 of 194 steps (9%) done
+[Tue Oct 22 16:15:08 2019]
+Finished job 178.
+18 of 194 steps (9%) done
+Submitted job 151 with external jobid 'Submitted batch job 452194 on cluster faculty'.
+
+[Tue Oct 22 16:15:08 2019]
+rule join:
+    input: outputs/unzip/CR3_REH1_plustet1_R1.fq, outputs/unzip/CR3_REH1_plustet1_R2.fq
+    output: outputs/join/CR3_REH1_plustet1.assembled.fastq
+    jobid: 143
+    wildcards: sample_id=CR3_REH1_plustet1
+
+tools/pear/0.9.6/pear -f outputs/unzip/CR3_REH1_plustet1_R1.fq -r outputs/unzip/CR3_REH1_plustet1_R2.fq -o outputs/join/CR3_REH1_plustet1
+[Tue Oct 22 16:15:08 2019]
+Finished job 191.
+19 of 194 steps (10%) done
+[Tue Oct 22 16:15:08 2019]
+Finished job 172.
+20 of 194 steps (10%) done
+Submitted job 143 with external jobid 'Submitted batch job 452195 on cluster faculty'.
+
+[Tue Oct 22 16:15:08 2019]
+rule join:
+    input: outputs/unzip/A6_3B_REH1_plustet2_R1.fq, outputs/unzip/A6_3B_REH1_plustet2_R2.fq
+    output: outputs/join/A6_3B_REH1_plustet2.assembled.fastq
+    jobid: 136
+    wildcards: sample_id=A6_3B_REH1_plustet2
+
+tools/pear/0.9.6/pear -f outputs/unzip/A6_3B_REH1_plustet2_R1.fq -r outputs/unzip/A6_3B_REH1_plustet2_R2.fq -o outputs/join/A6_3B_REH1_plustet2
+[Tue Oct 22 16:15:08 2019]
+Finished job 180.
+21 of 194 steps (11%) done
+Submitted job 136 with external jobid 'Submitted batch job 452196 on cluster faculty'.
+
+[Tue Oct 22 16:15:08 2019]
+rule join:
+    input: outputs/unzip/CR3_REH1_mintet1_R1.fq, outputs/unzip/CR3_REH1_mintet1_R2.fq
+    output: outputs/join/CR3_REH1_mintet1.assembled.fastq
+    jobid: 141
+    wildcards: sample_id=CR3_REH1_mintet1
+
+tools/pear/0.9.6/pear -f outputs/unzip/CR3_REH1_mintet1_R1.fq -r outputs/unzip/CR3_REH1_mintet1_R2.fq -o outputs/join/CR3_REH1_mintet1
+Submitted job 141 with external jobid 'Submitted batch job 452197 on cluster faculty'.
+
+[Tue Oct 22 16:15:08 2019]
+rule join:
+    input: outputs/unzip/CR3_REH1_mintet2_R1.fq, outputs/unzip/CR3_REH1_mintet2_R2.fq
+    output: outputs/join/CR3_REH1_mintet2.assembled.fastq
+    jobid: 142
+    wildcards: sample_id=CR3_REH1_mintet2
+
+tools/pear/0.9.6/pear -f outputs/unzip/CR3_REH1_mintet2_R1.fq -r outputs/unzip/CR3_REH1_mintet2_R2.fq -o outputs/join/CR3_REH1_mintet2
+Submitted job 142 with external jobid 'Submitted batch job 452198 on cluster faculty'.
+
+[Tue Oct 22 16:15:08 2019]
+rule join:
+    input: outputs/unzip/RPS12_REH1_plustet1_R1.fq, outputs/unzip/RPS12_REH1_plustet1_R2.fq
+    output: outputs/join/RPS12_REH1_plustet1.assembled.fastq
+    jobid: 159
+    wildcards: sample_id=RPS12_REH1_plustet1
+
+tools/pear/0.9.6/pear -f outputs/unzip/RPS12_REH1_plustet1_R1.fq -r outputs/unzip/RPS12_REH1_plustet1_R2.fq -o outputs/join/RPS12_REH1_plustet1
+[Tue Oct 22 16:15:08 2019]
+Finished job 167.
+22 of 194 steps (11%) done
+[Tue Oct 22 16:15:09 2019]
+Finished job 162.
+23 of 194 steps (12%) done
+Submitted job 159 with external jobid 'Submitted batch job 452199 on cluster faculty'.
+
+[Tue Oct 22 16:15:09 2019]
+rule join:
+    input: outputs/unzip/COIII_3B_MRB7260_plustet2_R1.fq, outputs/unzip/COIII_3B_MRB7260_plustet2_R2.fq
+    output: outputs/join/COIII_3B_MRB7260_plustet2.assembled.fastq
+    jobid: 140
+    wildcards: sample_id=COIII_3B_MRB7260_plustet2
+
+tools/pear/0.9.6/pear -f outputs/unzip/COIII_3B_MRB7260_plustet2_R1.fq -r outputs/unzip/COIII_3B_MRB7260_plustet2_R2.fq -o outputs/join/COIII_3B_MRB7260_plustet2
+[Tue Oct 22 16:15:09 2019]
+Finished job 165.
+24 of 194 steps (12%) done
+[Tue Oct 22 16:15:09 2019]
+Finished job 192.
+25 of 194 steps (13%) done
+Submitted job 140 with external jobid 'Submitted batch job 452200 on cluster faculty'.
+
+[Tue Oct 22 16:15:09 2019]
+rule join:
+    input: outputs/unzip/CR4_3B_MRB7260_plustet2_R1.fq, outputs/unzip/CR4_3B_MRB7260_plustet2_R2.fq
+    output: outputs/join/CR4_3B_MRB7260_plustet2.assembled.fastq
+    jobid: 148
+    wildcards: sample_id=CR4_3B_MRB7260_plustet2
+
+tools/pear/0.9.6/pear -f outputs/unzip/CR4_3B_MRB7260_plustet2_R1.fq -r outputs/unzip/CR4_3B_MRB7260_plustet2_R2.fq -o outputs/join/CR4_3B_MRB7260_plustet2
+[Tue Oct 22 16:15:09 2019]
+Finished job 177.
+26 of 194 steps (13%) done
+Submitted job 148 with external jobid 'Submitted batch job 452201 on cluster faculty'.
+
+[Tue Oct 22 16:15:09 2019]
+rule join:
+    input: outputs/unzip/CR4_3B_MRB7260_mintet2_R1.fq, outputs/unzip/CR4_3B_MRB7260_mintet2_R2.fq
+    output: outputs/join/CR4_3B_MRB7260_mintet2.assembled.fastq
+    jobid: 146
+    wildcards: sample_id=CR4_3B_MRB7260_mintet2
+
+tools/pear/0.9.6/pear -f outputs/unzip/CR4_3B_MRB7260_mintet2_R1.fq -r outputs/unzip/CR4_3B_MRB7260_mintet2_R2.fq -o outputs/join/CR4_3B_MRB7260_mintet2
+Submitted job 146 with external jobid 'Submitted batch job 452202 on cluster faculty'.
+
+[Tue Oct 22 16:15:09 2019]
+rule join:
+    input: outputs/unzip/CR4_3B_MRB7260_mintet1_R1.fq, outputs/unzip/CR4_3B_MRB7260_mintet1_R2.fq
+    output: outputs/join/CR4_3B_MRB7260_mintet1.assembled.fastq
+    jobid: 145
+    wildcards: sample_id=CR4_3B_MRB7260_mintet1
+
+tools/pear/0.9.6/pear -f outputs/unzip/CR4_3B_MRB7260_mintet1_R1.fq -r outputs/unzip/CR4_3B_MRB7260_mintet1_R2.fq -o outputs/join/CR4_3B_MRB7260_mintet1
+Submitted job 145 with external jobid 'Submitted batch job 452203 on cluster faculty'.
+
+[Tue Oct 22 16:15:09 2019]
+rule join:
+    input: outputs/unzip/RPS12_REH1_plustet2_R1.fq, outputs/unzip/RPS12_REH1_plustet2_R2.fq
+    output: outputs/join/RPS12_REH1_plustet2.assembled.fastq
+    jobid: 160
+    wildcards: sample_id=RPS12_REH1_plustet2
+
+tools/pear/0.9.6/pear -f outputs/unzip/RPS12_REH1_plustet2_R1.fq -r outputs/unzip/RPS12_REH1_plustet2_R2.fq -o outputs/join/RPS12_REH1_plustet2
+Submitted job 160 with external jobid 'Submitted batch job 452204 on cluster faculty'.
+
+[Tue Oct 22 16:15:09 2019]
+rule join:
+    input: outputs/unzip/A6_3B_REH1_mintet1_R1.fq, outputs/unzip/A6_3B_REH1_mintet1_R2.fq
+    output: outputs/join/A6_3B_REH1_mintet1.assembled.fastq
+    jobid: 133
+    wildcards: sample_id=A6_3B_REH1_mintet1
+
+tools/pear/0.9.6/pear -f outputs/unzip/A6_3B_REH1_mintet1_R1.fq -r outputs/unzip/A6_3B_REH1_mintet1_R2.fq -o outputs/join/A6_3B_REH1_mintet1
+Submitted job 133 with external jobid 'Submitted batch job 452205 on cluster faculty'.
+
+[Tue Oct 22 16:15:09 2019]
+rule join:
+    input: outputs/unzip/A6_3B_MRB7260_mintet2_R1.fq, outputs/unzip/A6_3B_MRB7260_mintet2_R2.fq
+    output: outputs/join/A6_3B_MRB7260_mintet2.assembled.fastq
+    jobid: 130
+    wildcards: sample_id=A6_3B_MRB7260_mintet2
+
+tools/pear/0.9.6/pear -f outputs/unzip/A6_3B_MRB7260_mintet2_R1.fq -r outputs/unzip/A6_3B_MRB7260_mintet2_R2.fq -o outputs/join/A6_3B_MRB7260_mintet2
+[Tue Oct 22 16:15:10 2019]
+Finished job 163.
+27 of 194 steps (14%) done
+Submitted job 130 with external jobid 'Submitted batch job 452206 on cluster faculty'.
+
+[Tue Oct 22 16:15:10 2019]
+rule join:
+    input: outputs/unzip/A6_3B_REH1_plustet1_R1.fq, outputs/unzip/A6_3B_REH1_plustet1_R2.fq
+    output: outputs/join/A6_3B_REH1_plustet1.assembled.fastq
+    jobid: 135
+    wildcards: sample_id=A6_3B_REH1_plustet1
+
+tools/pear/0.9.6/pear -f outputs/unzip/A6_3B_REH1_plustet1_R1.fq -r outputs/unzip/A6_3B_REH1_plustet1_R2.fq -o outputs/join/A6_3B_REH1_plustet1
+Submitted job 135 with external jobid 'Submitted batch job 452207 on cluster faculty'.
+
+[Tue Oct 22 16:15:10 2019]
+rule join:
+    input: outputs/unzip/A6_3B_MRB7260_plustet1_R1.fq, outputs/unzip/A6_3B_MRB7260_plustet1_R2.fq
+    output: outputs/join/A6_3B_MRB7260_plustet1.assembled.fastq
+    jobid: 131
+    wildcards: sample_id=A6_3B_MRB7260_plustet1
+
+tools/pear/0.9.6/pear -f outputs/unzip/A6_3B_MRB7260_plustet1_R1.fq -r outputs/unzip/A6_3B_MRB7260_plustet1_R2.fq -o outputs/join/A6_3B_MRB7260_plustet1
+Submitted job 131 with external jobid 'Submitted batch job 452208 on cluster faculty'.
+[Tue Oct 22 16:15:22 2019]
+Finished job 186.
+28 of 194 steps (14%) done
+
+[Tue Oct 22 16:15:22 2019]
+rule join:
+    input: outputs/unzip/ND9_3B_MRB7260_mintet2_R1.fq, outputs/unzip/ND9_3B_MRB7260_mintet2_R2.fq
+    output: outputs/join/ND9_3B_MRB7260_mintet2.assembled.fastq
+    jobid: 154
+    wildcards: sample_id=ND9_3B_MRB7260_mintet2
+
+tools/pear/0.9.6/pear -f outputs/unzip/ND9_3B_MRB7260_mintet2_R1.fq -r outputs/unzip/ND9_3B_MRB7260_mintet2_R2.fq -o outputs/join/ND9_3B_MRB7260_mintet2
+[Tue Oct 22 16:15:22 2019]
+Finished job 170.
+29 of 194 steps (15%) done
+[Tue Oct 22 16:15:22 2019]
+Finished job 169.
+30 of 194 steps (15%) done
+[Tue Oct 22 16:15:22 2019]
+Finished job 190.
+31 of 194 steps (16%) done
+Submitted job 154 with external jobid 'Submitted batch job 452209 on cluster faculty'.
+[Tue Oct 22 16:15:22 2019]
+Finished job 164.
+32 of 194 steps (16%) done
+
+[Tue Oct 22 16:15:22 2019]
+rule join:
+    input: outputs/unzip/A6_3B_MRB7260_plustet2_R1.fq, outputs/unzip/A6_3B_MRB7260_plustet2_R2.fq
+    output: outputs/join/A6_3B_MRB7260_plustet2.assembled.fastq
+    jobid: 132
+    wildcards: sample_id=A6_3B_MRB7260_plustet2
+
+tools/pear/0.9.6/pear -f outputs/unzip/A6_3B_MRB7260_plustet2_R1.fq -r outputs/unzip/A6_3B_MRB7260_plustet2_R2.fq -o outputs/join/A6_3B_MRB7260_plustet2
+Submitted job 132 with external jobid 'Submitted batch job 452210 on cluster faculty'.
+
+[Tue Oct 22 16:15:22 2019]
+rule join:
+    input: outputs/unzip/COIII_3B_MRB7260_mintet1_R1.fq, outputs/unzip/COIII_3B_MRB7260_mintet1_R2.fq
+    output: outputs/join/COIII_3B_MRB7260_mintet1.assembled.fastq
+    jobid: 137
+    wildcards: sample_id=COIII_3B_MRB7260_mintet1
+
+tools/pear/0.9.6/pear -f outputs/unzip/COIII_3B_MRB7260_mintet1_R1.fq -r outputs/unzip/COIII_3B_MRB7260_mintet1_R2.fq -o outputs/join/COIII_3B_MRB7260_mintet1
+Submitted job 137 with external jobid 'Submitted batch job 452211 on cluster faculty'.
+
+[Tue Oct 22 16:15:22 2019]
+rule join:
+    input: outputs/unzip/RPS12_REH1_mintet2_R1.fq, outputs/unzip/RPS12_REH1_mintet2_R2.fq
+    output: outputs/join/RPS12_REH1_mintet2.assembled.fastq
+    jobid: 158
+    wildcards: sample_id=RPS12_REH1_mintet2
+
+tools/pear/0.9.6/pear -f outputs/unzip/RPS12_REH1_mintet2_R1.fq -r outputs/unzip/RPS12_REH1_mintet2_R2.fq -o outputs/join/RPS12_REH1_mintet2
+Submitted job 158 with external jobid 'Submitted batch job 452212 on cluster faculty'.
+
+[Tue Oct 22 16:15:22 2019]
+rule join:
+    input: outputs/unzip/COIII_3B_MRB7260_mintet2_R1.fq, outputs/unzip/COIII_3B_MRB7260_mintet2_R2.fq
+    output: outputs/join/COIII_3B_MRB7260_mintet2.assembled.fastq
+    jobid: 138
+    wildcards: sample_id=COIII_3B_MRB7260_mintet2
+
+tools/pear/0.9.6/pear -f outputs/unzip/COIII_3B_MRB7260_mintet2_R1.fq -r outputs/unzip/COIII_3B_MRB7260_mintet2_R2.fq -o outputs/join/COIII_3B_MRB7260_mintet2
+Submitted job 138 with external jobid 'Submitted batch job 452213 on cluster faculty'.
+[Tue Oct 22 16:15:35 2019]
+Finished job 189.
+33 of 194 steps (17%) done
+
+[Tue Oct 22 16:15:35 2019]
+rule join:
+    input: outputs/unzip/RPS12_REH1_mintet1_R1.fq, outputs/unzip/RPS12_REH1_mintet1_R2.fq
+    output: outputs/join/RPS12_REH1_mintet1.assembled.fastq
+    jobid: 157
+    wildcards: sample_id=RPS12_REH1_mintet1
+
+tools/pear/0.9.6/pear -f outputs/unzip/RPS12_REH1_mintet1_R1.fq -r outputs/unzip/RPS12_REH1_mintet1_R2.fq -o outputs/join/RPS12_REH1_mintet1
+Submitted job 157 with external jobid 'Submitted batch job 452215 on cluster faculty'.
+[Tue Oct 22 16:21:40 2019]
+Finished job 156.
+34 of 194 steps (18%) done
+
+[Tue Oct 22 16:21:40 2019]
+rule filter:
+    input: outputs/join/ND9_3B_MRB7260_plustet2.assembled.fastq
+    output: outputs/filter/ND9_3B_MRB7260_plustet2.fq
+    jobid: 124
+    wildcards: sample_id=ND9_3B_MRB7260_plustet2
+
+tools/fastx/0.0.13/fastq_quality_filter -i outputs/join/ND9_3B_MRB7260_plustet2.assembled.fastq -o outputs/filter/ND9_3B_MRB7260_plustet2.fq -q 30 -p 90 -Q33 -v
+Submitted job 124 with external jobid 'Submitted batch job 452248 on cluster faculty'.
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 48 of /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile:
+Missing files after 5 seconds:
+outputs/filter/ND9_3B_MRB7260_plustet2.fq
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+[Tue Oct 22 16:22:37 2019]
+Finished job 149.
+35 of 194 steps (18%) done
+[Tue Oct 22 16:22:37 2019]
+Finished job 144.
+36 of 194 steps (19%) done
+[Tue Oct 22 16:22:49 2019]
+Finished job 140.
+37 of 194 steps (19%) done
+[Tue Oct 22 16:23:01 2019]
+Finished job 145.
+38 of 194 steps (20%) done
+[Tue Oct 22 16:23:02 2019]
+Finished job 152.
+39 of 194 steps (20%) done
+[Tue Oct 22 16:23:02 2019]
+Finished job 134.
+40 of 194 steps (21%) done
+[Tue Oct 22 16:23:14 2019]
+Finished job 147.
+41 of 194 steps (21%) done
+[Tue Oct 22 16:23:14 2019]
+Finished job 135.
+42 of 194 steps (22%) done
+[Tue Oct 22 16:24:00 2019]
+Finished job 151.
+43 of 194 steps (22%) done
+[Tue Oct 22 16:24:01 2019]
+Finished job 136.
+44 of 194 steps (23%) done
+[Tue Oct 22 16:24:02 2019]
+Finished job 150.
+45 of 194 steps (23%) done
+[Tue Oct 22 16:24:13 2019]
+Finished job 159.
+46 of 194 steps (24%) done
+[Tue Oct 22 16:24:13 2019]
+Finished job 146.
+47 of 194 steps (24%) done
+[Tue Oct 22 16:24:25 2019]
+Finished job 160.
+48 of 194 steps (25%) done
+[Tue Oct 22 16:24:37 2019]
+Finished job 131.
+49 of 194 steps (25%) done
+[Tue Oct 22 16:24:47 2019]
+Finished job 154.
+50 of 194 steps (26%) done
+[Tue Oct 22 16:24:47 2019]
+Finished job 153.
+51 of 194 steps (26%) done
+[Tue Oct 22 16:24:48 2019]
+Finished job 155.
+52 of 194 steps (27%) done
+[Tue Oct 22 16:25:31 2019]
+Finished job 132.
+53 of 194 steps (27%) done
+[Tue Oct 22 16:25:31 2019]
+Finished job 138.
+54 of 194 steps (28%) done
+[Tue Oct 22 16:25:42 2019]
+Finished job 137.
+55 of 194 steps (28%) done
+[Tue Oct 22 16:26:26 2019]
+Finished job 139.
+56 of 194 steps (29%) done
+[Tue Oct 22 16:26:26 2019]
+Finished job 142.
+57 of 194 steps (29%) done
+[Tue Oct 22 16:26:26 2019]
+Finished job 148.
+58 of 194 steps (30%) done
+[Tue Oct 22 16:26:26 2019]
+Finished job 133.
+59 of 194 steps (30%) done
+[Tue Oct 22 16:26:37 2019]
+Finished job 130.
+60 of 194 steps (31%) done
+[Tue Oct 22 16:27:27 2019]
+Finished job 143.
+61 of 194 steps (31%) done
+[Tue Oct 22 16:27:27 2019]
+Finished job 129.
+62 of 194 steps (32%) done
+[Tue Oct 22 16:27:47 2019]
+Finished job 141.
+63 of 194 steps (32%) done
+[Tue Oct 22 16:29:37 2019]
+Finished job 157.
+64 of 194 steps (33%) done
+[Tue Oct 22 16:29:37 2019]
+Finished job 158.
+65 of 194 steps (34%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/.snakemake/log/2019-10-22T161402.173442.snakemake.log

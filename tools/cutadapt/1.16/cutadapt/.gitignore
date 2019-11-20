@@ -1,0 +1,15 @@
+*.pyc
+__pycache__/
+/MANIFEST
+/build/
+/dist/
+/.coverage
+/.tox
+/src/cutadapt/_*.c
+/src/cutadapt/*.so
+/doc/_build
+/src/cutadapt.egg-info/
+/.cache/
+
+# Editor-specific ignore patterns such as "*~" should be added to
+# ~/.config/git/ignore, not here.

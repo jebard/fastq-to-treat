@@ -1,0 +1,1048 @@
+Building DAG of jobs...
+Error: Directory cannot be locked. This usually means that another Snakemake instance is running on this directory. Another possibility is that a previous run exited unexpectedly.
+Job counts:
+	count	jobs
+	1	all
+	32	collapse
+	32	filter
+	32	fq_2_fa
+	32	join
+	32	trim
+	32	unzip
+	193
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/COIII_3B_MRB7260_mintet1_S5_L001_R1_001.fastq.gz, ../C9K8C/fastq/COIII_3B_MRB7260_mintet1_S5_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/COIII_3B_MRB7260_mintet1_R1.fq, outputs/unzip/COIII_3B_MRB7260_mintet1_R2.fq
+    jobid: 169
+    wildcards: sample_id=COIII_3B_MRB7260_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/COIII_3B_MRB7260_plustet2_S8_L001_R1_001.fastq.gz, ../C9K8C/fastq/COIII_3B_MRB7260_plustet2_S8_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/COIII_3B_MRB7260_plustet2_R1.fq, outputs/unzip/COIII_3B_MRB7260_plustet2_R2.fq
+    jobid: 172
+    wildcards: sample_id=COIII_3B_MRB7260_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/CR3_REH1_plustet1_S30_L001_R1_001.fastq.gz, ../C9K8C/fastq/CR3_REH1_plustet1_S30_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/CR3_REH1_plustet1_R1.fq, outputs/unzip/CR3_REH1_plustet1_R2.fq
+    jobid: 175
+    wildcards: sample_id=CR3_REH1_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/RPS12_REH1_mintet2_S27_L001_R1_001.fastq.gz, ../C9K8C/fastq/RPS12_REH1_mintet2_S27_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/RPS12_REH1_mintet2_R1.fq, outputs/unzip/RPS12_REH1_mintet2_R2.fq
+    jobid: 190
+    wildcards: sample_id=RPS12_REH1_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/RPS12_REH1_plustet2_S28_L001_R1_001.fastq.gz, ../C9K8C/fastq/RPS12_REH1_plustet2_S28_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/RPS12_REH1_plustet2_R1.fq, outputs/unzip/RPS12_REH1_plustet2_R2.fq
+    jobid: 192
+    wildcards: sample_id=RPS12_REH1_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/CR3_REH1_mintet2_S31_L001_R1_001.fastq.gz, ../C9K8C/fastq/CR3_REH1_mintet2_S31_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/CR3_REH1_mintet2_R1.fq, outputs/unzip/CR3_REH1_mintet2_R2.fq
+    jobid: 174
+    wildcards: sample_id=CR3_REH1_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/CR3_REH1_plustet2_S32_L001_R1_001.fastq.gz, ../C9K8C/fastq/CR3_REH1_plustet2_S32_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/CR3_REH1_plustet2_R1.fq, outputs/unzip/CR3_REH1_plustet2_R2.fq
+    jobid: 176
+    wildcards: sample_id=CR3_REH1_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/A63B_MRB7260_plustet1_S2_L001_R1_001.fastq.gz, ../C9K8C/fastq/A63B_MRB7260_plustet1_S2_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/A6_3B_MRB7260_plustet1_R1.fq, outputs/unzip/A6_3B_MRB7260_plustet1_R2.fq
+    jobid: 163
+    wildcards: sample_id=A6_3B_MRB7260_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/COIII_3B_MRB7260_plustet1_S6_L001_R1_001.fastq.gz, ../C9K8C/fastq/COIII_3B_MRB7260_plustet1_S6_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/COIII_3B_MRB7260_plustet1_R1.fq, outputs/unzip/COIII_3B_MRB7260_plustet1_R2.fq
+    jobid: 171
+    wildcards: sample_id=COIII_3B_MRB7260_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/ND8_3B_MRB7260_mintet2_S15_L001_R1_001.fastq.gz, ../C9K8C/fastq/ND8_3B_MRB7260_mintet2_S15_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/ND8_3B_MRB7260_mintet2_R1.fq, outputs/unzip/ND8_3B_MRB7260_mintet2_R2.fq
+    jobid: 182
+    wildcards: sample_id=ND8_3B_MRB7260_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/ND8_3B_MRB7260_plustet2_S16_L001_R1_001.fastq.gz, ../C9K8C/fastq/ND8_3B_MRB7260_plustet2_S16_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/ND8_3B_MRB7260_plustet2_R1.fq, outputs/unzip/ND8_3B_MRB7260_plustet2_R2.fq
+    jobid: 184
+    wildcards: sample_id=ND8_3B_MRB7260_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/CR4_3B_MRB7260_plustet2_S12_L001_R1_001.fastq.gz, ../C9K8C/fastq/CR4_3B_MRB7260_plustet2_S12_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/CR4_3B_MRB7260_plustet2_R1.fq, outputs/unzip/CR4_3B_MRB7260_plustet2_R2.fq
+    jobid: 180
+    wildcards: sample_id=CR4_3B_MRB7260_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/ND8_3B_MRB7260_mintet1_S13_L001_R1_001.fastq.gz, ../C9K8C/fastq/ND8_3B_MRB7260_mintet1_S13_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/ND8_3B_MRB7260_mintet1_R1.fq, outputs/unzip/ND8_3B_MRB7260_mintet1_R2.fq
+    jobid: 181
+    wildcards: sample_id=ND8_3B_MRB7260_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/ND9_3B_MRB7260_mintet1_S17_L001_R1_001.fastq.gz, ../C9K8C/fastq/ND9_3B_MRB7260_mintet1_S17_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/ND9_3B_MRB7260_mintet1_R1.fq, outputs/unzip/ND9_3B_MRB7260_mintet1_R2.fq
+    jobid: 185
+    wildcards: sample_id=ND9_3B_MRB7260_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/A63B_REH1_mintet2_S23_L001_R1_001.fastq.gz, ../C9K8C/fastq/A63B_REH1_mintet2_S23_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/A6_3B_REH1_mintet2_R1.fq, outputs/unzip/A6_3B_REH1_mintet2_R2.fq
+    jobid: 166
+    wildcards: sample_id=A6_3B_REH1_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/RPS12_REH1_mintet1_S25_L001_R1_001.fastq.gz, ../C9K8C/fastq/RPS12_REH1_mintet1_S25_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/RPS12_REH1_mintet1_R1.fq, outputs/unzip/RPS12_REH1_mintet1_R2.fq
+    jobid: 189
+    wildcards: sample_id=RPS12_REH1_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/ND9_3B_MRB7260_plustet1_S18_L001_R1_001.fastq.gz, ../C9K8C/fastq/ND9_3B_MRB7260_plustet1_S18_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/ND9_3B_MRB7260_plustet1_R1.fq, outputs/unzip/ND9_3B_MRB7260_plustet1_R2.fq
+    jobid: 187
+    wildcards: sample_id=ND9_3B_MRB7260_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/A63B_MRB7260_mintet1_S1_L001_R1_001.fastq.gz, ../C9K8C/fastq/A63B_MRB7260_mintet1_S1_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/A6_3B_MRB7260_mintet1_R1.fq, outputs/unzip/A6_3B_MRB7260_mintet1_R2.fq
+    jobid: 161
+    wildcards: sample_id=A6_3B_MRB7260_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/COIII_3B_MRB7260_mintet2_S7_L001_R1_001.fastq.gz, ../C9K8C/fastq/COIII_3B_MRB7260_mintet2_S7_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/COIII_3B_MRB7260_mintet2_R1.fq, outputs/unzip/COIII_3B_MRB7260_mintet2_R2.fq
+    jobid: 170
+    wildcards: sample_id=COIII_3B_MRB7260_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/A63B_MRB7260_mintet2_S3_L001_R1_001.fastq.gz, ../C9K8C/fastq/A63B_MRB7260_mintet2_S3_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/A6_3B_MRB7260_mintet2_R1.fq, outputs/unzip/A6_3B_MRB7260_mintet2_R2.fq
+    jobid: 162
+    wildcards: sample_id=A6_3B_MRB7260_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/A63B_REH1_mintet1_S21_L001_R1_001.fastq.gz, ../C9K8C/fastq/A63B_REH1_mintet1_S21_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/A6_3B_REH1_mintet1_R1.fq, outputs/unzip/A6_3B_REH1_mintet1_R2.fq
+    jobid: 165
+    wildcards: sample_id=A6_3B_REH1_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/ND8_3B_MRB7260_plustet1_S14_L001_R1_001.fastq.gz, ../C9K8C/fastq/ND8_3B_MRB7260_plustet1_S14_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/ND8_3B_MRB7260_plustet1_R1.fq, outputs/unzip/ND8_3B_MRB7260_plustet1_R2.fq
+    jobid: 183
+    wildcards: sample_id=ND8_3B_MRB7260_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/CR4_3B_MRB7260_plustet1_S10_L001_R1_001.fastq.gz, ../C9K8C/fastq/CR4_3B_MRB7260_plustet1_S10_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/CR4_3B_MRB7260_plustet1_R1.fq, outputs/unzip/CR4_3B_MRB7260_plustet1_R2.fq
+    jobid: 179
+    wildcards: sample_id=CR4_3B_MRB7260_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/CR4_3B_MRB7260_mintet1_S9_L001_R1_001.fastq.gz, ../C9K8C/fastq/CR4_3B_MRB7260_mintet1_S9_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/CR4_3B_MRB7260_mintet1_R1.fq, outputs/unzip/CR4_3B_MRB7260_mintet1_R2.fq
+    jobid: 177
+    wildcards: sample_id=CR4_3B_MRB7260_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/RPS12_REH1_plustet1_S26_L001_R1_001.fastq.gz, ../C9K8C/fastq/RPS12_REH1_plustet1_S26_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/RPS12_REH1_plustet1_R1.fq, outputs/unzip/RPS12_REH1_plustet1_R2.fq
+    jobid: 191
+    wildcards: sample_id=RPS12_REH1_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/ND9_3B_MRB7260_plustet2_S20_L001_R1_001.fastq.gz, ../C9K8C/fastq/ND9_3B_MRB7260_plustet2_S20_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/ND9_3B_MRB7260_plustet2_R1.fq, outputs/unzip/ND9_3B_MRB7260_plustet2_R2.fq
+    jobid: 188
+    wildcards: sample_id=ND9_3B_MRB7260_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/A63B_MRB7260_plustet2_S4_L001_R1_001.fastq.gz, ../C9K8C/fastq/A63B_MRB7260_plustet2_S4_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/A6_3B_MRB7260_plustet2_R1.fq, outputs/unzip/A6_3B_MRB7260_plustet2_R2.fq
+    jobid: 164
+    wildcards: sample_id=A6_3B_MRB7260_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/CR3_REH1_mintet1_S29_L001_R1_001.fastq.gz, ../C9K8C/fastq/CR3_REH1_mintet1_S29_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/CR3_REH1_mintet1_R1.fq, outputs/unzip/CR3_REH1_mintet1_R2.fq
+    jobid: 173
+    wildcards: sample_id=CR3_REH1_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/CR4_3B_MRB7260_mintet2_S11_L001_R1_001.fastq.gz, ../C9K8C/fastq/CR4_3B_MRB7260_mintet2_S11_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/CR4_3B_MRB7260_mintet2_R1.fq, outputs/unzip/CR4_3B_MRB7260_mintet2_R2.fq
+    jobid: 178
+    wildcards: sample_id=CR4_3B_MRB7260_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/ND9_3B_MRB7260_mintet2_S19_L001_R1_001.fastq.gz, ../C9K8C/fastq/ND9_3B_MRB7260_mintet2_S19_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/ND9_3B_MRB7260_mintet2_R1.fq, outputs/unzip/ND9_3B_MRB7260_mintet2_R2.fq
+    jobid: 186
+    wildcards: sample_id=ND9_3B_MRB7260_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/A63B_REH1_plustet2_S24_L001_R1_001.fastq.gz, ../C9K8C/fastq/A63B_REH1_plustet2_S24_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/A6_3B_REH1_plustet2_R1.fq, outputs/unzip/A6_3B_REH1_plustet2_R2.fq
+    jobid: 168
+    wildcards: sample_id=A6_3B_REH1_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule unzip:
+    input: ../C9K8C/fastq/A63B_REH1_plustet1_S22_L001_R1_001.fastq.gz, ../C9K8C/fastq/A63B_REH1_plustet1_S22_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/A6_3B_REH1_plustet1_R1.fq, outputs/unzip/A6_3B_REH1_plustet1_R2.fq
+    jobid: 167
+    wildcards: sample_id=A6_3B_REH1_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/ND9_3B_MRB7260_mintet1_R1.fq, outputs/unzip/ND9_3B_MRB7260_mintet1_R2.fq
+    output: outputs/join/ND9_3B_MRB7260_mintet1.assembled.fastq
+    jobid: 153
+    wildcards: sample_id=ND9_3B_MRB7260_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/RPS12_REH1_mintet1_R1.fq, outputs/unzip/RPS12_REH1_mintet1_R2.fq
+    output: outputs/join/RPS12_REH1_mintet1.assembled.fastq
+    jobid: 157
+    wildcards: sample_id=RPS12_REH1_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/A6_3B_REH1_mintet2_R1.fq, outputs/unzip/A6_3B_REH1_mintet2_R2.fq
+    output: outputs/join/A6_3B_REH1_mintet2.assembled.fastq
+    jobid: 134
+    wildcards: sample_id=A6_3B_REH1_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/ND9_3B_MRB7260_plustet1_R1.fq, outputs/unzip/ND9_3B_MRB7260_plustet1_R2.fq
+    output: outputs/join/ND9_3B_MRB7260_plustet1.assembled.fastq
+    jobid: 155
+    wildcards: sample_id=ND9_3B_MRB7260_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/ND9_3B_MRB7260_plustet2_R1.fq, outputs/unzip/ND9_3B_MRB7260_plustet2_R2.fq
+    output: outputs/join/ND9_3B_MRB7260_plustet2.assembled.fastq
+    jobid: 156
+    wildcards: sample_id=ND9_3B_MRB7260_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/COIII_3B_MRB7260_mintet1_R1.fq, outputs/unzip/COIII_3B_MRB7260_mintet1_R2.fq
+    output: outputs/join/COIII_3B_MRB7260_mintet1.assembled.fastq
+    jobid: 137
+    wildcards: sample_id=COIII_3B_MRB7260_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/COIII_3B_MRB7260_plustet2_R1.fq, outputs/unzip/COIII_3B_MRB7260_plustet2_R2.fq
+    output: outputs/join/COIII_3B_MRB7260_plustet2.assembled.fastq
+    jobid: 140
+    wildcards: sample_id=COIII_3B_MRB7260_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/CR3_REH1_plustet1_R1.fq, outputs/unzip/CR3_REH1_plustet1_R2.fq
+    output: outputs/join/CR3_REH1_plustet1.assembled.fastq
+    jobid: 143
+    wildcards: sample_id=CR3_REH1_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/RPS12_REH1_mintet2_R1.fq, outputs/unzip/RPS12_REH1_mintet2_R2.fq
+    output: outputs/join/RPS12_REH1_mintet2.assembled.fastq
+    jobid: 158
+    wildcards: sample_id=RPS12_REH1_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/RPS12_REH1_plustet2_R1.fq, outputs/unzip/RPS12_REH1_plustet2_R2.fq
+    output: outputs/join/RPS12_REH1_plustet2.assembled.fastq
+    jobid: 160
+    wildcards: sample_id=RPS12_REH1_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/CR3_REH1_mintet2_R1.fq, outputs/unzip/CR3_REH1_mintet2_R2.fq
+    output: outputs/join/CR3_REH1_mintet2.assembled.fastq
+    jobid: 142
+    wildcards: sample_id=CR3_REH1_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/CR3_REH1_plustet2_R1.fq, outputs/unzip/CR3_REH1_plustet2_R2.fq
+    output: outputs/join/CR3_REH1_plustet2.assembled.fastq
+    jobid: 144
+    wildcards: sample_id=CR3_REH1_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/A6_3B_MRB7260_plustet1_R1.fq, outputs/unzip/A6_3B_MRB7260_plustet1_R2.fq
+    output: outputs/join/A6_3B_MRB7260_plustet1.assembled.fastq
+    jobid: 131
+    wildcards: sample_id=A6_3B_MRB7260_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/COIII_3B_MRB7260_plustet1_R1.fq, outputs/unzip/COIII_3B_MRB7260_plustet1_R2.fq
+    output: outputs/join/COIII_3B_MRB7260_plustet1.assembled.fastq
+    jobid: 139
+    wildcards: sample_id=COIII_3B_MRB7260_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/ND8_3B_MRB7260_mintet2_R1.fq, outputs/unzip/ND8_3B_MRB7260_mintet2_R2.fq
+    output: outputs/join/ND8_3B_MRB7260_mintet2.assembled.fastq
+    jobid: 150
+    wildcards: sample_id=ND8_3B_MRB7260_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/ND8_3B_MRB7260_plustet2_R1.fq, outputs/unzip/ND8_3B_MRB7260_plustet2_R2.fq
+    output: outputs/join/ND8_3B_MRB7260_plustet2.assembled.fastq
+    jobid: 152
+    wildcards: sample_id=ND8_3B_MRB7260_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/CR4_3B_MRB7260_plustet2_R1.fq, outputs/unzip/CR4_3B_MRB7260_plustet2_R2.fq
+    output: outputs/join/CR4_3B_MRB7260_plustet2.assembled.fastq
+    jobid: 148
+    wildcards: sample_id=CR4_3B_MRB7260_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/ND8_3B_MRB7260_mintet1_R1.fq, outputs/unzip/ND8_3B_MRB7260_mintet1_R2.fq
+    output: outputs/join/ND8_3B_MRB7260_mintet1.assembled.fastq
+    jobid: 149
+    wildcards: sample_id=ND8_3B_MRB7260_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/A6_3B_MRB7260_plustet2_R1.fq, outputs/unzip/A6_3B_MRB7260_plustet2_R2.fq
+    output: outputs/join/A6_3B_MRB7260_plustet2.assembled.fastq
+    jobid: 132
+    wildcards: sample_id=A6_3B_MRB7260_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/CR3_REH1_mintet1_R1.fq, outputs/unzip/CR3_REH1_mintet1_R2.fq
+    output: outputs/join/CR3_REH1_mintet1.assembled.fastq
+    jobid: 141
+    wildcards: sample_id=CR3_REH1_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/CR4_3B_MRB7260_mintet2_R1.fq, outputs/unzip/CR4_3B_MRB7260_mintet2_R2.fq
+    output: outputs/join/CR4_3B_MRB7260_mintet2.assembled.fastq
+    jobid: 146
+    wildcards: sample_id=CR4_3B_MRB7260_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/ND9_3B_MRB7260_mintet2_R1.fq, outputs/unzip/ND9_3B_MRB7260_mintet2_R2.fq
+    output: outputs/join/ND9_3B_MRB7260_mintet2.assembled.fastq
+    jobid: 154
+    wildcards: sample_id=ND9_3B_MRB7260_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/A6_3B_REH1_plustet2_R1.fq, outputs/unzip/A6_3B_REH1_plustet2_R2.fq
+    output: outputs/join/A6_3B_REH1_plustet2.assembled.fastq
+    jobid: 136
+    wildcards: sample_id=A6_3B_REH1_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/A6_3B_REH1_plustet1_R1.fq, outputs/unzip/A6_3B_REH1_plustet1_R2.fq
+    output: outputs/join/A6_3B_REH1_plustet1.assembled.fastq
+    jobid: 135
+    wildcards: sample_id=A6_3B_REH1_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/COIII_3B_MRB7260_mintet2_R1.fq, outputs/unzip/COIII_3B_MRB7260_mintet2_R2.fq
+    output: outputs/join/COIII_3B_MRB7260_mintet2.assembled.fastq
+    jobid: 138
+    wildcards: sample_id=COIII_3B_MRB7260_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/A6_3B_MRB7260_mintet1_R1.fq, outputs/unzip/A6_3B_MRB7260_mintet1_R2.fq
+    output: outputs/join/A6_3B_MRB7260_mintet1.assembled.fastq
+    jobid: 129
+    wildcards: sample_id=A6_3B_MRB7260_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/A6_3B_MRB7260_mintet2_R1.fq, outputs/unzip/A6_3B_MRB7260_mintet2_R2.fq
+    output: outputs/join/A6_3B_MRB7260_mintet2.assembled.fastq
+    jobid: 130
+    wildcards: sample_id=A6_3B_MRB7260_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/ND8_3B_MRB7260_plustet1_R1.fq, outputs/unzip/ND8_3B_MRB7260_plustet1_R2.fq
+    output: outputs/join/ND8_3B_MRB7260_plustet1.assembled.fastq
+    jobid: 151
+    wildcards: sample_id=ND8_3B_MRB7260_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/A6_3B_REH1_mintet1_R1.fq, outputs/unzip/A6_3B_REH1_mintet1_R2.fq
+    output: outputs/join/A6_3B_REH1_mintet1.assembled.fastq
+    jobid: 133
+    wildcards: sample_id=A6_3B_REH1_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/CR4_3B_MRB7260_plustet1_R1.fq, outputs/unzip/CR4_3B_MRB7260_plustet1_R2.fq
+    output: outputs/join/CR4_3B_MRB7260_plustet1.assembled.fastq
+    jobid: 147
+    wildcards: sample_id=CR4_3B_MRB7260_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/CR4_3B_MRB7260_mintet1_R1.fq, outputs/unzip/CR4_3B_MRB7260_mintet1_R2.fq
+    output: outputs/join/CR4_3B_MRB7260_mintet1.assembled.fastq
+    jobid: 145
+    wildcards: sample_id=CR4_3B_MRB7260_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule join:
+    input: outputs/unzip/RPS12_REH1_plustet1_R1.fq, outputs/unzip/RPS12_REH1_plustet1_R2.fq
+    output: outputs/join/RPS12_REH1_plustet1.assembled.fastq
+    jobid: 159
+    wildcards: sample_id=RPS12_REH1_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/CR3_REH1_plustet1.assembled.fastq
+    output: outputs/filter/CR3_REH1_plustet1.fq
+    jobid: 111
+    wildcards: sample_id=CR3_REH1_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/CR4_3B_MRB7260_plustet2.assembled.fastq
+    output: outputs/filter/CR4_3B_MRB7260_plustet2.fq
+    jobid: 116
+    wildcards: sample_id=CR4_3B_MRB7260_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/A6_3B_MRB7260_plustet1.assembled.fastq
+    output: outputs/filter/A6_3B_MRB7260_plustet1.fq
+    jobid: 99
+    wildcards: sample_id=A6_3B_MRB7260_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/COIII_3B_MRB7260_plustet1.assembled.fastq
+    output: outputs/filter/COIII_3B_MRB7260_plustet1.fq
+    jobid: 107
+    wildcards: sample_id=COIII_3B_MRB7260_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/ND8_3B_MRB7260_mintet2.assembled.fastq
+    output: outputs/filter/ND8_3B_MRB7260_mintet2.fq
+    jobid: 118
+    wildcards: sample_id=ND8_3B_MRB7260_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/ND8_3B_MRB7260_plustet2.assembled.fastq
+    output: outputs/filter/ND8_3B_MRB7260_plustet2.fq
+    jobid: 120
+    wildcards: sample_id=ND8_3B_MRB7260_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/ND9_3B_MRB7260_mintet1.assembled.fastq
+    output: outputs/filter/ND9_3B_MRB7260_mintet1.fq
+    jobid: 121
+    wildcards: sample_id=ND9_3B_MRB7260_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/A6_3B_REH1_mintet2.assembled.fastq
+    output: outputs/filter/A6_3B_REH1_mintet2.fq
+    jobid: 102
+    wildcards: sample_id=A6_3B_REH1_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/ND9_3B_MRB7260_plustet1.assembled.fastq
+    output: outputs/filter/ND9_3B_MRB7260_plustet1.fq
+    jobid: 123
+    wildcards: sample_id=ND9_3B_MRB7260_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/ND8_3B_MRB7260_plustet1.assembled.fastq
+    output: outputs/filter/ND8_3B_MRB7260_plustet1.fq
+    jobid: 119
+    wildcards: sample_id=ND8_3B_MRB7260_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/A6_3B_REH1_mintet1.assembled.fastq
+    output: outputs/filter/A6_3B_REH1_mintet1.fq
+    jobid: 101
+    wildcards: sample_id=A6_3B_REH1_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/COIII_3B_MRB7260_mintet2.assembled.fastq
+    output: outputs/filter/COIII_3B_MRB7260_mintet2.fq
+    jobid: 106
+    wildcards: sample_id=COIII_3B_MRB7260_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/A6_3B_MRB7260_mintet2.assembled.fastq
+    output: outputs/filter/A6_3B_MRB7260_mintet2.fq
+    jobid: 98
+    wildcards: sample_id=A6_3B_MRB7260_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/ND9_3B_MRB7260_plustet2.assembled.fastq
+    output: outputs/filter/ND9_3B_MRB7260_plustet2.fq
+    jobid: 124
+    wildcards: sample_id=ND9_3B_MRB7260_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/CR4_3B_MRB7260_mintet1.assembled.fastq
+    output: outputs/filter/CR4_3B_MRB7260_mintet1.fq
+    jobid: 113
+    wildcards: sample_id=CR4_3B_MRB7260_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/A6_3B_REH1_plustet1.assembled.fastq
+    output: outputs/filter/A6_3B_REH1_plustet1.fq
+    jobid: 103
+    wildcards: sample_id=A6_3B_REH1_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/RPS12_REH1_mintet2.assembled.fastq
+    output: outputs/filter/RPS12_REH1_mintet2.fq
+    jobid: 126
+    wildcards: sample_id=RPS12_REH1_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/CR3_REH1_plustet2.assembled.fastq
+    output: outputs/filter/CR3_REH1_plustet2.fq
+    jobid: 112
+    wildcards: sample_id=CR3_REH1_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/CR3_REH1_mintet2.assembled.fastq
+    output: outputs/filter/CR3_REH1_mintet2.fq
+    jobid: 110
+    wildcards: sample_id=CR3_REH1_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/RPS12_REH1_plustet2.assembled.fastq
+    output: outputs/filter/RPS12_REH1_plustet2.fq
+    jobid: 128
+    wildcards: sample_id=RPS12_REH1_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/COIII_3B_MRB7260_mintet1.assembled.fastq
+    output: outputs/filter/COIII_3B_MRB7260_mintet1.fq
+    jobid: 105
+    wildcards: sample_id=COIII_3B_MRB7260_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/COIII_3B_MRB7260_plustet2.assembled.fastq
+    output: outputs/filter/COIII_3B_MRB7260_plustet2.fq
+    jobid: 108
+    wildcards: sample_id=COIII_3B_MRB7260_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/ND8_3B_MRB7260_mintet1.assembled.fastq
+    output: outputs/filter/ND8_3B_MRB7260_mintet1.fq
+    jobid: 117
+    wildcards: sample_id=ND8_3B_MRB7260_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/RPS12_REH1_mintet1.assembled.fastq
+    output: outputs/filter/RPS12_REH1_mintet1.fq
+    jobid: 125
+    wildcards: sample_id=RPS12_REH1_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/CR4_3B_MRB7260_plustet1.assembled.fastq
+    output: outputs/filter/CR4_3B_MRB7260_plustet1.fq
+    jobid: 115
+    wildcards: sample_id=CR4_3B_MRB7260_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/A6_3B_MRB7260_mintet1.assembled.fastq
+    output: outputs/filter/A6_3B_MRB7260_mintet1.fq
+    jobid: 97
+    wildcards: sample_id=A6_3B_MRB7260_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/RPS12_REH1_plustet1.assembled.fastq
+    output: outputs/filter/RPS12_REH1_plustet1.fq
+    jobid: 127
+    wildcards: sample_id=RPS12_REH1_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/CR4_3B_MRB7260_mintet2.assembled.fastq
+    output: outputs/filter/CR4_3B_MRB7260_mintet2.fq
+    jobid: 114
+    wildcards: sample_id=CR4_3B_MRB7260_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/ND9_3B_MRB7260_mintet2.assembled.fastq
+    output: outputs/filter/ND9_3B_MRB7260_mintet2.fq
+    jobid: 122
+    wildcards: sample_id=ND9_3B_MRB7260_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/CR3_REH1_mintet1.assembled.fastq
+    output: outputs/filter/CR3_REH1_mintet1.fq
+    jobid: 109
+    wildcards: sample_id=CR3_REH1_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/A6_3B_MRB7260_plustet2.assembled.fastq
+    output: outputs/filter/A6_3B_MRB7260_plustet2.fq
+    jobid: 100
+    wildcards: sample_id=A6_3B_MRB7260_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule filter:
+    input: outputs/join/A6_3B_REH1_plustet2.assembled.fastq
+    output: outputs/filter/A6_3B_REH1_plustet2.fq
+    jobid: 104
+    wildcards: sample_id=A6_3B_REH1_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/A6_3B_MRB7260_plustet2.fq
+    output: outputs/fq_2_fa/A6_3B_MRB7260_plustet2.fa
+    jobid: 68
+    wildcards: sample_id=A6_3B_MRB7260_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/CR3_REH1_mintet1.fq
+    output: outputs/fq_2_fa/CR3_REH1_mintet1.fa
+    jobid: 77
+    wildcards: sample_id=CR3_REH1_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/CR4_3B_MRB7260_mintet2.fq
+    output: outputs/fq_2_fa/CR4_3B_MRB7260_mintet2.fa
+    jobid: 82
+    wildcards: sample_id=CR4_3B_MRB7260_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/ND9_3B_MRB7260_mintet2.fq
+    output: outputs/fq_2_fa/ND9_3B_MRB7260_mintet2.fa
+    jobid: 90
+    wildcards: sample_id=ND9_3B_MRB7260_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/A6_3B_REH1_plustet2.fq
+    output: outputs/fq_2_fa/A6_3B_REH1_plustet2.fa
+    jobid: 72
+    wildcards: sample_id=A6_3B_REH1_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/A6_3B_MRB7260_mintet1.fq
+    output: outputs/fq_2_fa/A6_3B_MRB7260_mintet1.fa
+    jobid: 65
+    wildcards: sample_id=A6_3B_MRB7260_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/CR4_3B_MRB7260_plustet1.fq
+    output: outputs/fq_2_fa/CR4_3B_MRB7260_plustet1.fa
+    jobid: 83
+    wildcards: sample_id=CR4_3B_MRB7260_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/RPS12_REH1_plustet1.fq
+    output: outputs/fq_2_fa/RPS12_REH1_plustet1.fa
+    jobid: 95
+    wildcards: sample_id=RPS12_REH1_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/RPS12_REH1_mintet1.fq
+    output: outputs/fq_2_fa/RPS12_REH1_mintet1.fa
+    jobid: 93
+    wildcards: sample_id=RPS12_REH1_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/COIII_3B_MRB7260_mintet1.fq
+    output: outputs/fq_2_fa/COIII_3B_MRB7260_mintet1.fa
+    jobid: 73
+    wildcards: sample_id=COIII_3B_MRB7260_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/COIII_3B_MRB7260_plustet2.fq
+    output: outputs/fq_2_fa/COIII_3B_MRB7260_plustet2.fa
+    jobid: 76
+    wildcards: sample_id=COIII_3B_MRB7260_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/RPS12_REH1_mintet2.fq
+    output: outputs/fq_2_fa/RPS12_REH1_mintet2.fa
+    jobid: 94
+    wildcards: sample_id=RPS12_REH1_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/RPS12_REH1_plustet2.fq
+    output: outputs/fq_2_fa/RPS12_REH1_plustet2.fa
+    jobid: 96
+    wildcards: sample_id=RPS12_REH1_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/CR3_REH1_mintet2.fq
+    output: outputs/fq_2_fa/CR3_REH1_mintet2.fa
+    jobid: 78
+    wildcards: sample_id=CR3_REH1_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/CR3_REH1_plustet2.fq
+    output: outputs/fq_2_fa/CR3_REH1_plustet2.fa
+    jobid: 80
+    wildcards: sample_id=CR3_REH1_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/ND8_3B_MRB7260_mintet1.fq
+    output: outputs/fq_2_fa/ND8_3B_MRB7260_mintet1.fa
+    jobid: 85
+    wildcards: sample_id=ND8_3B_MRB7260_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/A6_3B_REH1_plustet1.fq
+    output: outputs/fq_2_fa/A6_3B_REH1_plustet1.fa
+    jobid: 71
+    wildcards: sample_id=A6_3B_REH1_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/COIII_3B_MRB7260_mintet2.fq
+    output: outputs/fq_2_fa/COIII_3B_MRB7260_mintet2.fa
+    jobid: 74
+    wildcards: sample_id=COIII_3B_MRB7260_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/A6_3B_MRB7260_mintet2.fq
+    output: outputs/fq_2_fa/A6_3B_MRB7260_mintet2.fa
+    jobid: 66
+    wildcards: sample_id=A6_3B_MRB7260_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/A6_3B_REH1_mintet1.fq
+    output: outputs/fq_2_fa/A6_3B_REH1_mintet1.fa
+    jobid: 69
+    wildcards: sample_id=A6_3B_REH1_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/ND8_3B_MRB7260_plustet1.fq
+    output: outputs/fq_2_fa/ND8_3B_MRB7260_plustet1.fa
+    jobid: 87
+    wildcards: sample_id=ND8_3B_MRB7260_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/CR4_3B_MRB7260_mintet1.fq
+    output: outputs/fq_2_fa/CR4_3B_MRB7260_mintet1.fa
+    jobid: 81
+    wildcards: sample_id=CR4_3B_MRB7260_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/ND9_3B_MRB7260_plustet2.fq
+    output: outputs/fq_2_fa/ND9_3B_MRB7260_plustet2.fa
+    jobid: 92
+    wildcards: sample_id=ND9_3B_MRB7260_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/ND9_3B_MRB7260_mintet1.fq
+    output: outputs/fq_2_fa/ND9_3B_MRB7260_mintet1.fa
+    jobid: 89
+    wildcards: sample_id=ND9_3B_MRB7260_mintet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/A6_3B_REH1_mintet2.fq
+    output: outputs/fq_2_fa/A6_3B_REH1_mintet2.fa
+    jobid: 70
+    wildcards: sample_id=A6_3B_REH1_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/ND9_3B_MRB7260_plustet1.fq
+    output: outputs/fq_2_fa/ND9_3B_MRB7260_plustet1.fa
+    jobid: 91
+    wildcards: sample_id=ND9_3B_MRB7260_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/CR3_REH1_plustet1.fq
+    output: outputs/fq_2_fa/CR3_REH1_plustet1.fa
+    jobid: 79
+    wildcards: sample_id=CR3_REH1_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/A6_3B_MRB7260_plustet1.fq
+    output: outputs/fq_2_fa/A6_3B_MRB7260_plustet1.fa
+    jobid: 67
+    wildcards: sample_id=A6_3B_MRB7260_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/COIII_3B_MRB7260_plustet1.fq
+    output: outputs/fq_2_fa/COIII_3B_MRB7260_plustet1.fa
+    jobid: 75
+    wildcards: sample_id=COIII_3B_MRB7260_plustet1
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/ND8_3B_MRB7260_mintet2.fq
+    output: outputs/fq_2_fa/ND8_3B_MRB7260_mintet2.fa
+    jobid: 86
+    wildcards: sample_id=ND8_3B_MRB7260_mintet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/ND8_3B_MRB7260_plustet2.fq
+    output: outputs/fq_2_fa/ND8_3B_MRB7260_plustet2.fa
+    jobid: 88
+    wildcards: sample_id=ND8_3B_MRB7260_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule fq_2_fa:
+    input: outputs/filter/CR4_3B_MRB7260_plustet2.fq
+    output: outputs/fq_2_fa/CR4_3B_MRB7260_plustet2.fa
+    jobid: 84
+    wildcards: sample_id=CR4_3B_MRB7260_plustet2
+
+
+[Tue Oct 22 13:32:27 2019]
+rule trim:
+    input: outputs/fq_2_fa/ND8_3B_MRB7260_mintet1.fa
+    output: outputs/trimmed/ND8_3B_MRB7260_mintet1.fa
+    jobid: 53
+    wildcards: sample_id=ND8_3B_MRB7260_mintet1
+
+InputFunctionException in line 62 of /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile:
+KeyError: 'A'
+Wildcards:
+sample_id=ND8_3B_MRB7260_mintet1

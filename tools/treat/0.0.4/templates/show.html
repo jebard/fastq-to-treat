@@ -1,0 +1,35 @@
+{{define "content"}}
+
+<div class="page-header">
+    <h3>
+        <ol class="breadcrumb">
+        <li>
+        <i class="fa fa-align-justify fa-lg"></i> 
+        {{ .Key.Gene }}</li>
+        <li>{{ .Key.Sample }}</li>
+        <li class="active">{{ .Fragment.Name }}</li>
+        </ol>
+    </h3>
+    <div>
+    <span class="label label-default"><i class="fa fa-barcode fa-sm"></i> Fragment Count: {{ .Alignment.ReadCount }}</span>
+    <span class="label label-default"><i class="fa fa-balance-scale fa-sm"></i> Norm Count: {{ .Alignment.Norm | round }}</span>
+    <span class="label label-info"><i class="fa fa-edit fa-sm"></i> Edit Stops: {{ .Alignment.EditStop }}</span>
+    <span class="label label-junction"><i class="fa fa-link fa-sm"></i> Junction Length: {{ .Alignment.JuncLen }}</span>
+    {{if gt .Alignment.AltEditing 0 }}
+        <span class="label label-warning"><i class="fa fa-magic fa-sm"></i> A{{ .Alignment.AltEditing }} Editing</span>
+    {{ end }}
+    {{ if eq .Alignment.HasMutation 1 }}
+    <span class="label label-danger"><i class="fa fa-warning fa-sm"></i> Mutation</span>
+    {{ end }}
+    </div>
+</div>
+
+<div class="table-responsive">
+<table class="table table-bordered table-condensed dt">
+<tbody>
+{{ align $.Alignment $.Fragment $.Template }}
+</tbody>
+</table>
+</div>
+
+{{end}}

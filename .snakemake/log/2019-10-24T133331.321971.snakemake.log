@@ -1,0 +1,16 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 100
+Job counts:
+	count	jobs
+	1	all
+	1
+
+[Thu Oct 24 13:33:35 2019]
+localrule all:
+    input: outputs/collapse/A6_3B_MRB7260_mintet1.fa, outputs/collapse/A6_3B_MRB7260_mintet2.fa, outputs/collapse/A6_3B_MRB7260_plustet1.fa, outputs/collapse/A6_3B_MRB7260_plustet2.fa, outputs/collapse/A6_3B_REH1_mintet1.fa, outputs/collapse/A6_3B_REH1_mintet2.fa, outputs/collapse/A6_3B_REH1_plustet1.fa, outputs/collapse/A6_3B_REH1_plustet2.fa, outputs/collapse/COIII_3B_MRB7260_mintet1.fa, outputs/collapse/COIII_3B_MRB7260_mintet2.fa, outputs/collapse/COIII_3B_MRB7260_plustet1.fa, outputs/collapse/COIII_3B_MRB7260_plustet2.fa, outputs/collapse/CR3_REH1_mintet1.fa, outputs/collapse/CR3_REH1_mintet2.fa, outputs/collapse/CR3_REH1_plustet1.fa, outputs/collapse/CR3_REH1_plustet2.fa, outputs/collapse/CR4_3B_MRB7260_mintet1.fa, outputs/collapse/CR4_3B_MRB7260_mintet2.fa, outputs/collapse/CR4_3B_MRB7260_plustet1.fa, outputs/collapse/CR4_3B_MRB7260_plustet2.fa, outputs/collapse/ND8_3B_MRB7260_mintet1.fa, outputs/collapse/ND8_3B_MRB7260_mintet2.fa, outputs/collapse/ND8_3B_MRB7260_plustet1.fa, outputs/collapse/ND8_3B_MRB7260_plustet2.fa, outputs/collapse/ND9_3B_MRB7260_mintet1.fa, outputs/collapse/ND9_3B_MRB7260_mintet2.fa, outputs/collapse/ND9_3B_MRB7260_plustet1.fa, outputs/collapse/ND9_3B_MRB7260_plustet2.fa, outputs/collapse/RPS12_REH1_mintet1.fa, outputs/collapse/RPS12_REH1_mintet2.fa, outputs/collapse/RPS12_REH1_plustet1.fa, outputs/collapse/RPS12_REH1_plustet2.fa
+    jobid: 0
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/.snakemake/log/2019-10-24T133331.321971.snakemake.log

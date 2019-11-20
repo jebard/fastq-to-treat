@@ -1,0 +1,35 @@
+{
+    "raw_fastq_gz_dir": "../C9K8C/fastq/",
+    "meta_file": "meta_data.txt",
+    "tool_version":
+    {
+        "pear": "0.9.6",
+        "fastx": "0.0.13",
+        "cutadapt": "1.16",
+        "treat": "0.0.4"
+    },
+    "parameters":
+    {
+        "quality_filtering":
+        {
+            "percentage": "90",
+            "qscore": "0"
+        }
+    },
+    "file_names":
+    {
+        "mkdir_done": "mkdir.done",
+        "collapse_done": "collapse.done",
+        "treat_done": "treat.db"
+    },
+    "dir_names":
+    {
+        "collapse_dir": "outputs/collapse",
+        "trimmed_dir": "outputs/trimmed",
+        "fq_2_fa_dir": "outputs/fq_2_fa",
+        "filter_dir": "outputs/filter",
+        "join_dir": "outputs/join",
+        "unzip_dir": "outputs/unzip",
+        "treat_dir": "outputs/treat"
+    }
+}

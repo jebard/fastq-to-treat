@@ -1,0 +1,18 @@
+KeyboardInterrupt in line 1 of /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile.
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile", line 1, in <module>
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/site-packages/pandas/__init__.py", line 30, in <module>
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/site-packages/pandas/_libs/__init__.py", line 3, in <module>
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/site-packages/pandas/_libs/tslibs/__init__.py", line 3, in <module>
+  File "pandas/_libs/tslibs/c_timestamp.pxd", line 7, in init pandas._libs.tslibs.conversion
+  File "pandas/_libs/tslibs/c_timestamp.pyx", line 1, in init pandas._libs.tslibs.c_timestamp
+  File "pandas/_libs/tslibs/tzconversion.pyx", line 1, in init pandas._libs.tslibs.tzconversion
+  File "pandas/_libs/tslibs/timedeltas.pyx", line 1, in init pandas._libs.tslibs.timedeltas
+  File "pandas/_libs/tslibs/offsets.pyx", line 1, in init pandas._libs.tslibs.offsets
+  File "pandas/_libs/tslibs/ccalendar.pyx", line 13, in init pandas._libs.tslibs.ccalendar
+  File "pandas/_libs/tslibs/strptime.pyx", line 615, in init pandas._libs.tslibs.strptime
+  File "pandas/_libs/tslibs/strptime.pyx", line 558, in pandas._libs.tslibs.strptime.TimeRE.__init__
+  File "pandas/_libs/tslibs/strptime.pyx", line 574, in pandas._libs.tslibs.strptime.TimeRE.__seqToRE
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/site-packages/pytz/lazy.py", line 101, in _lazy
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/site-packages/pytz/__init__.py", line 1104, in <genexpr>
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/site-packages/pytz/__init__.py", line 114, in resource_exists
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/site-packages/pytz/__init__.py", line 108, in open_resource

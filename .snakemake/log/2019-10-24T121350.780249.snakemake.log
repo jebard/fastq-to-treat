@@ -1,0 +1,1027 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 100
+Job counts:
+	count	jobs
+	1	all
+	25	collapse
+	14	filter
+	19	fq_2_fa
+	19	trim
+	78
+
+[Thu Oct 24 12:14:09 2019]
+rule collapse:
+    input: outputs/trimmed/A6_3B_REH1_plustet2.fa
+    output: outputs/collapse/A6_3B_REH1_plustet2.fa
+    jobid: 8
+    wildcards: sample_id=A6_3B_REH1_plustet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/A6_3B_REH1_plustet2.fa -o outputs/collapse/A6_3B_REH1_plustet2.fa -v
+Submitted job 8 with external jobid 'Submitted batch job 462657 on cluster faculty'.
+
+[Thu Oct 24 12:14:10 2019]
+rule fq_2_fa:
+    input: outputs/filter/RPS12_REH1_plustet1.fq
+    output: outputs/fq_2_fa/RPS12_REH1_plustet1.fa
+    jobid: 95
+    wildcards: sample_id=RPS12_REH1_plustet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/RPS12_REH1_plustet1.fq -o outputs/fq_2_fa/RPS12_REH1_plustet1.fa -n -v -Q33
+Submitted job 95 with external jobid 'Submitted batch job 462658 on cluster faculty'.
+
+[Thu Oct 24 12:14:10 2019]
+rule fq_2_fa:
+    input: outputs/filter/RPS12_REH1_plustet2.fq
+    output: outputs/fq_2_fa/RPS12_REH1_plustet2.fa
+    jobid: 96
+    wildcards: sample_id=RPS12_REH1_plustet2
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/RPS12_REH1_plustet2.fq -o outputs/fq_2_fa/RPS12_REH1_plustet2.fa -n -v -Q33
+Submitted job 96 with external jobid 'Submitted batch job 462659 on cluster faculty'.
+
+[Thu Oct 24 12:14:10 2019]
+rule fq_2_fa:
+    input: outputs/filter/A6_3B_MRB7260_plustet1.fq
+    output: outputs/fq_2_fa/A6_3B_MRB7260_plustet1.fa
+    jobid: 67
+    wildcards: sample_id=A6_3B_MRB7260_plustet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/A6_3B_MRB7260_plustet1.fq -o outputs/fq_2_fa/A6_3B_MRB7260_plustet1.fa -n -v -Q33
+Submitted job 67 with external jobid 'Submitted batch job 462660 on cluster faculty'.
+
+[Thu Oct 24 12:14:10 2019]
+rule filter:
+    input: outputs/join/RPS12_REH1_mintet2.assembled.fastq
+    output: outputs/filter/RPS12_REH1_mintet2.fq
+    jobid: 126
+    wildcards: sample_id=RPS12_REH1_mintet2
+
+tools/fastx/0.0.13/fastq_quality_filter -i outputs/join/RPS12_REH1_mintet2.assembled.fastq -o outputs/filter/RPS12_REH1_mintet2.fq -q 0 -p 90 -Q33 -v
+Submitted job 126 with external jobid 'Submitted batch job 462661 on cluster faculty'.
+
+[Thu Oct 24 12:14:10 2019]
+rule collapse:
+    input: outputs/trimmed/CR4_3B_MRB7260_plustet1.fa
+    output: outputs/collapse/CR4_3B_MRB7260_plustet1.fa
+    jobid: 19
+    wildcards: sample_id=CR4_3B_MRB7260_plustet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/CR4_3B_MRB7260_plustet1.fa -o outputs/collapse/CR4_3B_MRB7260_plustet1.fa -v
+Submitted job 19 with external jobid 'Submitted batch job 462662 on cluster faculty'.
+
+[Thu Oct 24 12:14:11 2019]
+rule collapse:
+    input: outputs/trimmed/ND9_3B_MRB7260_mintet2.fa
+    output: outputs/collapse/ND9_3B_MRB7260_mintet2.fa
+    jobid: 26
+    wildcards: sample_id=ND9_3B_MRB7260_mintet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/ND9_3B_MRB7260_mintet2.fa -o outputs/collapse/ND9_3B_MRB7260_mintet2.fa -v
+Submitted job 26 with external jobid 'Submitted batch job 462663 on cluster faculty'.
+
+[Thu Oct 24 12:14:12 2019]
+rule filter:
+    input: outputs/join/A6_3B_MRB7260_mintet1.assembled.fastq
+    output: outputs/filter/A6_3B_MRB7260_mintet1.fq
+    jobid: 97
+    wildcards: sample_id=A6_3B_MRB7260_mintet1
+
+tools/fastx/0.0.13/fastq_quality_filter -i outputs/join/A6_3B_MRB7260_mintet1.assembled.fastq -o outputs/filter/A6_3B_MRB7260_mintet1.fq -q 0 -p 90 -Q33 -v
+Submitted job 97 with external jobid 'Submitted batch job 462664 on cluster faculty'.
+
+[Thu Oct 24 12:14:13 2019]
+rule filter:
+    input: outputs/join/COIII_3B_MRB7260_mintet2.assembled.fastq
+    output: outputs/filter/COIII_3B_MRB7260_mintet2.fq
+    jobid: 106
+    wildcards: sample_id=COIII_3B_MRB7260_mintet2
+
+tools/fastx/0.0.13/fastq_quality_filter -i outputs/join/COIII_3B_MRB7260_mintet2.assembled.fastq -o outputs/filter/COIII_3B_MRB7260_mintet2.fq -q 0 -p 90 -Q33 -v
+Submitted job 106 with external jobid 'Submitted batch job 462665 on cluster faculty'.
+
+[Thu Oct 24 12:14:14 2019]
+rule filter:
+    input: outputs/join/RPS12_REH1_mintet1.assembled.fastq
+    output: outputs/filter/RPS12_REH1_mintet1.fq
+    jobid: 125
+    wildcards: sample_id=RPS12_REH1_mintet1
+
+tools/fastx/0.0.13/fastq_quality_filter -i outputs/join/RPS12_REH1_mintet1.assembled.fastq -o outputs/filter/RPS12_REH1_mintet1.fq -q 0 -p 90 -Q33 -v
+Submitted job 125 with external jobid 'Submitted batch job 462666 on cluster faculty'.
+
+[Thu Oct 24 12:14:14 2019]
+rule filter:
+    input: outputs/join/CR3_REH1_plustet1.assembled.fastq
+    output: outputs/filter/CR3_REH1_plustet1.fq
+    jobid: 111
+    wildcards: sample_id=CR3_REH1_plustet1
+
+tools/fastx/0.0.13/fastq_quality_filter -i outputs/join/CR3_REH1_plustet1.assembled.fastq -o outputs/filter/CR3_REH1_plustet1.fq -q 0 -p 90 -Q33 -v
+Submitted job 111 with external jobid 'Submitted batch job 462667 on cluster faculty'.
+
+[Thu Oct 24 12:14:14 2019]
+rule filter:
+    input: outputs/join/COIII_3B_MRB7260_mintet1.assembled.fastq
+    output: outputs/filter/COIII_3B_MRB7260_mintet1.fq
+    jobid: 105
+    wildcards: sample_id=COIII_3B_MRB7260_mintet1
+
+tools/fastx/0.0.13/fastq_quality_filter -i outputs/join/COIII_3B_MRB7260_mintet1.assembled.fastq -o outputs/filter/COIII_3B_MRB7260_mintet1.fq -q 0 -p 90 -Q33 -v
+Submitted job 105 with external jobid 'Submitted batch job 462668 on cluster faculty'.
+
+[Thu Oct 24 12:14:14 2019]
+rule filter:
+    input: outputs/join/CR4_3B_MRB7260_plustet2.assembled.fastq
+    output: outputs/filter/CR4_3B_MRB7260_plustet2.fq
+    jobid: 116
+    wildcards: sample_id=CR4_3B_MRB7260_plustet2
+
+tools/fastx/0.0.13/fastq_quality_filter -i outputs/join/CR4_3B_MRB7260_plustet2.assembled.fastq -o outputs/filter/CR4_3B_MRB7260_plustet2.fq -q 0 -p 90 -Q33 -v
+Submitted job 116 with external jobid 'Submitted batch job 462669 on cluster faculty'.
+
+[Thu Oct 24 12:14:14 2019]
+rule fq_2_fa:
+    input: outputs/filter/ND9_3B_MRB7260_mintet1.fq
+    output: outputs/fq_2_fa/ND9_3B_MRB7260_mintet1.fa
+    jobid: 89
+    wildcards: sample_id=ND9_3B_MRB7260_mintet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/ND9_3B_MRB7260_mintet1.fq -o outputs/fq_2_fa/ND9_3B_MRB7260_mintet1.fa -n -v -Q33
+Submitted job 89 with external jobid 'Submitted batch job 462670 on cluster faculty'.
+
+[Thu Oct 24 12:14:15 2019]
+rule filter:
+    input: outputs/join/A6_3B_MRB7260_plustet2.assembled.fastq
+    output: outputs/filter/A6_3B_MRB7260_plustet2.fq
+    jobid: 100
+    wildcards: sample_id=A6_3B_MRB7260_plustet2
+
+tools/fastx/0.0.13/fastq_quality_filter -i outputs/join/A6_3B_MRB7260_plustet2.assembled.fastq -o outputs/filter/A6_3B_MRB7260_plustet2.fq -q 0 -p 90 -Q33 -v
+Submitted job 100 with external jobid 'Submitted batch job 462671 on cluster faculty'.
+
+[Thu Oct 24 12:14:15 2019]
+rule filter:
+    input: outputs/join/CR3_REH1_mintet2.assembled.fastq
+    output: outputs/filter/CR3_REH1_mintet2.fq
+    jobid: 110
+    wildcards: sample_id=CR3_REH1_mintet2
+
+tools/fastx/0.0.13/fastq_quality_filter -i outputs/join/CR3_REH1_mintet2.assembled.fastq -o outputs/filter/CR3_REH1_mintet2.fq -q 0 -p 90 -Q33 -v
+Submitted job 110 with external jobid 'Submitted batch job 462672 on cluster faculty'.
+
+[Thu Oct 24 12:14:15 2019]
+rule filter:
+    input: outputs/join/A6_3B_REH1_mintet1.assembled.fastq
+    output: outputs/filter/A6_3B_REH1_mintet1.fq
+    jobid: 101
+    wildcards: sample_id=A6_3B_REH1_mintet1
+
+tools/fastx/0.0.13/fastq_quality_filter -i outputs/join/A6_3B_REH1_mintet1.assembled.fastq -o outputs/filter/A6_3B_REH1_mintet1.fq -q 0 -p 90 -Q33 -v
+Submitted job 101 with external jobid 'Submitted batch job 462673 on cluster faculty'.
+
+[Thu Oct 24 12:14:15 2019]
+rule collapse:
+    input: outputs/trimmed/ND8_3B_MRB7260_plustet2.fa
+    output: outputs/collapse/ND8_3B_MRB7260_plustet2.fa
+    jobid: 24
+    wildcards: sample_id=ND8_3B_MRB7260_plustet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/ND8_3B_MRB7260_plustet2.fa -o outputs/collapse/ND8_3B_MRB7260_plustet2.fa -v
+Submitted job 24 with external jobid 'Submitted batch job 462674 on cluster faculty'.
+
+[Thu Oct 24 12:14:15 2019]
+rule filter:
+    input: outputs/join/COIII_3B_MRB7260_plustet1.assembled.fastq
+    output: outputs/filter/COIII_3B_MRB7260_plustet1.fq
+    jobid: 107
+    wildcards: sample_id=COIII_3B_MRB7260_plustet1
+
+tools/fastx/0.0.13/fastq_quality_filter -i outputs/join/COIII_3B_MRB7260_plustet1.assembled.fastq -o outputs/filter/COIII_3B_MRB7260_plustet1.fq -q 0 -p 90 -Q33 -v
+Submitted job 107 with external jobid 'Submitted batch job 462675 on cluster faculty'.
+
+[Thu Oct 24 12:14:16 2019]
+rule filter:
+    input: outputs/join/A6_3B_MRB7260_mintet2.assembled.fastq
+    output: outputs/filter/A6_3B_MRB7260_mintet2.fq
+    jobid: 98
+    wildcards: sample_id=A6_3B_MRB7260_mintet2
+
+tools/fastx/0.0.13/fastq_quality_filter -i outputs/join/A6_3B_MRB7260_mintet2.assembled.fastq -o outputs/filter/A6_3B_MRB7260_mintet2.fq -q 0 -p 90 -Q33 -v
+Submitted job 98 with external jobid 'Submitted batch job 462676 on cluster faculty'.
+
+[Thu Oct 24 12:14:16 2019]
+rule collapse:
+    input: outputs/trimmed/ND8_3B_MRB7260_mintet2.fa
+    output: outputs/collapse/ND8_3B_MRB7260_mintet2.fa
+    jobid: 22
+    wildcards: sample_id=ND8_3B_MRB7260_mintet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/ND8_3B_MRB7260_mintet2.fa -o outputs/collapse/ND8_3B_MRB7260_mintet2.fa -v
+Submitted job 22 with external jobid 'Submitted batch job 462677 on cluster faculty'.
+
+[Thu Oct 24 12:14:16 2019]
+rule collapse:
+    input: outputs/trimmed/ND8_3B_MRB7260_plustet1.fa
+    output: outputs/collapse/ND8_3B_MRB7260_plustet1.fa
+    jobid: 23
+    wildcards: sample_id=ND8_3B_MRB7260_plustet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/ND8_3B_MRB7260_plustet1.fa -o outputs/collapse/ND8_3B_MRB7260_plustet1.fa -v
+Submitted job 23 with external jobid 'Submitted batch job 462678 on cluster faculty'.
+
+[Thu Oct 24 12:14:16 2019]
+rule fq_2_fa:
+    input: outputs/filter/CR4_3B_MRB7260_mintet2.fq
+    output: outputs/fq_2_fa/CR4_3B_MRB7260_mintet2.fa
+    jobid: 82
+    wildcards: sample_id=CR4_3B_MRB7260_mintet2
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/CR4_3B_MRB7260_mintet2.fq -o outputs/fq_2_fa/CR4_3B_MRB7260_mintet2.fa -n -v -Q33
+Submitted job 82 with external jobid 'Submitted batch job 462679 on cluster faculty'.
+
+[Thu Oct 24 12:14:16 2019]
+rule filter:
+    input: outputs/join/CR3_REH1_mintet1.assembled.fastq
+    output: outputs/filter/CR3_REH1_mintet1.fq
+    jobid: 109
+    wildcards: sample_id=CR3_REH1_mintet1
+
+tools/fastx/0.0.13/fastq_quality_filter -i outputs/join/CR3_REH1_mintet1.assembled.fastq -o outputs/filter/CR3_REH1_mintet1.fq -q 0 -p 90 -Q33 -v
+Submitted job 109 with external jobid 'Submitted batch job 462680 on cluster faculty'.
+
+[Thu Oct 24 12:14:17 2019]
+rule filter:
+    input: outputs/join/ND9_3B_MRB7260_plustet1.assembled.fastq
+    output: outputs/filter/ND9_3B_MRB7260_plustet1.fq
+    jobid: 123
+    wildcards: sample_id=ND9_3B_MRB7260_plustet1
+
+tools/fastx/0.0.13/fastq_quality_filter -i outputs/join/ND9_3B_MRB7260_plustet1.assembled.fastq -o outputs/filter/ND9_3B_MRB7260_plustet1.fq -q 0 -p 90 -Q33 -v
+Submitted job 123 with external jobid 'Submitted batch job 462681 on cluster faculty'.
+Waiting at most 120 seconds for missing files.
+[Thu Oct 24 12:15:06 2019]
+Finished job 8.
+1 of 78 steps (1%) done
+[Thu Oct 24 12:15:06 2019]
+Finished job 95.
+2 of 78 steps (3%) done
+
+[Thu Oct 24 12:15:06 2019]
+rule trim:
+    input: outputs/fq_2_fa/RPS12_REH1_plustet1.fa
+    output: outputs/trimmed/RPS12_REH1_plustet1.fa
+    jobid: 63
+    wildcards: sample_id=RPS12_REH1_plustet1
+
+./tools/cutadapt/1.16/cutadapt/bin/cutadapt -m 15 -g CTAATACACTTTTGATAACAAAC -a AGATATAAGATATGTTTTT -n 2 outputs/fq_2_fa/RPS12_REH1_plustet1.fa > outputs/trimmed/RPS12_REH1_plustet1.fa 2>outputs/trimmed/RPS12_REH1_plustet1.fa.stats
+[Thu Oct 24 12:15:06 2019]
+Finished job 96.
+3 of 78 steps (4%) done
+[Thu Oct 24 12:15:06 2019]
+Finished job 67.
+4 of 78 steps (5%) done
+[Thu Oct 24 12:15:06 2019]
+Finished job 19.
+5 of 78 steps (6%) done
+Submitted job 63 with external jobid 'Submitted batch job 462685 on cluster faculty'.
+[Thu Oct 24 12:15:06 2019]
+Finished job 26.
+6 of 78 steps (8%) done
+
+[Thu Oct 24 12:15:06 2019]
+rule trim:
+    input: outputs/fq_2_fa/RPS12_REH1_plustet2.fa
+    output: outputs/trimmed/RPS12_REH1_plustet2.fa
+    jobid: 64
+    wildcards: sample_id=RPS12_REH1_plustet2
+
+./tools/cutadapt/1.16/cutadapt/bin/cutadapt -m 15 -g CTAATACACTTTTGATAACAAAC -a AGATATAAGATATGTTTTT -n 2 outputs/fq_2_fa/RPS12_REH1_plustet2.fa > outputs/trimmed/RPS12_REH1_plustet2.fa 2>outputs/trimmed/RPS12_REH1_plustet2.fa.stats
+[Thu Oct 24 12:15:06 2019]
+Finished job 97.
+7 of 78 steps (9%) done
+[Thu Oct 24 12:15:06 2019]
+Finished job 106.
+8 of 78 steps (10%) done
+Submitted job 64 with external jobid 'Submitted batch job 462686 on cluster faculty'.
+
+[Thu Oct 24 12:15:06 2019]
+rule trim:
+    input: outputs/fq_2_fa/A6_3B_MRB7260_plustet1.fa
+    output: outputs/trimmed/A6_3B_MRB7260_plustet1.fa
+    jobid: 35
+    wildcards: sample_id=A6_3B_MRB7260_plustet1
+
+./tools/cutadapt/1.16/cutadapt/bin/cutadapt -m 15 -g GAAAACACCCATTTTTAGGAGG -a GGAGTTATAGAATAAGATCAAATAAG -n 2 outputs/fq_2_fa/A6_3B_MRB7260_plustet1.fa > outputs/trimmed/A6_3B_MRB7260_plustet1.fa 2>outputs/trimmed/A6_3B_MRB7260_plustet1.fa.stats
+Submitted job 35 with external jobid 'Submitted batch job 462687 on cluster faculty'.
+
+[Thu Oct 24 12:15:07 2019]
+rule fq_2_fa:
+    input: outputs/filter/A6_3B_MRB7260_mintet1.fq
+    output: outputs/fq_2_fa/A6_3B_MRB7260_mintet1.fa
+    jobid: 65
+    wildcards: sample_id=A6_3B_MRB7260_mintet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/A6_3B_MRB7260_mintet1.fq -o outputs/fq_2_fa/A6_3B_MRB7260_mintet1.fa -n -v -Q33
+Submitted job 65 with external jobid 'Submitted batch job 462688 on cluster faculty'.
+
+[Thu Oct 24 12:15:07 2019]
+rule fq_2_fa:
+    input: outputs/filter/COIII_3B_MRB7260_mintet2.fq
+    output: outputs/fq_2_fa/COIII_3B_MRB7260_mintet2.fa
+    jobid: 74
+    wildcards: sample_id=COIII_3B_MRB7260_mintet2
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/COIII_3B_MRB7260_mintet2.fq -o outputs/fq_2_fa/COIII_3B_MRB7260_mintet2.fa -n -v -Q33
+Submitted job 74 with external jobid 'Submitted batch job 462689 on cluster faculty'.
+[Thu Oct 24 12:15:07 2019]
+Finished job 116.
+9 of 78 steps (12%) done
+
+[Thu Oct 24 12:15:07 2019]
+rule fq_2_fa:
+    input: outputs/filter/CR4_3B_MRB7260_plustet2.fq
+    output: outputs/fq_2_fa/CR4_3B_MRB7260_plustet2.fa
+    jobid: 84
+    wildcards: sample_id=CR4_3B_MRB7260_plustet2
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/CR4_3B_MRB7260_plustet2.fq -o outputs/fq_2_fa/CR4_3B_MRB7260_plustet2.fa -n -v -Q33
+[Thu Oct 24 12:15:07 2019]
+Finished job 89.
+10 of 78 steps (13%) done
+[Thu Oct 24 12:15:07 2019]
+Finished job 100.
+11 of 78 steps (14%) done
+Submitted job 84 with external jobid 'Submitted batch job 462690 on cluster faculty'.
+[Thu Oct 24 12:15:07 2019]
+Finished job 24.
+12 of 78 steps (15%) done
+
+[Thu Oct 24 12:15:07 2019]
+rule fq_2_fa:
+    input: outputs/filter/A6_3B_MRB7260_plustet2.fq
+    output: outputs/fq_2_fa/A6_3B_MRB7260_plustet2.fa
+    jobid: 68
+    wildcards: sample_id=A6_3B_MRB7260_plustet2
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/A6_3B_MRB7260_plustet2.fq -o outputs/fq_2_fa/A6_3B_MRB7260_plustet2.fa -n -v -Q33
+[Thu Oct 24 12:15:07 2019]
+Finished job 107.
+13 of 78 steps (17%) done
+[Thu Oct 24 12:15:07 2019]
+Finished job 98.
+14 of 78 steps (18%) done
+Submitted job 68 with external jobid 'Submitted batch job 462691 on cluster faculty'.
+
+[Thu Oct 24 12:15:08 2019]
+rule trim:
+    input: outputs/fq_2_fa/ND9_3B_MRB7260_mintet1.fa
+    output: outputs/trimmed/ND9_3B_MRB7260_mintet1.fa
+    jobid: 57
+    wildcards: sample_id=ND9_3B_MRB7260_mintet1
+
+./tools/cutadapt/1.16/cutadapt/bin/cutadapt -m 15 -g TTGGTAGGAGGATGATTGGG -a CACCGTTGTAATTCTAAATTTC -n 2 outputs/fq_2_fa/ND9_3B_MRB7260_mintet1.fa > outputs/trimmed/ND9_3B_MRB7260_mintet1.fa 2>outputs/trimmed/ND9_3B_MRB7260_mintet1.fa.stats
+Submitted job 57 with external jobid 'Submitted batch job 462692 on cluster faculty'.
+[Thu Oct 24 12:15:08 2019]
+Finished job 22.
+15 of 78 steps (19%) done
+
+[Thu Oct 24 12:15:08 2019]
+rule fq_2_fa:
+    input: outputs/filter/COIII_3B_MRB7260_plustet1.fq
+    output: outputs/fq_2_fa/COIII_3B_MRB7260_plustet1.fa
+    jobid: 75
+    wildcards: sample_id=COIII_3B_MRB7260_plustet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/COIII_3B_MRB7260_plustet1.fq -o outputs/fq_2_fa/COIII_3B_MRB7260_plustet1.fa -n -v -Q33
+[Thu Oct 24 12:15:08 2019]
+Finished job 23.
+16 of 78 steps (21%) done
+Submitted job 75 with external jobid 'Submitted batch job 462693 on cluster faculty'.
+
+[Thu Oct 24 12:15:08 2019]
+rule fq_2_fa:
+    input: outputs/filter/A6_3B_MRB7260_mintet2.fq
+    output: outputs/fq_2_fa/A6_3B_MRB7260_mintet2.fa
+    jobid: 66
+    wildcards: sample_id=A6_3B_MRB7260_mintet2
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/A6_3B_MRB7260_mintet2.fq -o outputs/fq_2_fa/A6_3B_MRB7260_mintet2.fa -n -v -Q33
+[Thu Oct 24 12:15:08 2019]
+Finished job 82.
+17 of 78 steps (22%) done
+[Thu Oct 24 12:15:08 2019]
+Finished job 123.
+18 of 78 steps (23%) done
+Submitted job 66 with external jobid 'Submitted batch job 462694 on cluster faculty'.
+
+[Thu Oct 24 12:15:08 2019]
+rule trim:
+    input: outputs/fq_2_fa/CR4_3B_MRB7260_mintet2.fa
+    output: outputs/trimmed/CR4_3B_MRB7260_mintet2.fa
+    jobid: 50
+    wildcards: sample_id=CR4_3B_MRB7260_mintet2
+
+./tools/cutadapt/1.16/cutadapt/bin/cutadapt -m 15 -g GAGTTTGATTGGGGGGTTTTAGTTGGT -a TGGTTTTATAAAATGTTTTTTCT -n 2 outputs/fq_2_fa/CR4_3B_MRB7260_mintet2.fa > outputs/trimmed/CR4_3B_MRB7260_mintet2.fa 2>outputs/trimmed/CR4_3B_MRB7260_mintet2.fa.stats
+Submitted job 50 with external jobid 'Submitted batch job 462695 on cluster faculty'.
+
+[Thu Oct 24 12:15:09 2019]
+rule fq_2_fa:
+    input: outputs/filter/ND9_3B_MRB7260_plustet1.fq
+    output: outputs/fq_2_fa/ND9_3B_MRB7260_plustet1.fa
+    jobid: 91
+    wildcards: sample_id=ND9_3B_MRB7260_plustet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/ND9_3B_MRB7260_plustet1.fq -o outputs/fq_2_fa/ND9_3B_MRB7260_plustet1.fa -n -v -Q33
+Submitted job 91 with external jobid 'Submitted batch job 462696 on cluster faculty'.
+[Thu Oct 24 12:15:19 2019]
+Finished job 105.
+19 of 78 steps (24%) done
+
+[Thu Oct 24 12:15:19 2019]
+rule fq_2_fa:
+    input: outputs/filter/COIII_3B_MRB7260_mintet1.fq
+    output: outputs/fq_2_fa/COIII_3B_MRB7260_mintet1.fa
+    jobid: 73
+    wildcards: sample_id=COIII_3B_MRB7260_mintet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/COIII_3B_MRB7260_mintet1.fq -o outputs/fq_2_fa/COIII_3B_MRB7260_mintet1.fa -n -v -Q33
+[Thu Oct 24 12:15:20 2019]
+Finished job 101.
+20 of 78 steps (26%) done
+Submitted job 73 with external jobid 'Submitted batch job 462697 on cluster faculty'.
+
+[Thu Oct 24 12:15:20 2019]
+rule fq_2_fa:
+    input: outputs/filter/A6_3B_REH1_mintet1.fq
+    output: outputs/fq_2_fa/A6_3B_REH1_mintet1.fa
+    jobid: 69
+    wildcards: sample_id=A6_3B_REH1_mintet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/A6_3B_REH1_mintet1.fq -o outputs/fq_2_fa/A6_3B_REH1_mintet1.fa -n -v -Q33
+Submitted job 69 with external jobid 'Submitted batch job 462698 on cluster faculty'.
+Waiting at most 120 seconds for missing files.
+[Thu Oct 24 12:15:37 2019]
+Finished job 63.
+21 of 78 steps (27%) done
+
+[Thu Oct 24 12:15:38 2019]
+rule collapse:
+    input: outputs/trimmed/RPS12_REH1_plustet1.fa
+    output: outputs/collapse/RPS12_REH1_plustet1.fa
+    jobid: 31
+    wildcards: sample_id=RPS12_REH1_plustet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/RPS12_REH1_plustet1.fa -o outputs/collapse/RPS12_REH1_plustet1.fa -v
+[Thu Oct 24 12:15:38 2019]
+Finished job 64.
+22 of 78 steps (28%) done
+Submitted job 31 with external jobid 'Submitted batch job 462700 on cluster faculty'.
+[Thu Oct 24 12:15:39 2019]
+Finished job 35.
+23 of 78 steps (29%) done
+
+[Thu Oct 24 12:15:40 2019]
+rule collapse:
+    input: outputs/trimmed/A6_3B_MRB7260_plustet1.fa
+    output: outputs/collapse/A6_3B_MRB7260_plustet1.fa
+    jobid: 3
+    wildcards: sample_id=A6_3B_MRB7260_plustet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/A6_3B_MRB7260_plustet1.fa -o outputs/collapse/A6_3B_MRB7260_plustet1.fa -v
+Submitted job 3 with external jobid 'Submitted batch job 462701 on cluster faculty'.
+[Thu Oct 24 12:15:41 2019]
+Finished job 65.
+24 of 78 steps (31%) done
+
+[Thu Oct 24 12:15:41 2019]
+rule collapse:
+    input: outputs/trimmed/RPS12_REH1_plustet2.fa
+    output: outputs/collapse/RPS12_REH1_plustet2.fa
+    jobid: 32
+    wildcards: sample_id=RPS12_REH1_plustet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/RPS12_REH1_plustet2.fa -o outputs/collapse/RPS12_REH1_plustet2.fa -v
+[Thu Oct 24 12:15:42 2019]
+Finished job 74.
+25 of 78 steps (32%) done
+Submitted job 32 with external jobid 'Submitted batch job 462702 on cluster faculty'.
+[Thu Oct 24 12:15:43 2019]
+Finished job 84.
+26 of 78 steps (33%) done
+
+[Thu Oct 24 12:15:43 2019]
+rule trim:
+    input: outputs/fq_2_fa/COIII_3B_MRB7260_mintet2.fa
+    output: outputs/trimmed/COIII_3B_MRB7260_mintet2.fa
+    jobid: 42
+    wildcards: sample_id=COIII_3B_MRB7260_mintet2
+
+./tools/cutadapt/1.16/cutadapt/bin/cutadapt -m 15 -g GCAGAAACAAAGGGG -a GGTAGTTTGTAGGAAGTT -n 2 outputs/fq_2_fa/COIII_3B_MRB7260_mintet2.fa > outputs/trimmed/COIII_3B_MRB7260_mintet2.fa 2>outputs/trimmed/COIII_3B_MRB7260_mintet2.fa.stats
+Submitted job 42 with external jobid 'Submitted batch job 462703 on cluster faculty'.
+[Thu Oct 24 12:15:44 2019]
+Finished job 68.
+27 of 78 steps (35%) done
+
+[Thu Oct 24 12:15:45 2019]
+rule trim:
+    input: outputs/fq_2_fa/A6_3B_MRB7260_mintet1.fa
+    output: outputs/trimmed/A6_3B_MRB7260_mintet1.fa
+    jobid: 33
+    wildcards: sample_id=A6_3B_MRB7260_mintet1
+
+./tools/cutadapt/1.16/cutadapt/bin/cutadapt -m 15 -g GAAAACACCCATTTTTAGGAGG -a GGAGTTATAGAATAAGATCAAATAAG -n 2 outputs/fq_2_fa/A6_3B_MRB7260_mintet1.fa > outputs/trimmed/A6_3B_MRB7260_mintet1.fa 2>outputs/trimmed/A6_3B_MRB7260_mintet1.fa.stats
+[Thu Oct 24 12:15:45 2019]
+Finished job 57.
+28 of 78 steps (36%) done
+[Thu Oct 24 12:15:45 2019]
+Finished job 75.
+29 of 78 steps (37%) done
+[Thu Oct 24 12:15:46 2019]
+Finished job 111.
+30 of 78 steps (38%) done
+Submitted job 33 with external jobid 'Submitted batch job 462704 on cluster faculty'.
+[Thu Oct 24 12:15:46 2019]
+Finished job 110.
+31 of 78 steps (40%) done
+
+[Thu Oct 24 12:15:46 2019]
+rule trim:
+    input: outputs/fq_2_fa/CR4_3B_MRB7260_plustet2.fa
+    output: outputs/trimmed/CR4_3B_MRB7260_plustet2.fa
+    jobid: 52
+    wildcards: sample_id=CR4_3B_MRB7260_plustet2
+
+./tools/cutadapt/1.16/cutadapt/bin/cutadapt -m 15 -g GAGTTTGATTGGGGGGTTTTAGTTGGT -a TGGTTTTATAAAATGTTTTTTCT -n 2 outputs/fq_2_fa/CR4_3B_MRB7260_plustet2.fa > outputs/trimmed/CR4_3B_MRB7260_plustet2.fa 2>outputs/trimmed/CR4_3B_MRB7260_plustet2.fa.stats
+[Thu Oct 24 12:15:46 2019]
+Finished job 109.
+32 of 78 steps (41%) done
+[Thu Oct 24 12:15:46 2019]
+Finished job 66.
+33 of 78 steps (42%) done
+[Thu Oct 24 12:15:46 2019]
+Finished job 50.
+34 of 78 steps (44%) done
+[Thu Oct 24 12:15:46 2019]
+Finished job 91.
+35 of 78 steps (45%) done
+Submitted job 52 with external jobid 'Submitted batch job 462705 on cluster faculty'.
+
+[Thu Oct 24 12:15:46 2019]
+rule fq_2_fa:
+    input: outputs/filter/CR3_REH1_mintet2.fq
+    output: outputs/fq_2_fa/CR3_REH1_mintet2.fa
+    jobid: 78
+    wildcards: sample_id=CR3_REH1_mintet2
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/CR3_REH1_mintet2.fq -o outputs/fq_2_fa/CR3_REH1_mintet2.fa -n -v -Q33
+Submitted job 78 with external jobid 'Submitted batch job 462706 on cluster faculty'.
+
+[Thu Oct 24 12:15:46 2019]
+rule collapse:
+    input: outputs/trimmed/CR4_3B_MRB7260_mintet2.fa
+    output: outputs/collapse/CR4_3B_MRB7260_mintet2.fa
+    jobid: 18
+    wildcards: sample_id=CR4_3B_MRB7260_mintet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/CR4_3B_MRB7260_mintet2.fa -o outputs/collapse/CR4_3B_MRB7260_mintet2.fa -v
+Submitted job 18 with external jobid 'Submitted batch job 462707 on cluster faculty'.
+
+[Thu Oct 24 12:15:46 2019]
+rule fq_2_fa:
+    input: outputs/filter/CR3_REH1_mintet1.fq
+    output: outputs/fq_2_fa/CR3_REH1_mintet1.fa
+    jobid: 77
+    wildcards: sample_id=CR3_REH1_mintet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/CR3_REH1_mintet1.fq -o outputs/fq_2_fa/CR3_REH1_mintet1.fa -n -v -Q33
+Submitted job 77 with external jobid 'Submitted batch job 462708 on cluster faculty'.
+
+[Thu Oct 24 12:15:47 2019]
+rule collapse:
+    input: outputs/trimmed/ND9_3B_MRB7260_mintet1.fa
+    output: outputs/collapse/ND9_3B_MRB7260_mintet1.fa
+    jobid: 25
+    wildcards: sample_id=ND9_3B_MRB7260_mintet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/ND9_3B_MRB7260_mintet1.fa -o outputs/collapse/ND9_3B_MRB7260_mintet1.fa -v
+Submitted job 25 with external jobid 'Submitted batch job 462709 on cluster faculty'.
+
+[Thu Oct 24 12:15:47 2019]
+rule trim:
+    input: outputs/fq_2_fa/ND9_3B_MRB7260_plustet1.fa
+    output: outputs/trimmed/ND9_3B_MRB7260_plustet1.fa
+    jobid: 59
+    wildcards: sample_id=ND9_3B_MRB7260_plustet1
+
+./tools/cutadapt/1.16/cutadapt/bin/cutadapt -m 15 -g TTGGTAGGAGGATGATTGGG -a CACCGTTGTAATTCTAAATTTC -n 2 outputs/fq_2_fa/ND9_3B_MRB7260_plustet1.fa > outputs/trimmed/ND9_3B_MRB7260_plustet1.fa 2>outputs/trimmed/ND9_3B_MRB7260_plustet1.fa.stats
+Submitted job 59 with external jobid 'Submitted batch job 462710 on cluster faculty'.
+
+[Thu Oct 24 12:15:47 2019]
+rule trim:
+    input: outputs/fq_2_fa/A6_3B_MRB7260_mintet2.fa
+    output: outputs/trimmed/A6_3B_MRB7260_mintet2.fa
+    jobid: 34
+    wildcards: sample_id=A6_3B_MRB7260_mintet2
+
+./tools/cutadapt/1.16/cutadapt/bin/cutadapt -m 15 -g GAAAACACCCATTTTTAGGAGG -a GGAGTTATAGAATAAGATCAAATAAG -n 2 outputs/fq_2_fa/A6_3B_MRB7260_mintet2.fa > outputs/trimmed/A6_3B_MRB7260_mintet2.fa 2>outputs/trimmed/A6_3B_MRB7260_mintet2.fa.stats
+Submitted job 34 with external jobid 'Submitted batch job 462711 on cluster faculty'.
+
+[Thu Oct 24 12:15:47 2019]
+rule fq_2_fa:
+    input: outputs/filter/CR3_REH1_plustet1.fq
+    output: outputs/fq_2_fa/CR3_REH1_plustet1.fa
+    jobid: 79
+    wildcards: sample_id=CR3_REH1_plustet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/CR3_REH1_plustet1.fq -o outputs/fq_2_fa/CR3_REH1_plustet1.fa -n -v -Q33
+Submitted job 79 with external jobid 'Submitted batch job 462712 on cluster faculty'.
+
+[Thu Oct 24 12:15:47 2019]
+rule trim:
+    input: outputs/fq_2_fa/COIII_3B_MRB7260_plustet1.fa
+    output: outputs/trimmed/COIII_3B_MRB7260_plustet1.fa
+    jobid: 43
+    wildcards: sample_id=COIII_3B_MRB7260_plustet1
+
+./tools/cutadapt/1.16/cutadapt/bin/cutadapt -m 15 -g GCAGAAACAAAGGGG -a GGTAGTTTGTAGGAAGTT -n 2 outputs/fq_2_fa/COIII_3B_MRB7260_plustet1.fa > outputs/trimmed/COIII_3B_MRB7260_plustet1.fa 2>outputs/trimmed/COIII_3B_MRB7260_plustet1.fa.stats
+Submitted job 43 with external jobid 'Submitted batch job 462713 on cluster faculty'.
+
+[Thu Oct 24 12:15:48 2019]
+rule trim:
+    input: outputs/fq_2_fa/A6_3B_MRB7260_plustet2.fa
+    output: outputs/trimmed/A6_3B_MRB7260_plustet2.fa
+    jobid: 36
+    wildcards: sample_id=A6_3B_MRB7260_plustet2
+
+./tools/cutadapt/1.16/cutadapt/bin/cutadapt -m 15 -g GAAAACACCCATTTTTAGGAGG -a GGAGTTATAGAATAAGATCAAATAAG -n 2 outputs/fq_2_fa/A6_3B_MRB7260_plustet2.fa > outputs/trimmed/A6_3B_MRB7260_plustet2.fa 2>outputs/trimmed/A6_3B_MRB7260_plustet2.fa.stats
+Submitted job 36 with external jobid 'Submitted batch job 462714 on cluster faculty'.
+[Thu Oct 24 12:15:57 2019]
+Finished job 31.
+36 of 78 steps (46%) done
+[Thu Oct 24 12:15:57 2019]
+Finished job 3.
+37 of 78 steps (47%) done
+[Thu Oct 24 12:15:57 2019]
+Finished job 32.
+38 of 78 steps (49%) done
+[Thu Oct 24 12:15:57 2019]
+Finished job 18.
+39 of 78 steps (50%) done
+[Thu Oct 24 12:15:58 2019]
+Finished job 73.
+40 of 78 steps (51%) done
+
+[Thu Oct 24 12:15:58 2019]
+rule trim:
+    input: outputs/fq_2_fa/COIII_3B_MRB7260_mintet1.fa
+    output: outputs/trimmed/COIII_3B_MRB7260_mintet1.fa
+    jobid: 41
+    wildcards: sample_id=COIII_3B_MRB7260_mintet1
+
+./tools/cutadapt/1.16/cutadapt/bin/cutadapt -m 15 -g GCAGAAACAAAGGGG -a GGTAGTTTGTAGGAAGTT -n 2 outputs/fq_2_fa/COIII_3B_MRB7260_mintet1.fa > outputs/trimmed/COIII_3B_MRB7260_mintet1.fa 2>outputs/trimmed/COIII_3B_MRB7260_mintet1.fa.stats
+[Thu Oct 24 12:15:58 2019]
+Finished job 69.
+41 of 78 steps (53%) done
+[Thu Oct 24 12:15:58 2019]
+Finished job 25.
+42 of 78 steps (54%) done
+Submitted job 41 with external jobid 'Submitted batch job 462715 on cluster faculty'.
+
+[Thu Oct 24 12:15:58 2019]
+rule trim:
+    input: outputs/fq_2_fa/A6_3B_REH1_mintet1.fa
+    output: outputs/trimmed/A6_3B_REH1_mintet1.fa
+    jobid: 37
+    wildcards: sample_id=A6_3B_REH1_mintet1
+
+./tools/cutadapt/1.16/cutadapt/bin/cutadapt -m 15 -g GAAAACACCCATTTTTAGGAGG -a GGAGTTATAGAATAAGATCAAATAAG -n 2 outputs/fq_2_fa/A6_3B_REH1_mintet1.fa > outputs/trimmed/A6_3B_REH1_mintet1.fa 2>outputs/trimmed/A6_3B_REH1_mintet1.fa.stats
+Submitted job 37 with external jobid 'Submitted batch job 462716 on cluster faculty'.
+[Thu Oct 24 12:16:08 2019]
+Finished job 126.
+43 of 78 steps (55%) done
+
+[Thu Oct 24 12:16:08 2019]
+rule fq_2_fa:
+    input: outputs/filter/RPS12_REH1_mintet2.fq
+    output: outputs/fq_2_fa/RPS12_REH1_mintet2.fa
+    jobid: 94
+    wildcards: sample_id=RPS12_REH1_mintet2
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/RPS12_REH1_mintet2.fq -o outputs/fq_2_fa/RPS12_REH1_mintet2.fa -n -v -Q33
+[Thu Oct 24 12:16:08 2019]
+Finished job 125.
+44 of 78 steps (56%) done
+Submitted job 94 with external jobid 'Submitted batch job 462718 on cluster faculty'.
+
+[Thu Oct 24 12:16:08 2019]
+rule fq_2_fa:
+    input: outputs/filter/RPS12_REH1_mintet1.fq
+    output: outputs/fq_2_fa/RPS12_REH1_mintet1.fa
+    jobid: 93
+    wildcards: sample_id=RPS12_REH1_mintet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/RPS12_REH1_mintet1.fq -o outputs/fq_2_fa/RPS12_REH1_mintet1.fa -n -v -Q33
+Submitted job 93 with external jobid 'Submitted batch job 462719 on cluster faculty'.
+[Thu Oct 24 12:16:09 2019]
+Finished job 36.
+45 of 78 steps (58%) done
+
+[Thu Oct 24 12:16:09 2019]
+rule collapse:
+    input: outputs/trimmed/A6_3B_MRB7260_plustet2.fa
+    output: outputs/collapse/A6_3B_MRB7260_plustet2.fa
+    jobid: 4
+    wildcards: sample_id=A6_3B_MRB7260_plustet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/A6_3B_MRB7260_plustet2.fa -o outputs/collapse/A6_3B_MRB7260_plustet2.fa -v
+Submitted job 4 with external jobid 'Submitted batch job 462720 on cluster faculty'.
+[Thu Oct 24 12:16:20 2019]
+Finished job 42.
+46 of 78 steps (59%) done
+
+[Thu Oct 24 12:16:21 2019]
+rule collapse:
+    input: outputs/trimmed/COIII_3B_MRB7260_mintet2.fa
+    output: outputs/collapse/COIII_3B_MRB7260_mintet2.fa
+    jobid: 10
+    wildcards: sample_id=COIII_3B_MRB7260_mintet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/COIII_3B_MRB7260_mintet2.fa -o outputs/collapse/COIII_3B_MRB7260_mintet2.fa -v
+[Thu Oct 24 12:16:22 2019]
+Finished job 33.
+47 of 78 steps (60%) done
+Submitted job 10 with external jobid 'Submitted batch job 462730 on cluster faculty'.
+[Thu Oct 24 12:16:23 2019]
+Finished job 52.
+48 of 78 steps (62%) done
+
+[Thu Oct 24 12:16:23 2019]
+rule collapse:
+    input: outputs/trimmed/A6_3B_MRB7260_mintet1.fa
+    output: outputs/collapse/A6_3B_MRB7260_mintet1.fa
+    jobid: 1
+    wildcards: sample_id=A6_3B_MRB7260_mintet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/A6_3B_MRB7260_mintet1.fa -o outputs/collapse/A6_3B_MRB7260_mintet1.fa -v
+Submitted job 1 with external jobid 'Submitted batch job 462731 on cluster faculty'.
+[Thu Oct 24 12:16:25 2019]
+Finished job 78.
+49 of 78 steps (63%) done
+
+[Thu Oct 24 12:16:26 2019]
+rule collapse:
+    input: outputs/trimmed/CR4_3B_MRB7260_plustet2.fa
+    output: outputs/collapse/CR4_3B_MRB7260_plustet2.fa
+    jobid: 20
+    wildcards: sample_id=CR4_3B_MRB7260_plustet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/CR4_3B_MRB7260_plustet2.fa -o outputs/collapse/CR4_3B_MRB7260_plustet2.fa -v
+Submitted job 20 with external jobid 'Submitted batch job 462732 on cluster faculty'.
+[Thu Oct 24 12:16:28 2019]
+Finished job 59.
+50 of 78 steps (64%) done
+
+[Thu Oct 24 12:16:28 2019]
+rule collapse:
+    input: outputs/trimmed/ND9_3B_MRB7260_plustet1.fa
+    output: outputs/collapse/ND9_3B_MRB7260_plustet1.fa
+    jobid: 27
+    wildcards: sample_id=ND9_3B_MRB7260_plustet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/ND9_3B_MRB7260_plustet1.fa -o outputs/collapse/ND9_3B_MRB7260_plustet1.fa -v
+[Thu Oct 24 12:16:29 2019]
+Finished job 34.
+51 of 78 steps (65%) done
+Submitted job 27 with external jobid 'Submitted batch job 462733 on cluster faculty'.
+
+[Thu Oct 24 12:16:30 2019]
+rule trim:
+    input: outputs/fq_2_fa/CR3_REH1_mintet2.fa
+    output: outputs/trimmed/CR3_REH1_mintet2.fa
+    jobid: 46
+    wildcards: sample_id=CR3_REH1_mintet2
+
+./tools/cutadapt/1.16/cutadapt/bin/cutadapt -m 15 -g AGAAATATAAATATGTGTATGATATAT -a AAGTATGCAAATAATTTTTGT -n 2 outputs/fq_2_fa/CR3_REH1_mintet2.fa > outputs/trimmed/CR3_REH1_mintet2.fa 2>outputs/trimmed/CR3_REH1_mintet2.fa.stats
+[Thu Oct 24 12:16:30 2019]
+Finished job 79.
+52 of 78 steps (67%) done
+[Thu Oct 24 12:16:30 2019]
+Finished job 43.
+53 of 78 steps (68%) done
+[Thu Oct 24 12:16:30 2019]
+Finished job 41.
+54 of 78 steps (69%) done
+[Thu Oct 24 12:16:30 2019]
+Finished job 37.
+55 of 78 steps (71%) done
+[Thu Oct 24 12:16:30 2019]
+Finished job 4.
+56 of 78 steps (72%) done
+Submitted job 46 with external jobid 'Submitted batch job 462734 on cluster faculty'.
+
+[Thu Oct 24 12:16:30 2019]
+rule trim:
+    input: outputs/fq_2_fa/CR3_REH1_plustet1.fa
+    output: outputs/trimmed/CR3_REH1_plustet1.fa
+    jobid: 47
+    wildcards: sample_id=CR3_REH1_plustet1
+
+./tools/cutadapt/1.16/cutadapt/bin/cutadapt -m 15 -g AGAAATATAAATATGTGTATGATATAT -a AAGTATGCAAATAATTTTTGT -n 2 outputs/fq_2_fa/CR3_REH1_plustet1.fa > outputs/trimmed/CR3_REH1_plustet1.fa 2>outputs/trimmed/CR3_REH1_plustet1.fa.stats
+Submitted job 47 with external jobid 'Submitted batch job 462735 on cluster faculty'.
+
+[Thu Oct 24 12:16:30 2019]
+rule collapse:
+    input: outputs/trimmed/A6_3B_MRB7260_mintet2.fa
+    output: outputs/collapse/A6_3B_MRB7260_mintet2.fa
+    jobid: 2
+    wildcards: sample_id=A6_3B_MRB7260_mintet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/A6_3B_MRB7260_mintet2.fa -o outputs/collapse/A6_3B_MRB7260_mintet2.fa -v
+Submitted job 2 with external jobid 'Submitted batch job 462736 on cluster faculty'.
+
+[Thu Oct 24 12:16:30 2019]
+rule collapse:
+    input: outputs/trimmed/A6_3B_REH1_mintet1.fa
+    output: outputs/collapse/A6_3B_REH1_mintet1.fa
+    jobid: 5
+    wildcards: sample_id=A6_3B_REH1_mintet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/A6_3B_REH1_mintet1.fa -o outputs/collapse/A6_3B_REH1_mintet1.fa -v
+Submitted job 5 with external jobid 'Submitted batch job 462737 on cluster faculty'.
+
+[Thu Oct 24 12:16:30 2019]
+rule collapse:
+    input: outputs/trimmed/COIII_3B_MRB7260_plustet1.fa
+    output: outputs/collapse/COIII_3B_MRB7260_plustet1.fa
+    jobid: 11
+    wildcards: sample_id=COIII_3B_MRB7260_plustet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/COIII_3B_MRB7260_plustet1.fa -o outputs/collapse/COIII_3B_MRB7260_plustet1.fa -v
+Submitted job 11 with external jobid 'Submitted batch job 462738 on cluster faculty'.
+
+[Thu Oct 24 12:16:31 2019]
+rule collapse:
+    input: outputs/trimmed/COIII_3B_MRB7260_mintet1.fa
+    output: outputs/collapse/COIII_3B_MRB7260_mintet1.fa
+    jobid: 9
+    wildcards: sample_id=COIII_3B_MRB7260_mintet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/COIII_3B_MRB7260_mintet1.fa -o outputs/collapse/COIII_3B_MRB7260_mintet1.fa -v
+Submitted job 9 with external jobid 'Submitted batch job 462739 on cluster faculty'.
+[Thu Oct 24 12:17:35 2019]
+Finished job 10.
+57 of 78 steps (73%) done
+[Thu Oct 24 12:18:11 2019]
+Finished job 1.
+58 of 78 steps (74%) done
+[Thu Oct 24 12:18:36 2019]
+Finished job 20.
+59 of 78 steps (76%) done
+[Thu Oct 24 12:18:36 2019]
+Finished job 27.
+60 of 78 steps (77%) done
+[Thu Oct 24 12:18:36 2019]
+Finished job 94.
+61 of 78 steps (78%) done
+
+[Thu Oct 24 12:18:36 2019]
+rule trim:
+    input: outputs/fq_2_fa/RPS12_REH1_mintet2.fa
+    output: outputs/trimmed/RPS12_REH1_mintet2.fa
+    jobid: 62
+    wildcards: sample_id=RPS12_REH1_mintet2
+
+./tools/cutadapt/1.16/cutadapt/bin/cutadapt -m 15 -g CTAATACACTTTTGATAACAAAC -a AGATATAAGATATGTTTTT -n 2 outputs/fq_2_fa/RPS12_REH1_mintet2.fa > outputs/trimmed/RPS12_REH1_mintet2.fa 2>outputs/trimmed/RPS12_REH1_mintet2.fa.stats
+[Thu Oct 24 12:18:36 2019]
+Finished job 93.
+62 of 78 steps (79%) done
+[Thu Oct 24 12:18:36 2019]
+Finished job 77.
+63 of 78 steps (81%) done
+[Thu Oct 24 12:18:36 2019]
+Finished job 46.
+64 of 78 steps (82%) done
+[Thu Oct 24 12:18:36 2019]
+Finished job 47.
+65 of 78 steps (83%) done
+[Thu Oct 24 12:18:36 2019]
+Finished job 2.
+66 of 78 steps (85%) done
+[Thu Oct 24 12:18:36 2019]
+Finished job 5.
+67 of 78 steps (86%) done
+Submitted job 62 with external jobid 'Submitted batch job 462744 on cluster faculty'.
+[Thu Oct 24 12:18:36 2019]
+Finished job 11.
+68 of 78 steps (87%) done
+
+[Thu Oct 24 12:18:36 2019]
+rule trim:
+    input: outputs/fq_2_fa/RPS12_REH1_mintet1.fa
+    output: outputs/trimmed/RPS12_REH1_mintet1.fa
+    jobid: 61
+    wildcards: sample_id=RPS12_REH1_mintet1
+
+./tools/cutadapt/1.16/cutadapt/bin/cutadapt -m 15 -g CTAATACACTTTTGATAACAAAC -a AGATATAAGATATGTTTTT -n 2 outputs/fq_2_fa/RPS12_REH1_mintet1.fa > outputs/trimmed/RPS12_REH1_mintet1.fa 2>outputs/trimmed/RPS12_REH1_mintet1.fa.stats
+Submitted job 61 with external jobid 'Submitted batch job 462745 on cluster faculty'.
+
+[Thu Oct 24 12:18:37 2019]
+rule collapse:
+    input: outputs/trimmed/CR3_REH1_plustet1.fa
+    output: outputs/collapse/CR3_REH1_plustet1.fa
+    jobid: 15
+    wildcards: sample_id=CR3_REH1_plustet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/CR3_REH1_plustet1.fa -o outputs/collapse/CR3_REH1_plustet1.fa -v
+Submitted job 15 with external jobid 'Submitted batch job 462746 on cluster faculty'.
+
+[Thu Oct 24 12:18:37 2019]
+rule trim:
+    input: outputs/fq_2_fa/CR3_REH1_mintet1.fa
+    output: outputs/trimmed/CR3_REH1_mintet1.fa
+    jobid: 45
+    wildcards: sample_id=CR3_REH1_mintet1
+
+./tools/cutadapt/1.16/cutadapt/bin/cutadapt -m 15 -g AGAAATATAAATATGTGTATGATATAT -a AAGTATGCAAATAATTTTTGT -n 2 outputs/fq_2_fa/CR3_REH1_mintet1.fa > outputs/trimmed/CR3_REH1_mintet1.fa 2>outputs/trimmed/CR3_REH1_mintet1.fa.stats
+Submitted job 45 with external jobid 'Submitted batch job 462747 on cluster faculty'.
+
+[Thu Oct 24 12:18:37 2019]
+rule collapse:
+    input: outputs/trimmed/CR3_REH1_mintet2.fa
+    output: outputs/collapse/CR3_REH1_mintet2.fa
+    jobid: 14
+    wildcards: sample_id=CR3_REH1_mintet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/CR3_REH1_mintet2.fa -o outputs/collapse/CR3_REH1_mintet2.fa -v
+Submitted job 14 with external jobid 'Submitted batch job 462748 on cluster faculty'.
+[Thu Oct 24 12:18:37 2019]
+Finished job 9.
+69 of 78 steps (88%) done
+Waiting at most 120 seconds for missing files.
+[Thu Oct 24 12:19:37 2019]
+Finished job 15.
+70 of 78 steps (90%) done
+[Thu Oct 24 12:19:37 2019]
+Finished job 45.
+71 of 78 steps (91%) done
+
+[Thu Oct 24 12:19:37 2019]
+rule collapse:
+    input: outputs/trimmed/CR3_REH1_mintet1.fa
+    output: outputs/collapse/CR3_REH1_mintet1.fa
+    jobid: 13
+    wildcards: sample_id=CR3_REH1_mintet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/CR3_REH1_mintet1.fa -o outputs/collapse/CR3_REH1_mintet1.fa -v
+[Thu Oct 24 12:19:37 2019]
+Finished job 14.
+72 of 78 steps (92%) done
+Submitted job 13 with external jobid 'Submitted batch job 462751 on cluster faculty'.
+[Thu Oct 24 12:19:47 2019]
+Finished job 62.
+73 of 78 steps (94%) done
+
+[Thu Oct 24 12:19:47 2019]
+rule collapse:
+    input: outputs/trimmed/RPS12_REH1_mintet2.fa
+    output: outputs/collapse/RPS12_REH1_mintet2.fa
+    jobid: 30
+    wildcards: sample_id=RPS12_REH1_mintet2
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/RPS12_REH1_mintet2.fa -o outputs/collapse/RPS12_REH1_mintet2.fa -v
+[Thu Oct 24 12:19:47 2019]
+Finished job 61.
+74 of 78 steps (95%) done
+[Thu Oct 24 12:19:47 2019]
+Finished job 13.
+75 of 78 steps (96%) done
+Submitted job 30 with external jobid 'Submitted batch job 462763 on cluster faculty'.
+
+[Thu Oct 24 12:19:48 2019]
+rule collapse:
+    input: outputs/trimmed/RPS12_REH1_mintet1.fa
+    output: outputs/collapse/RPS12_REH1_mintet1.fa
+    jobid: 29
+    wildcards: sample_id=RPS12_REH1_mintet1
+
+./tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/RPS12_REH1_mintet1.fa -o outputs/collapse/RPS12_REH1_mintet1.fa -v
+Submitted job 29 with external jobid 'Submitted batch job 462764 on cluster faculty'.
+Waiting at most 120 seconds for missing files.
+[Thu Oct 24 12:20:18 2019]
+Finished job 30.
+76 of 78 steps (97%) done
+[Thu Oct 24 12:20:18 2019]
+Finished job 29.
+77 of 78 steps (99%) done
+
+[Thu Oct 24 12:20:18 2019]
+localrule all:
+    input: outputs/collapse/A6_3B_MRB7260_mintet1.fa, outputs/collapse/A6_3B_MRB7260_mintet2.fa, outputs/collapse/A6_3B_MRB7260_plustet1.fa, outputs/collapse/A6_3B_MRB7260_plustet2.fa, outputs/collapse/A6_3B_REH1_mintet1.fa, outputs/collapse/A6_3B_REH1_mintet2.fa, outputs/collapse/A6_3B_REH1_plustet1.fa, outputs/collapse/A6_3B_REH1_plustet2.fa, outputs/collapse/COIII_3B_MRB7260_mintet1.fa, outputs/collapse/COIII_3B_MRB7260_mintet2.fa, outputs/collapse/COIII_3B_MRB7260_plustet1.fa, outputs/collapse/COIII_3B_MRB7260_plustet2.fa, outputs/collapse/CR3_REH1_mintet1.fa, outputs/collapse/CR3_REH1_mintet2.fa, outputs/collapse/CR3_REH1_plustet1.fa, outputs/collapse/CR3_REH1_plustet2.fa, outputs/collapse/CR4_3B_MRB7260_mintet1.fa, outputs/collapse/CR4_3B_MRB7260_mintet2.fa, outputs/collapse/CR4_3B_MRB7260_plustet1.fa, outputs/collapse/CR4_3B_MRB7260_plustet2.fa, outputs/collapse/ND8_3B_MRB7260_mintet1.fa, outputs/collapse/ND8_3B_MRB7260_mintet2.fa, outputs/collapse/ND8_3B_MRB7260_plustet1.fa, outputs/collapse/ND8_3B_MRB7260_plustet2.fa, outputs/collapse/ND9_3B_MRB7260_mintet1.fa, outputs/collapse/ND9_3B_MRB7260_mintet2.fa, outputs/collapse/ND9_3B_MRB7260_plustet1.fa, outputs/collapse/ND9_3B_MRB7260_plustet2.fa, outputs/collapse/RPS12_REH1_mintet1.fa, outputs/collapse/RPS12_REH1_mintet2.fa, outputs/collapse/RPS12_REH1_plustet1.fa, outputs/collapse/RPS12_REH1_plustet2.fa
+    jobid: 0
+
+echo All samples were successfully collapsed, ready for treat!
+[Thu Oct 24 12:20:19 2019]
+Finished job 0.
+78 of 78 steps (100%) done
+Complete log: /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/.snakemake/log/2019-10-24T121350.780249.snakemake.log

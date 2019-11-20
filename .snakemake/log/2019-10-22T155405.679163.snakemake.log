@@ -1,0 +1,436 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 50
+Job counts:
+	count	jobs
+	1	all
+	32	collapse
+	26	fq_2_fa
+	31	trim
+	90
+
+[Tue Oct 22 15:54:07 2019]
+rule fq_2_fa:
+    input: outputs/filter/CR4_3B_MRB7260_mintet2.fq
+    output: outputs/fq_2_fa/CR4_3B_MRB7260_mintet2.fa
+    jobid: 82
+    wildcards: sample_id=CR4_3B_MRB7260_mintet2
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/CR4_3B_MRB7260_mintet2.fq -o outputs/fq_2_fa/CR4_3B_MRB7260_mintet2.fa -n -v -Q33
+Submitted job 82 with external jobid 'Submitted batch job 452013 on cluster faculty'.
+
+[Tue Oct 22 15:54:07 2019]
+rule fq_2_fa:
+    input: outputs/filter/CR4_3B_MRB7260_plustet2.fq
+    output: outputs/fq_2_fa/CR4_3B_MRB7260_plustet2.fa
+    jobid: 84
+    wildcards: sample_id=CR4_3B_MRB7260_plustet2
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/CR4_3B_MRB7260_plustet2.fq -o outputs/fq_2_fa/CR4_3B_MRB7260_plustet2.fa -n -v -Q33
+Submitted job 84 with external jobid 'Submitted batch job 452014 on cluster faculty'.
+
+[Tue Oct 22 15:54:07 2019]
+rule fq_2_fa:
+    input: outputs/filter/ND8_3B_MRB7260_plustet1.fq
+    output: outputs/fq_2_fa/ND8_3B_MRB7260_plustet1.fa
+    jobid: 87
+    wildcards: sample_id=ND8_3B_MRB7260_plustet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/ND8_3B_MRB7260_plustet1.fq -o outputs/fq_2_fa/ND8_3B_MRB7260_plustet1.fa -n -v -Q33
+Submitted job 87 with external jobid 'Submitted batch job 452015 on cluster faculty'.
+
+[Tue Oct 22 15:54:07 2019]
+rule fq_2_fa:
+    input: outputs/filter/COIII_3B_MRB7260_plustet1.fq
+    output: outputs/fq_2_fa/COIII_3B_MRB7260_plustet1.fa
+    jobid: 75
+    wildcards: sample_id=COIII_3B_MRB7260_plustet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/COIII_3B_MRB7260_plustet1.fq -o outputs/fq_2_fa/COIII_3B_MRB7260_plustet1.fa -n -v -Q33
+Submitted job 75 with external jobid 'Submitted batch job 452016 on cluster faculty'.
+
+[Tue Oct 22 15:54:08 2019]
+rule fq_2_fa:
+    input: outputs/filter/ND8_3B_MRB7260_mintet2.fq
+    output: outputs/fq_2_fa/ND8_3B_MRB7260_mintet2.fa
+    jobid: 86
+    wildcards: sample_id=ND8_3B_MRB7260_mintet2
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/ND8_3B_MRB7260_mintet2.fq -o outputs/fq_2_fa/ND8_3B_MRB7260_mintet2.fa -n -v -Q33
+Submitted job 86 with external jobid 'Submitted batch job 452017 on cluster faculty'.
+
+[Tue Oct 22 15:54:08 2019]
+rule fq_2_fa:
+    input: outputs/filter/ND9_3B_MRB7260_mintet1.fq
+    output: outputs/fq_2_fa/ND9_3B_MRB7260_mintet1.fa
+    jobid: 89
+    wildcards: sample_id=ND9_3B_MRB7260_mintet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/ND9_3B_MRB7260_mintet1.fq -o outputs/fq_2_fa/ND9_3B_MRB7260_mintet1.fa -n -v -Q33
+Submitted job 89 with external jobid 'Submitted batch job 452018 on cluster faculty'.
+
+[Tue Oct 22 15:54:08 2019]
+rule fq_2_fa:
+    input: outputs/filter/ND8_3B_MRB7260_plustet2.fq
+    output: outputs/fq_2_fa/ND8_3B_MRB7260_plustet2.fa
+    jobid: 88
+    wildcards: sample_id=ND8_3B_MRB7260_plustet2
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/ND8_3B_MRB7260_plustet2.fq -o outputs/fq_2_fa/ND8_3B_MRB7260_plustet2.fa -n -v -Q33
+Submitted job 88 with external jobid 'Submitted batch job 452019 on cluster faculty'.
+
+[Tue Oct 22 15:54:08 2019]
+rule collapse:
+    input: outputs/trimmed/ND9_3B_MRB7260_plustet2.fa
+    output: outputs/collapse/ND9_3B_MRB7260_plustet2.fa
+    jobid: 28
+    wildcards: sample_id=ND9_3B_MRB7260_plustet2
+
+tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/ND9_3B_MRB7260_plustet2.fa -o outputs/collapse/ND9_3B_MRB7260_plustet2.fa -v
+Submitted job 28 with external jobid 'Submitted batch job 452020 on cluster faculty'.
+
+[Tue Oct 22 15:54:08 2019]
+rule trim:
+    input: outputs/fq_2_fa/COIII_3B_MRB7260_plustet2.fa
+    output: outputs/trimmed/COIII_3B_MRB7260_plustet2.fa
+    jobid: 44
+    wildcards: sample_id=COIII_3B_MRB7260_plustet2
+
+./tools/cutadapt/1.16/cutadapt/bin/cutadapt -m 15 -g GCAGAAACAAAGGGG -a GGTAGTTTGTAGGAAGTT -n 2 outputs/fq_2_fa/COIII_3B_MRB7260_plustet2.fa > outputs/trimmed/COIII_3B_MRB7260_plustet2.fa 2>outputs/trimmed/COIII_3B_MRB7260_plustet2.fa.stats
+Submitted job 44 with external jobid 'Submitted batch job 452021 on cluster faculty'.
+
+[Tue Oct 22 15:54:08 2019]
+rule fq_2_fa:
+    input: outputs/filter/RPS12_REH1_mintet1.fq
+    output: outputs/fq_2_fa/RPS12_REH1_mintet1.fa
+    jobid: 93
+    wildcards: sample_id=RPS12_REH1_mintet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/RPS12_REH1_mintet1.fq -o outputs/fq_2_fa/RPS12_REH1_mintet1.fa -n -v -Q33
+Submitted job 93 with external jobid 'Submitted batch job 452022 on cluster faculty'.
+
+[Tue Oct 22 15:54:08 2019]
+rule fq_2_fa:
+    input: outputs/filter/COIII_3B_MRB7260_mintet2.fq
+    output: outputs/fq_2_fa/COIII_3B_MRB7260_mintet2.fa
+    jobid: 74
+    wildcards: sample_id=COIII_3B_MRB7260_mintet2
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/COIII_3B_MRB7260_mintet2.fq -o outputs/fq_2_fa/COIII_3B_MRB7260_mintet2.fa -n -v -Q33
+Submitted job 74 with external jobid 'Submitted batch job 452023 on cluster faculty'.
+
+[Tue Oct 22 15:54:09 2019]
+rule fq_2_fa:
+    input: outputs/filter/A6_3B_MRB7260_mintet2.fq
+    output: outputs/fq_2_fa/A6_3B_MRB7260_mintet2.fa
+    jobid: 66
+    wildcards: sample_id=A6_3B_MRB7260_mintet2
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/A6_3B_MRB7260_mintet2.fq -o outputs/fq_2_fa/A6_3B_MRB7260_mintet2.fa -n -v -Q33
+Submitted job 66 with external jobid 'Submitted batch job 452024 on cluster faculty'.
+
+[Tue Oct 22 15:54:09 2019]
+rule fq_2_fa:
+    input: outputs/filter/A6_3B_REH1_mintet1.fq
+    output: outputs/fq_2_fa/A6_3B_REH1_mintet1.fa
+    jobid: 69
+    wildcards: sample_id=A6_3B_REH1_mintet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/A6_3B_REH1_mintet1.fq -o outputs/fq_2_fa/A6_3B_REH1_mintet1.fa -n -v -Q33
+Submitted job 69 with external jobid 'Submitted batch job 452025 on cluster faculty'.
+
+[Tue Oct 22 15:54:09 2019]
+rule fq_2_fa:
+    input: outputs/filter/RPS12_REH1_mintet2.fq
+    output: outputs/fq_2_fa/RPS12_REH1_mintet2.fa
+    jobid: 94
+    wildcards: sample_id=RPS12_REH1_mintet2
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/RPS12_REH1_mintet2.fq -o outputs/fq_2_fa/RPS12_REH1_mintet2.fa -n -v -Q33
+Submitted job 94 with external jobid 'Submitted batch job 452026 on cluster faculty'.
+
+[Tue Oct 22 15:54:09 2019]
+rule fq_2_fa:
+    input: outputs/filter/ND9_3B_MRB7260_plustet1.fq
+    output: outputs/fq_2_fa/ND9_3B_MRB7260_plustet1.fa
+    jobid: 91
+    wildcards: sample_id=ND9_3B_MRB7260_plustet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/ND9_3B_MRB7260_plustet1.fq -o outputs/fq_2_fa/ND9_3B_MRB7260_plustet1.fa -n -v -Q33
+Submitted job 91 with external jobid 'Submitted batch job 452027 on cluster faculty'.
+
+[Tue Oct 22 15:54:09 2019]
+rule fq_2_fa:
+    input: outputs/filter/CR3_REH1_mintet2.fq
+    output: outputs/fq_2_fa/CR3_REH1_mintet2.fa
+    jobid: 78
+    wildcards: sample_id=CR3_REH1_mintet2
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/CR3_REH1_mintet2.fq -o outputs/fq_2_fa/CR3_REH1_mintet2.fa -n -v -Q33
+Submitted job 78 with external jobid 'Submitted batch job 452028 on cluster faculty'.
+
+[Tue Oct 22 15:54:09 2019]
+rule fq_2_fa:
+    input: outputs/filter/CR3_REH1_plustet1.fq
+    output: outputs/fq_2_fa/CR3_REH1_plustet1.fa
+    jobid: 79
+    wildcards: sample_id=CR3_REH1_plustet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/CR3_REH1_plustet1.fq -o outputs/fq_2_fa/CR3_REH1_plustet1.fa -n -v -Q33
+Submitted job 79 with external jobid 'Submitted batch job 452029 on cluster faculty'.
+
+[Tue Oct 22 15:54:10 2019]
+rule fq_2_fa:
+    input: outputs/filter/A6_3B_REH1_plustet1.fq
+    output: outputs/fq_2_fa/A6_3B_REH1_plustet1.fa
+    jobid: 71
+    wildcards: sample_id=A6_3B_REH1_plustet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/A6_3B_REH1_plustet1.fq -o outputs/fq_2_fa/A6_3B_REH1_plustet1.fa -n -v -Q33
+Submitted job 71 with external jobid 'Submitted batch job 452030 on cluster faculty'.
+
+[Tue Oct 22 15:54:10 2019]
+rule fq_2_fa:
+    input: outputs/filter/RPS12_REH1_plustet2.fq
+    output: outputs/fq_2_fa/RPS12_REH1_plustet2.fa
+    jobid: 96
+    wildcards: sample_id=RPS12_REH1_plustet2
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/RPS12_REH1_plustet2.fq -o outputs/fq_2_fa/RPS12_REH1_plustet2.fa -n -v -Q33
+Submitted job 96 with external jobid 'Submitted batch job 452031 on cluster faculty'.
+
+[Tue Oct 22 15:54:10 2019]
+rule fq_2_fa:
+    input: outputs/filter/COIII_3B_MRB7260_mintet1.fq
+    output: outputs/fq_2_fa/COIII_3B_MRB7260_mintet1.fa
+    jobid: 73
+    wildcards: sample_id=COIII_3B_MRB7260_mintet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/COIII_3B_MRB7260_mintet1.fq -o outputs/fq_2_fa/COIII_3B_MRB7260_mintet1.fa -n -v -Q33
+Submitted job 73 with external jobid 'Submitted batch job 452032 on cluster faculty'.
+
+[Tue Oct 22 15:54:10 2019]
+rule fq_2_fa:
+    input: outputs/filter/ND9_3B_MRB7260_mintet2.fq
+    output: outputs/fq_2_fa/ND9_3B_MRB7260_mintet2.fa
+    jobid: 90
+    wildcards: sample_id=ND9_3B_MRB7260_mintet2
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/ND9_3B_MRB7260_mintet2.fq -o outputs/fq_2_fa/ND9_3B_MRB7260_mintet2.fa -n -v -Q33
+Submitted job 90 with external jobid 'Submitted batch job 452033 on cluster faculty'.
+
+[Tue Oct 22 15:54:10 2019]
+rule trim:
+    input: outputs/fq_2_fa/ND8_3B_MRB7260_mintet1.fa
+    output: outputs/trimmed/ND8_3B_MRB7260_mintet1.fa
+    jobid: 53
+    wildcards: sample_id=ND8_3B_MRB7260_mintet1
+
+./tools/cutadapt/1.16/cutadapt/bin/cutadapt -m 15 -g GAGCAGGAGTTTTTCGGGGG -a CACGGTGAAATTAAATTTTGACTAAAT -n 2 outputs/fq_2_fa/ND8_3B_MRB7260_mintet1.fa > outputs/trimmed/ND8_3B_MRB7260_mintet1.fa 2>outputs/trimmed/ND8_3B_MRB7260_mintet1.fa.stats
+Submitted job 53 with external jobid 'Submitted batch job 452034 on cluster faculty'.
+
+[Tue Oct 22 15:54:10 2019]
+rule fq_2_fa:
+    input: outputs/filter/A6_3B_MRB7260_plustet1.fq
+    output: outputs/fq_2_fa/A6_3B_MRB7260_plustet1.fa
+    jobid: 67
+    wildcards: sample_id=A6_3B_MRB7260_plustet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/A6_3B_MRB7260_plustet1.fq -o outputs/fq_2_fa/A6_3B_MRB7260_plustet1.fa -n -v -Q33
+Submitted job 67 with external jobid 'Submitted batch job 452035 on cluster faculty'.
+
+[Tue Oct 22 15:54:10 2019]
+rule fq_2_fa:
+    input: outputs/filter/RPS12_REH1_plustet1.fq
+    output: outputs/fq_2_fa/RPS12_REH1_plustet1.fa
+    jobid: 95
+    wildcards: sample_id=RPS12_REH1_plustet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/RPS12_REH1_plustet1.fq -o outputs/fq_2_fa/RPS12_REH1_plustet1.fa -n -v -Q33
+Submitted job 95 with external jobid 'Submitted batch job 452036 on cluster faculty'.
+
+[Tue Oct 22 15:54:11 2019]
+rule fq_2_fa:
+    input: outputs/filter/CR4_3B_MRB7260_plustet1.fq
+    output: outputs/fq_2_fa/CR4_3B_MRB7260_plustet1.fa
+    jobid: 83
+    wildcards: sample_id=CR4_3B_MRB7260_plustet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/CR4_3B_MRB7260_plustet1.fq -o outputs/fq_2_fa/CR4_3B_MRB7260_plustet1.fa -n -v -Q33
+Submitted job 83 with external jobid 'Submitted batch job 452037 on cluster faculty'.
+
+[Tue Oct 22 15:54:11 2019]
+rule trim:
+    input: outputs/fq_2_fa/A6_3B_REH1_mintet2.fa
+    output: outputs/trimmed/A6_3B_REH1_mintet2.fa
+    jobid: 38
+    wildcards: sample_id=A6_3B_REH1_mintet2
+
+./tools/cutadapt/1.16/cutadapt/bin/cutadapt -m 15 -g GAAAACACCCATTTTTAGGAGG -a GGAGTTATAGAATAAGATCAAATAAG -n 2 outputs/fq_2_fa/A6_3B_REH1_mintet2.fa > outputs/trimmed/A6_3B_REH1_mintet2.fa 2>outputs/trimmed/A6_3B_REH1_mintet2.fa.stats
+Submitted job 38 with external jobid 'Submitted batch job 452038 on cluster faculty'.
+
+[Tue Oct 22 15:54:11 2019]
+rule trim:
+    input: outputs/fq_2_fa/CR3_REH1_plustet2.fa
+    output: outputs/trimmed/CR3_REH1_plustet2.fa
+    jobid: 48
+    wildcards: sample_id=CR3_REH1_plustet2
+
+./tools/cutadapt/1.16/cutadapt/bin/cutadapt -m 15 -g AGAAATATAAATATGTGTATGATATAT -a AAGTATGCAAATAATTTTTGT -n 2 outputs/fq_2_fa/CR3_REH1_plustet2.fa > outputs/trimmed/CR3_REH1_plustet2.fa 2>outputs/trimmed/CR3_REH1_plustet2.fa.stats
+Submitted job 48 with external jobid 'Submitted batch job 452039 on cluster faculty'.
+
+[Tue Oct 22 15:54:11 2019]
+rule trim:
+    input: outputs/fq_2_fa/CR4_3B_MRB7260_mintet1.fa
+    output: outputs/trimmed/CR4_3B_MRB7260_mintet1.fa
+    jobid: 49
+    wildcards: sample_id=CR4_3B_MRB7260_mintet1
+
+./tools/cutadapt/1.16/cutadapt/bin/cutadapt -m 15 -g GAGTTTGATTGGGGGGTTTTAGTTGGT -a TGGTTTTATAAAATGTTTTTTCT -n 2 outputs/fq_2_fa/CR4_3B_MRB7260_mintet1.fa > outputs/trimmed/CR4_3B_MRB7260_mintet1.fa 2>outputs/trimmed/CR4_3B_MRB7260_mintet1.fa.stats
+Submitted job 49 with external jobid 'Submitted batch job 452040 on cluster faculty'.
+
+[Tue Oct 22 15:54:11 2019]
+rule fq_2_fa:
+    input: outputs/filter/A6_3B_MRB7260_plustet2.fq
+    output: outputs/fq_2_fa/A6_3B_MRB7260_plustet2.fa
+    jobid: 68
+    wildcards: sample_id=A6_3B_MRB7260_plustet2
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/A6_3B_MRB7260_plustet2.fq -o outputs/fq_2_fa/A6_3B_MRB7260_plustet2.fa -n -v -Q33
+Submitted job 68 with external jobid 'Submitted batch job 452041 on cluster faculty'.
+
+[Tue Oct 22 15:54:11 2019]
+rule fq_2_fa:
+    input: outputs/filter/A6_3B_REH1_plustet2.fq
+    output: outputs/fq_2_fa/A6_3B_REH1_plustet2.fa
+    jobid: 72
+    wildcards: sample_id=A6_3B_REH1_plustet2
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/A6_3B_REH1_plustet2.fq -o outputs/fq_2_fa/A6_3B_REH1_plustet2.fa -n -v -Q33
+Submitted job 72 with external jobid 'Submitted batch job 452042 on cluster faculty'.
+
+[Tue Oct 22 15:54:11 2019]
+rule fq_2_fa:
+    input: outputs/filter/A6_3B_MRB7260_mintet1.fq
+    output: outputs/fq_2_fa/A6_3B_MRB7260_mintet1.fa
+    jobid: 65
+    wildcards: sample_id=A6_3B_MRB7260_mintet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/A6_3B_MRB7260_mintet1.fq -o outputs/fq_2_fa/A6_3B_MRB7260_mintet1.fa -n -v -Q33
+Submitted job 65 with external jobid 'Submitted batch job 452043 on cluster faculty'.
+
+[Tue Oct 22 15:54:12 2019]
+rule fq_2_fa:
+    input: outputs/filter/CR3_REH1_mintet1.fq
+    output: outputs/fq_2_fa/CR3_REH1_mintet1.fa
+    jobid: 77
+    wildcards: sample_id=CR3_REH1_mintet1
+
+tools/fastx/0.0.13/fastq_to_fasta -i outputs/filter/CR3_REH1_mintet1.fq -o outputs/fq_2_fa/CR3_REH1_mintet1.fa -n -v -Q33
+Submitted job 77 with external jobid 'Submitted batch job 452044 on cluster faculty'.
+[Tue Oct 22 15:54:17 2019]
+Error in rule collapse:
+    jobid: 28
+    output: outputs/collapse/ND9_3B_MRB7260_plustet2.fa
+    shell:
+        tools/fastx/0.0.13/fastx_collapser -i outputs/trimmed/ND9_3B_MRB7260_plustet2.fa -o outputs/collapse/ND9_3B_MRB7260_plustet2.fa -v
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 452020 on cluster faculty
+
+Error executing rule collapse on cluster (jobid: 28, external: Submitted batch job 452020 on cluster faculty, jobscript: /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/.snakemake/tmp.zkj02zz6/snakejob.collapse.28.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Tue Oct 22 15:54:30 2019]
+Finished job 82.
+1 of 90 steps (1%) done
+[Tue Oct 22 15:54:30 2019]
+Finished job 84.
+2 of 90 steps (2%) done
+[Tue Oct 22 15:54:30 2019]
+Finished job 87.
+3 of 90 steps (3%) done
+[Tue Oct 22 15:54:30 2019]
+Finished job 75.
+4 of 90 steps (4%) done
+[Tue Oct 22 15:54:30 2019]
+Finished job 89.
+5 of 90 steps (6%) done
+[Tue Oct 22 15:54:30 2019]
+Finished job 88.
+6 of 90 steps (7%) done
+[Tue Oct 22 15:54:30 2019]
+Finished job 44.
+7 of 90 steps (8%) done
+[Tue Oct 22 15:54:32 2019]
+Finished job 83.
+8 of 90 steps (9%) done
+[Tue Oct 22 15:54:43 2019]
+Finished job 86.
+9 of 90 steps (10%) done
+[Tue Oct 22 15:54:43 2019]
+Finished job 74.
+10 of 90 steps (11%) done
+[Tue Oct 22 15:54:43 2019]
+Finished job 66.
+11 of 90 steps (12%) done
+[Tue Oct 22 15:54:43 2019]
+Finished job 69.
+12 of 90 steps (13%) done
+[Tue Oct 22 15:54:43 2019]
+Finished job 91.
+13 of 90 steps (14%) done
+[Tue Oct 22 15:54:43 2019]
+Finished job 71.
+14 of 90 steps (16%) done
+[Tue Oct 22 15:54:44 2019]
+Finished job 73.
+15 of 90 steps (17%) done
+[Tue Oct 22 15:54:44 2019]
+Finished job 90.
+16 of 90 steps (18%) done
+[Tue Oct 22 15:54:44 2019]
+Finished job 53.
+17 of 90 steps (19%) done
+[Tue Oct 22 15:54:44 2019]
+Finished job 67.
+18 of 90 steps (20%) done
+[Tue Oct 22 15:54:55 2019]
+Finished job 78.
+19 of 90 steps (21%) done
+[Tue Oct 22 15:54:55 2019]
+Finished job 79.
+20 of 90 steps (22%) done
+[Tue Oct 22 15:54:55 2019]
+Finished job 96.
+21 of 90 steps (23%) done
+[Tue Oct 22 15:54:55 2019]
+Finished job 95.
+22 of 90 steps (24%) done
+[Tue Oct 22 15:55:06 2019]
+Finished job 93.
+23 of 90 steps (26%) done
+[Tue Oct 22 15:55:06 2019]
+Finished job 94.
+24 of 90 steps (27%) done
+[Tue Oct 22 15:55:06 2019]
+Finished job 38.
+25 of 90 steps (28%) done
+[Tue Oct 22 15:55:06 2019]
+Finished job 48.
+26 of 90 steps (29%) done
+[Tue Oct 22 15:55:06 2019]
+Finished job 49.
+27 of 90 steps (30%) done
+[Tue Oct 22 15:55:06 2019]
+Finished job 68.
+28 of 90 steps (31%) done
+[Tue Oct 22 15:55:06 2019]
+Finished job 72.
+29 of 90 steps (32%) done
+[Tue Oct 22 15:55:06 2019]
+Finished job 65.
+30 of 90 steps (33%) done
+[Tue Oct 22 15:55:06 2019]
+Finished job 77.
+31 of 90 steps (34%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/.snakemake/log/2019-10-22T155405.679163.snakemake.log

@@ -1,0 +1,46 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	32	collapse
+	32	filter
+	32	fq_2_fa
+	32	join
+	32	treat
+	32	trim
+	32	unzip
+	225
+
+[Thu Oct 24 10:54:51 2019]
+rule unzip:
+    input: ../C9K8C/fastq/CR3_REH1_mintet1_S29_L001_R1_001.fastq.gz, ../C9K8C/fastq/CR3_REH1_mintet1_S29_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/CR3_REH1_mintet1_R1.fq, outputs/unzip/CR3_REH1_mintet1_R2.fq
+    jobid: 205
+    wildcards: sample_id=CR3_REH1_mintet1
+
+[Thu Oct 24 10:55:08 2019]
+Finished job 205.
+1 of 225 steps (0.44%) done
+
+[Thu Oct 24 10:55:08 2019]
+rule join:
+    input: outputs/unzip/CR3_REH1_mintet1_R1.fq, outputs/unzip/CR3_REH1_mintet1_R2.fq
+    output: outputs/join/CR3_REH1_mintet1.assembled.fastq
+    jobid: 173
+    wildcards: sample_id=CR3_REH1_mintet1
+
+Terminating processes on user request, this might take some time.
+[Thu Oct 24 10:55:16 2019]
+Error in rule join:
+    jobid: 173
+    output: outputs/join/CR3_REH1_mintet1.assembled.fastq
+    shell:
+        tools/pear/0.9.6/pear -f outputs/unzip/CR3_REH1_mintet1_R1.fq -r outputs/unzip/CR3_REH1_mintet1_R2.fq -o outputs/join/CR3_REH1_mintet1
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job join since they might be corrupted:
+outputs/join/CR3_REH1_mintet1.assembled.fastq
+Complete log: /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/.snakemake/log/2019-10-24T105448.257386.snakemake.log

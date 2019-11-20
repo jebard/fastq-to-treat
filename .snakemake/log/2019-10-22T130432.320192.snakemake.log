@@ -1,0 +1,44 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	32	collapse
+	32	filter
+	32	fq_2_fa
+	32	join
+	1	mkdir
+	32	strip
+	32	unzip
+	194
+
+[Tue Oct 22 13:04:36 2019]
+localrule mkdir:
+    output: mkdir.done
+    jobid: 193
+
+Touching output file mkdir.done.
+[Tue Oct 22 13:04:36 2019]
+Finished job 193.
+1 of 194 steps (0.52%) done
+
+[Tue Oct 22 13:04:36 2019]
+rule unzip:
+    input: ../C9K8C/fastq/CR3_REH1_mintet1_S29_L001_R1_001.fastq.gz, ../C9K8C/fastq/CR3_REH1_mintet1_S29_L001_R2_001.fastq.gz, mkdir.done
+    output: outputs/unzip/CR3_REH1_mintet1_R1.fq, outputs/unzip/CR3_REH1_mintet1_R2.fq
+    jobid: 173
+    wildcards: sample_id=CR3_REH1_mintet1
+
+Terminating processes on user request, this might take some time.
+[Tue Oct 22 13:04:45 2019]
+Error in rule unzip:
+    jobid: 173
+    output: outputs/unzip/CR3_REH1_mintet1_R1.fq, outputs/unzip/CR3_REH1_mintet1_R2.fq
+    shell:
+        gunzip -c ../C9K8C/fastq/CR3_REH1_mintet1_S29_L001_R1_001.fastq.gz > outputs/unzip/CR3_REH1_mintet1_R1.fq && gunzip -c ../C9K8C/fastq/CR3_REH1_mintet1_S29_L001_R2_001.fastq.gz > outputs/unzip/CR3_REH1_mintet1_R2.fq
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job unzip since they might be corrupted:
+outputs/unzip/CR3_REH1_mintet1_R1.fq

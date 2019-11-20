@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 2 of /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile:
+Missing input files for rule all:
+hello/world.txt

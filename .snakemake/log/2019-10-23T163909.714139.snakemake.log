@@ -1,0 +1,56 @@
+Building DAG of jobs...
+Full Traceback (most recent call last):
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/site-packages/snakemake/io.py", line 681, in format_match
+    value = wildcards[name]
+KeyError: 'sample_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/site-packages/snakemake/rules.py", line 741, in expand_input
+    incomplete_checkpoint_func=handle_incomplete_checkpoint,
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/site-packages/snakemake/rules.py", line 699, in _apply_wildcards
+    concrete = concretize(item_, wildcards, _is_callable)
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/site-packages/snakemake/rules.py", line 724, in concretize_iofile
+    fail_dynamic=self.dynamic_output,
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/site-packages/snakemake/io.py", line 464, in apply_wildcards
+    dynamic_fill=DYNAMIC_FILL,
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/site-packages/snakemake/io.py", line 693, in apply_wildcards
+    return re.sub(_wildcard_regex, format_match, pattern)
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/re.py", line 192, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/site-packages/snakemake/io.py", line 691, in format_match
+    raise WildcardError(str(ex))
+snakemake.exceptions.WildcardError: 'sample_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/site-packages/snakemake/__init__.py", line 618, in snakemake
+    batch=batch,
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/site-packages/snakemake/workflow.py", line 502, in execute
+    dag.init()
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/site-packages/snakemake/dag.py", line 168, in init
+    job = self.update([job], progress=progress)
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/site-packages/snakemake/dag.py", line 710, in update
+    progress=progress,
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/site-packages/snakemake/dag.py", line 764, in update_
+    potential_dependencies = self.collect_potential_dependencies(job)
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/site-packages/snakemake/dag.py", line 1379, in collect_potential_dependencies
+    jobs = file2jobs(file)
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/site-packages/snakemake/dag.py", line 1467, in file2jobs
+    jobs.append(self.new_job(rule, targetfile=targetfile))
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/site-packages/snakemake/dag.py", line 1225, in new_job
+    targetfile=targetfile,
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/site-packages/snakemake/jobs.py", line 130, in __init__
+    self.wildcards_dict
+  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/lib/python3.7/site-packages/snakemake/rules.py", line 747, in expand_input
+    rule=self,
+snakemake.exceptions.WildcardError: Wildcards in input files cannot be determined from output files:
+'sample_id'
+
+WildcardError in line 93 of /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile:
+Wildcards in input files cannot be determined from output files:
+'sample_id'
+unlocking
+removed all locks
