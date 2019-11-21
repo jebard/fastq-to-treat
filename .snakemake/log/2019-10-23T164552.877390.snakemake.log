@@ -1,3 +1,0 @@
-KeyError in line 40 of /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile:
-'collapsed_dir'
-  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile", line 40, in <module>

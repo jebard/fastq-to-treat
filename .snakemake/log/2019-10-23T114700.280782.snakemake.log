@@ -1,3 +1,0 @@
-AttributeError in line 93 of /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile:
-'Rules' object has no attribute 'treat'
-  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile", line 93, in <module>

@@ -1,3 +1,0 @@
-WildcardError in line 37 of /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile:
-No values given for wildcard 'sample_id'.
-  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile", line 37, in <module>

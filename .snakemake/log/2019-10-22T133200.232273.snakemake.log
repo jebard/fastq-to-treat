@@ -1,3 +1,0 @@
-AttributeError in line 71 of /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile:
-'Rules' object has no attribute 'strip'
-  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile", line 71, in <module>

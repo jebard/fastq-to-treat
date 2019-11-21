@@ -1,4 +1,0 @@
-Building DAG of jobs...
-WildcardError in line 39 of /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile:
-Wildcards in input files cannot be determined from output files:
-'sample_id'

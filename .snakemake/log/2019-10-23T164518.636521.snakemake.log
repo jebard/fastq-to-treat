@@ -1,3 +1,0 @@
-NameError in line 40 of /projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile:
-name 'file' is not defined
-  File "/projects/academic/lread/core-sequencing-runs/treat-scripting/development/treat-virtualenv/Snakefile", line 40, in <module>
