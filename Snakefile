@@ -47,9 +47,11 @@ rule all:
             knock = get_knockdown_gene(sample)
             version = config["tool_version"]["treat"]
             if (get_tet_flag(sample)):
-                os.system("./tools/treat/" + str(version) + "/treat load --sample " + sample + " --fasta outputs/collapse/" + sample + ".fa --gene " + gene +" --offset " + str(offset) + " --template "+template+" --replicate "+ str(rep) + " --knock-down " +knock+" --tet")
+                #os.system("./tools/treat/" + str(version) + "/treat load --sample " + sample + " --fasta outputs/collapse/" + sample + ".fa --gene " + gene +" --offset " + str(offset) + " --template "+template+" --replicate "+ str(rep) + " --knock-down " +knock+" --tet")
+                os.system("./tools/treat/" + str(version) + "/treat load --sample " + sample + " --fasta " + config["dir_names"]["collapse_dir"]+"/" + sample + ".fa --gene " + gene +" --offset " + str(offset) + " --template "+template+" --replicate "+ str(rep) + " --knock-down " +knock+" --tet")
             else:
-                os.system("./tools/treat/" + str(version) + "/treat load --sample " + sample + " --fasta outputs/collapse/" + sample + ".fa --gene " + gene +" --offset " + str(offset) + " --template "+template+" --replicate "+ str(rep) + " --knock-down " + knock)
+                #os.system("./tools/treat/" + str(version) + "/treat load --sample " + sample + " --fasta outputs/collapse/" + sample + ".fa --gene " + gene +" --offset " + str(offset) + " --template "+template+" --replicate "+ str(rep) + " --knock-down " + knock)
+                os.system("./tools/treat/" + str(version) + "/treat load --sample " + sample + " --fasta " + config["dir_names"]["collapse_dir"]+"/" + sample + ".fa --gene " + gene +" --offset " + str(offset) + " --template "+template+" --replicate "+ str(rep) + " --knock-down " + knock)
                    
 rule mkdir:
     output: touch(config["file_names"]["mkdir_done"])
@@ -70,7 +72,10 @@ rule join:
     input: rules.unzip.output
     output: config["dir_names"]["join_dir"] + "/{sample_id}.assembled.fastq"
     version: config["tool_version"]["pear"]
-    shell: "tools/pear/{version}/pear -f {input[0]} -r {input[1]} -o outputs/join/{wildcards.sample_id}"
+    params:
+         outputDir = config["dir_names"]["join_dir"]
+    #shell: "tools/pear/{version}/pear -f {input[0]} -r {input[1]} -o outputs/join/{wildcards.sample_id}"
+    shell: "tools/pear/{version}/pear -f {input[0]} -r {input[1]} -o {params.outputDir}/{wildcards.sample_id}" #outputs/join/{wildcards.sample_id}"
 
 rule filter:
     input: rules.join.output
