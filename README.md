@@ -36,3 +36,8 @@ Example :
 
 
 7. Pipeline should result in a treat.db file -- proceed with treat normalization process.
+
+8. Copy over the resulting tread.db file onto your local machine, or a machine that can launch a treat web browser.
+
+9. Run treat.exe --db server (or equivalent command found https://github.com/ubccr/treat)
+
