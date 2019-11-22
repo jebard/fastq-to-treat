@@ -4,7 +4,8 @@ Handles the preprocessing from illumina fastq files through TREAT using SnakeMak
 1. Navigate to the new flowcell data output.
 
 2. git clone this repository 
-    `git clone git@github.com:jebard/fastq-to-treat.git`
+
+    `git clone https://github.com/jebard/fastq-to-treat.git`
 
 3. Activate the python anaconda environment (testing on CCR 11-21-19)
 
