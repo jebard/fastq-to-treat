@@ -9,7 +9,7 @@ Handles the preprocessing from illumina fastq files through TREAT using SnakeMak
 
 3. Activate the python anaconda environment (testing on CCR 11-21-19)
 
-    `source bin/activate` 
+    `source fastq-to-treat/bin/activate` 
 
 4. Edit the config.json file and cluster.json files
 
