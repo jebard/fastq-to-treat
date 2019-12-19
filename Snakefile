@@ -99,7 +99,7 @@ rule trim:
     params:
         adapter1=lambda wildcards: get_forward_primer(wildcards.sample_id),
         adapter2=lambda wildcards: get_reverse_primer(wildcards.sample_id)
-    shell: "./tools/cutadapt/{version}/cutadapt/bin/cutadapt -m 15 -g {params.adapter1} -a {params.adapter2} -n 2 {input} > {output} 2>{output}.stats"
+    shell: "cutadapt -m 15 -g {params.adapter1} -a {params.adapter2} -n 2 {input} > {output} 2>{output}.stats"
 
 rule collapse:
     input: rules.trim.output
