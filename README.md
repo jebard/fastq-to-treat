@@ -63,4 +63,5 @@ Copy the new .database file into /lread/dbs
 * NOTE:  this will start treat up and will take some time to load.
 
 14. To monitor the service
+
 `sudo journalctl -f -u treat`
