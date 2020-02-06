@@ -45,18 +45,23 @@ To launch treat with updated DB
 Copy the new .database file into /lread/dbs
 
 Check treats status
+
 10. systemctl status treat 
 
 Stop the treat service
+
 11. sudo systemctl stop treat
 
-should show treat as stopped
+Should show treat as stopped
+
 12. sudo systemctl status treat 
 
 Restart the treat service
+
 13. sudo systemctl start treat
 
 * NOTE:  this will start treat up and will take some time to load.
 
 To monitor the service
+
 14. sudo journalctl -f -u treat
