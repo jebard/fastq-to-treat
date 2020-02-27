@@ -48,10 +48,10 @@ rule all:
             version = config["tool_version"]["treat"]
             if (get_tet_flag(sample)):
                 #os.system("./tools/treat/" + str(version) + "/treat load --sample " + sample + " --fasta outputs/collapse/" + sample + ".fa --gene " + gene +" --offset " + str(offset) + " --template "+template+" --replicate "+ str(rep) + " --knock-down " +knock+" --tet")
-                os.system("./tools/treat/" + str(version) + "/treat load --sample " + sample + " --fasta " + config["dir_names"]["collapse_dir"]+"/" + sample + ".fa --gene " + gene +" --offset " + str(offset) + " --template "+template+" --replicate "+ str(rep) + " --knock-down " +knock+" --tet")
+                os.system("./tools/treat/" + str(version) + "/treat load --sample " + sample + " --fasta " + config["dir_names"]["collapse_dir"]+"/" + sample + ".fa --gene " + gene +" --offset " + str(offset) + " --template "+template+" --replicate "+ str(rep) + "--exclude-snps --knock-down " +knock+" --tet")
             else:
                 #os.system("./tools/treat/" + str(version) + "/treat load --sample " + sample + " --fasta outputs/collapse/" + sample + ".fa --gene " + gene +" --offset " + str(offset) + " --template "+template+" --replicate "+ str(rep) + " --knock-down " + knock)
-                os.system("./tools/treat/" + str(version) + "/treat load --sample " + sample + " --fasta " + config["dir_names"]["collapse_dir"]+"/" + sample + ".fa --gene " + gene +" --offset " + str(offset) + " --template "+template+" --replicate "+ str(rep) + " --knock-down " + knock)
+                os.system("./tools/treat/" + str(version) + "/treat load --sample " + sample + " --fasta " + config["dir_names"]["collapse_dir"]+"/" + sample + ".fa --gene " + gene +" --offset " + str(offset) + " --template "+template+" --replicate "+ str(rep) + "--exclude-snps --knock-down " + knock)
                    
 rule mkdir:
     output: touch(config["file_names"]["mkdir_done"])
